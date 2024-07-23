@@ -1,0 +1,27 @@
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+    provider     = "mysql"
+    url          = env("DATABASE_URL")
+    relationMode = "prisma"
+}
+
+model Payment {
+    id              String  @id @default(uuid())
+    name1           String  @db.VarChar(100)
+    email1          String  @db.VarChar(100)
+    phone1          String  @db.VarChar(100)
+    name2           String  @default("") @db.VarChar(100)
+    email2          String  @default("") @db.VarChar(100)
+    phone2          String  @default("") @db.VarChar(100)
+    modeOfPayment   String  @db.VarChar(20)
+    noOfPeople      Int
+    amountPaid     Int
+    snu             Boolean
+    tid             String  @default("") @db.VarChar(100)
+    paymentVerified Boolean
+    emailSent       Boolean
+}

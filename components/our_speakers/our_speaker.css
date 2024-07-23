@@ -1,0 +1,72 @@
+.speakers_section_bg{
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    height: 15rem;
+}
+
+.speakers_section_title{
+    position: relative;
+    left: 37rem;
+    z-index: 10;
+
+}
+
+.speakers_section_title>p{
+    color: #000;
+    font-family: Bebas Neue, serif;
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 58.824% */
+    letter-spacing: 2.04px;
+    margin-bottom: 10rem;
+}
+
+.speakers_section_cards{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-content: center;
+    left: 14rem;
+    width: 100%;
+}
+
+.speakers_section_cards-det{
+    display: flex;
+    flex-direction: column;
+    border: solid 2px blue;
+    width: 15rem;
+    height: 20rem;
+}
+
+.speakers_section-card2{
+    align-self: center;
+    position: relative;
+    background-color: red;
+    top: 15rem;
+    width: 100%;
+}
+
+.speakers_section_cards__firstname{
+    color: #000;
+    font-family: Outfit;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 137.931% */
+    letter-spacing: 0.87px;
+}
+
+.speakers_section_cards__lastname{
+    color: #000;
+    font-family: Outfit;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 142.857% */
+    letter-spacing: 0.84px;
+}
+

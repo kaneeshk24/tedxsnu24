@@ -1,0 +1,89 @@
+.GooglePay {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  @include respondAt(915px) {
+    flex-direction: column;
+    padding-bottom: 0;
+    padding-top: 5rem;
+  }
+  &__qr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &--TID {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      input {
+        font-family: "Raleway", sans-serif;
+        border: 0.51px rgba(0, 0, 0, 0.2) solid;
+        border-radius: 6px;
+        width: 25rem;
+        width: 18rem;
+        padding: 0.7rem 0rem 0.7rem 1rem;
+        @include respondAt(915px) {
+          width: 19rem;
+        }
+      }
+    }
+    &--text {
+      font-family: "Raleway", sans-serif;
+      @include respondAt(915px) {
+        font-size: 1.3rem;
+      }
+      color: #000000;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+    &--image {
+      width: 20rem;
+    }
+    &--bottom {
+      font-family: "Raleway", sans-serif;
+      color: #000000;
+      font-size: 1rem;
+      border: 1.41px rgba(0, 0, 0, 0.2) solid;
+      padding: 0.8rem 5rem 0.8rem 5rem;
+      cursor: pointer;
+    }
+  }
+  &__details {
+    @include respondAt(915px) {
+      margin-bottom: 3rem;
+    }
+    &--image {
+      width: 26rem;
+      @include respondAt(915px) {
+        width: 20rem;
+      }
+    }
+    &--priceDetails {
+      p {
+        color: rgba(18, 18, 18, 0.8);
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+      &__snu,
+      &__people,
+      &__ticket {
+        display: flex;
+        justify-content: space-between;
+        p {
+          color: rgba(18, 18, 18, 0.49);
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+      &__total {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

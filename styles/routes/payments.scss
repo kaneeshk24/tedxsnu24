@@ -1,0 +1,79 @@
+.PaymentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  @include respondAt(915px) {
+    flex-direction: column;
+    padding-bottom: 0;
+    padding-top: 5rem;
+  }
+  &__option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include respondAt(915px)
+    {
+        margin-bottom: 2rem;
+    }
+    &--title {
+      font-family: "Raleway", sans-serif;
+      color: #636872;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    &--mode {
+      color: black;
+      border: 1.41px rgba(0, 0, 0, 0.2) solid;
+      padding: 0.8rem 2rem 0.8rem 2rem;
+      margin-right: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: "Raleway", sans-serif;
+      margin-top: 2rem;
+      width: 20rem;
+      text-align: center;
+      @include respondAt(915px) {
+        width: 15rem;
+      }
+    }
+  }
+  &__details {
+    @include respondAt(915px) {
+      margin-bottom: 3rem;
+    }
+    &--image {
+      width: 26rem;
+      @include respondAt(915px) {
+        width: 20rem;
+      }
+    }
+    &--priceDetails {
+      p {
+        color: rgba(18, 18, 18, 0.8);
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+      &__snu,
+      &__people,
+      &__ticket {
+        display: flex;
+        justify-content: space-between;
+        p {
+          color: rgba(18, 18, 18, 0.49);
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+      &__total {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

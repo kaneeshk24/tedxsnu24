@@ -1,0 +1,114 @@
+.LandingPageContainer {
+  display: flex;
+  place-items: center;
+  align-content: center;
+  justify-content: space-around;
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  /*&__logo {
+    margin-top: 2.3rem;
+    img {
+      width: 22rem;
+      @include respondAt(767px) {
+        width: 15rem;
+      }
+    }
+  }*/
+  &__desc {
+    font-family: "Outfit", sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 300;
+    width: 50rem;
+    margin-top: 2rem;
+    @include respondAt(767px) {
+      width: 18rem;
+      font-size: 1rem;
+    }
+  }
+  &__details {
+    margin-top: 2rem;
+    border: 3px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    &--date {
+      display: grid;
+      place-items: center;
+      margin-left: 2rem;
+      padding-right: 2rem;
+      border-right: 1px solid white;
+      margin-top: 1.3rem;
+      margin-bottom: 1.3rem;
+      &__text {
+        color: #fff;
+        text-align: center;
+        font-family: "Outfit", sans-serif;
+        font-size: 3.7rem;
+        font-style: normal;
+        font-weight: 400;
+        margin: 0;
+        @include respondAt(767px) {
+          font-size: 2rem;
+        }
+      }
+      &__month,
+      &__year {
+        color: #fff;
+        text-align: center;
+        font-family: "Outfit", sans-serif;
+        font-size: 1.7rem;
+        font-style: normal;
+        font-weight: 400;
+        margin: 0;
+        @include respondAt(767px) {
+          font-size: 1rem;
+        }
+      }
+    }
+    &--venue {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      display: grid;
+      place-items: center;
+      @include respondAt(767px) {
+        margin-left: 0.6rem;
+        margin-right: 0.6rem;
+      }
+      &__location {
+        color: #fff;
+        text-align: center;
+        font-family: "Outfit", sans-serif;
+        font-size: 2.2rem;
+        font-style: normal;
+        font-weight: 400;
+        margin: 0;
+        @include respondAt(767px) {
+          font-size: 1.8rem;
+        }
+      }
+      &__text {
+        color: #fff;
+        text-align: center;
+        font-family: "Outfit", sans-serif;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 400;
+        width: 20rem;
+        @include respondAt(767px) {
+          font-size: 0.8rem;
+          width: 10rem;
+        }
+      }
+    }
+  }
+}
+.LandingPageContainer video,
+.LandingPageContainer img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}

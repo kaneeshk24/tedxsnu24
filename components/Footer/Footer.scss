@@ -1,0 +1,228 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__header {
+    padding-left: 7rem;
+
+    padding-top: 5rem;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+
+
+
+    @include respondAt(915px) {
+      padding-left: 2rem;
+      padding-top: 3rem;
+    }
+
+    &--text-container {
+      display: flex;
+      flex-direction: column;
+      align-items:flex-start;
+      @include respondAt(915px){
+        margin-left : 3rem;
+        margin-top : 2rem;
+      }
+    }
+
+    &--text {
+      color: black;
+      font-family: "Bebas Neue", serif;
+      font-size: 3.7rem;
+      font-style: normal;
+      font-weight: 400;
+      margin-top: -3rem;
+      margin-left: -4rem;
+      padding-bottom: -4rem;
+
+      @include respondAt(915px) {
+        font-size: 3rem;
+      }
+    }
+
+    &--desc {
+      color: black;
+      font-family: "Outfit", sans-serif;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 1rem;
+
+      @include respondAt(915px) {
+        font-size: 2rem;
+      }
+    }
+
+    &--buttons {
+      margin-top: -2.3rem;
+    }
+
+    &--buttons__contact {
+      background-color: black;
+      color: white;
+      padding: 2rem 3.5rem;
+      border: none;
+      border-radius: 2.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin-top: -8rem;
+      padding-top: -4rem;
+
+      &:hover {
+        background-color: red;
+        color: white;
+      }
+    }
+
+    &__register {
+      border-radius: 1.1875rem;
+      border: 2px solid #c7751e;
+      background: #212223;
+      width: 9rem;
+      padding: 0.5625rem 1.1875rem;
+      color: white;
+      text-align: center;
+      font-family: "Outfit", sans-serif;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      margin-right: 2rem;
+      cursor: pointer;
+
+      @include respondAt(915px) {
+        width: 10rem;
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__contact {
+      border-radius: 1.1875rem;
+      border: 2px solid #c7751e;
+      background: #212223;
+      width: 10rem;
+      padding: 0.5625rem 1.1875rem;
+      color: white;
+      text-align: center;
+      font-family: "Outfit", sans-serif;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+
+  &__below {
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+
+    @include respondAt(915px) {
+      align-items: flex-start;
+    }
+
+    &--sections {
+      margin-left: 7rem;
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      @include respondAt(915px) {
+        flex-direction: column;
+        margin-left: 2rem;
+        align-items: flex-start;
+        margin-bottom: 0rem;
+      }
+
+      &__item {
+        color: black;
+        font-family: "Outfit", sans-serif;
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 600;
+        margin-right: 3rem;
+        cursor: pointer;
+
+        @include respondAt(915px) {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+          margin-top: 1rem;
+        }
+      }
+
+      &__divider {
+        width: 0.5rem;
+        margin-right: 3rem;
+
+        @include respondAt(915px) {
+          display: none;
+        }
+      }
+
+      &__logo {
+        width: 12rem;
+        cursor: pointer;
+
+        @include respondAt(915px) {
+          display: none;
+        }
+      }
+    }
+
+    &--logo {
+      margin-bottom: 2rem;
+
+      @include respondAt(915px) {
+        margin-left: 1rem;
+      }
+
+      img {
+        width: 25rem;
+        cursor: pointer;
+
+        @include respondAt(915px) {
+          width: 20rem;
+        }
+      }
+    }
+
+    &--social {
+      @include respondAt(915px) {
+        margin-left: 2rem;
+      }
+
+      img {
+        width: 2rem;
+        margin-right: 1rem;
+        cursor: pointer;
+      }
+
+      stretched-image{
+        width: 5rem;
+        margin-right: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.Footer__header--buttons__contact {
+  background-color: black; // Set the initial background color
+  color: white; // Set the initial text color
+  padding: 1rem 2rem; // Add some padding
+  border: none; // Remove default button border
+  cursor: pointer; // Change the cursor to a pointer on hover
+  transition: background-color 0.3s ease, color 0.3s ease; // Add a smooth transition
+  font-size: 1.2rem;
+ 
+
+  &:hover {
+    background-color: red; // Change the background color on hover
+    color: white; // Change the text color on hover
+  }
+}

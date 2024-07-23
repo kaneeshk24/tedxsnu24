@@ -1,0 +1,57 @@
+.AboutUs {
+  color: white;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  &__heading {
+    color: #fff;
+    text-align: center;
+    font-family: "Bebas Neue", serif;
+    font-size: 4.25rem;
+    font-style: normal;
+    font-weight: 400;
+    @include respondAtLarge(768px,1200px) {
+      font-size: 3rem;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    @include respondAt(1200px) {
+      flex-direction: column-reverse;
+    }
+    &--carousel {
+      width: 30rem;
+      @include respondAt(767px)  {
+        width: 15rem;
+        margin-bottom: 2rem;
+      }
+    }
+    &--text {
+      color: #fff;
+      font-family: "Outfit", sans-serif;
+      font-size: 1.3rem;
+      font-style: normal;
+      font-weight: 400;
+      width: 40rem;
+      margin-right: 5rem;
+      
+      @include respondAt(767px) {
+        margin: 0;
+        width: 20rem;
+        font-size: .8rem;
+        text-align: center;
+        margin-right: 0;
+      }
+      @include respondAtLarge(768px,1200px) {
+        margin: 0;
+        width: 40rem;
+        font-size: 1.3rem;
+        text-align: center;
+        margin-top: 3rem;
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+.RegisterSection {
+  margin-bottom: 5rem;
+  padding-top: 8rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  @include respondAt(915px) {
+    flex-direction: column;
+    padding-top: 6rem;
+    padding-bottom: 0;
+  }
+  &__details {
+    @include respondAt(915px) {
+      width: 20rem;
+    }
+    &--snu,
+    &--people {
+      p {
+        font-family: "Raleway", sans-serif;
+        color: #636872;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 0.7rem;
+        margin-top: 0;
+      }
+      &__options {
+        display: flex;
+        @include respondAt(915px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        &--red {
+          color: black;
+          border: 2px red solid;
+          padding: 0.8rem 2rem 0.8rem 2rem;
+          margin-right: 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          @include respondAt(915px) {
+            width: 10rem;
+          }
+        }
+        &--white {
+          color: black;
+          border: 1.41px rgba(0, 0, 0, 0.2) solid;
+          padding: 0.8rem 2rem 0.8rem 2rem;
+          margin-right: 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          @include respondAt(915px) {
+            width: 10rem;
+          }
+        }
+      }
+    }
+    &--people {
+      margin-top: 1rem;
+    }
+    &--value {
+      p {
+        color: #0b0b0b;
+        font-weight: 800;
+        font-family: "Raleway", sans-serif;
+        font-size: 1.1rem;
+      }
+      &__error {
+
+      }
+      &__email {
+        &--warn {
+          font-size: 5rem;
+        }
+      }
+      &__name,
+      &__email,
+      &__phone {
+        p {
+          color: #636872;
+          font-weight: 600;
+          font-size: 1rem;
+        }
+        &--warn {
+          font-size: .7rem !important;
+          margin-top: .3rem;
+          color: rgb(180, 179, 179) !important;
+        }
+        input {
+          font-family: "Raleway", sans-serif;
+          border: 0.51px rgba(0, 0, 0, 0.2) solid;
+          border-radius: 6px;
+          width: 25rem;
+          padding: 0.7rem 0rem 0.7rem 1rem;
+          @include respondAt(915px) {
+            width: 19rem;
+          }
+        }
+      }
+    }
+    &--submit {
+      font-family: "Raleway", sans-serif;
+      font-weight: 700;
+      padding: 0.8rem 2rem 0.8rem 2rem;
+      border: 2px solid red;
+      border-radius: 7px;
+      text-align: center;
+      margin-top: 2rem;
+      cursor: pointer;
+      @include respondAt(915px)
+      {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  &__amount {
+    @include respondAt(915px) {
+      margin-bottom: 3rem;
+    }
+    &--image {
+      width: 26rem;
+      @include respondAt(915px ){
+        width: 20rem;
+      }
+    }
+    &--priceDetails {
+      p {
+        color: rgba(18, 18, 18, 0.8);
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+      &__snu,
+      &__people,
+      &__ticket {
+        display: flex;
+        justify-content: space-between;
+        p {
+          color: rgba(18, 18, 18, 0.49);
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+      &__total {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

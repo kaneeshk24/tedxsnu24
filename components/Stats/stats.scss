@@ -1,0 +1,44 @@
+.StatsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  &__card {
+    margin-top: 4rem;
+    display: grid;
+    place-items: center;
+    margin-bottom: 4rem;
+    @include respondAt(767px) {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    &--number {
+      color: #000;
+      text-align: center;
+      font-family: "Outfit", sans-serif;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      margin: 0;
+    }
+    &--text {
+      color: #10125c;
+      font-family: "Outfit", sans-serif;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 600;
+      margin: 0;
+    }
+    &:nth-child(-n+3) {
+        padding-right: 2rem;
+        border-right: 4px solid black;
+        @include respondAt(767px) {
+            padding-right: 2rem;
+            border: none;
+        }
+    }
+    padding-left: 2rem;
+    @include respondAt(767px) {
+        padding-left: 2rem;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.Performers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @include respondAt(915px) {
+    align-items: center;
+  }
+  &__heading {
+    color: white;
+    font-size: 3.8rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    // margin-right: 2.5em;
+    margin-left: 2.5em;
+    margin-top: 0;
+    @include respondAt(915px) {
+      width: 100vw;
+      display: grid;
+      place-items: center;
+      font-size: 2.5rem;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &--card {
+      margin: 1rem 2rem 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &__image {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 1rem;
+        @include respondAt(915px) {
+          width: 15rem;
+          height: 12rem;
+        }
+      }
+      &__name {
+        color: #fff;
+        font-size: 2.5rem;
+        font-family: "Outfit", sans-serif;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 0;
+        @include respondAt(915px) {
+          font-size: 1.5rem;
+        }
+      }
+      &__desc {
+        color: #fff;
+        font-size: 1.5625rem;
+        font-family: "Outfit", sans-serif;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 0;
+        @include respondAt(915px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

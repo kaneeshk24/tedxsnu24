@@ -1,0 +1,55 @@
+.AdminMainContainer {
+  padding-top: 7rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  &__title {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+  &__end {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  &__filter {
+    display: flex;
+    align-items: center;
+    &--options {
+      display: flex;
+      &__white {
+        margin-right: 1rem;
+        cursor: pointer;
+        color: black;
+        border: 1.41px rgba(0, 0, 0, 0.2) solid;
+        padding: 0.8rem 2rem 0.8rem 2rem;
+      }
+      &__red {
+        margin-right: 1rem;
+        cursor: pointer;
+        color: black;
+        border: 1.41px red solid;
+        padding: 0.8rem 2rem 0.8rem 2rem;
+      }
+    }
+    &--title {
+      margin-right: 3rem;
+    }
+  }
+  font-family: "Inter", sans-serif;
+}
+.bordered-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.bordered-table th,
+.bordered-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center; /* Center text horizontally */
+  vertical-align: middle; /* Center text vertically */
+}
+
+.bordered-table th {
+  background-color: #f2f2f2;
+}
