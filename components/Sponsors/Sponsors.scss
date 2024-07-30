@@ -2,7 +2,15 @@
   display: grid;
   place-items: center;
   align-content: center;
-  &__our {
+  background-color: black; // Assuming a dark background based on your button styles
+  
+
+  &__past {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+    align-items: flex-start;
+
     &--heading {
       color: white;
       font-family: "Bebas Neue", serif;
@@ -10,97 +18,125 @@
       font-style: normal;
       font-weight: 400;
       margin-top: 2rem;
-      margin-bottom: 2rem;
-      text-align: center;
+      margin-bottom: 4rem;
+      text-align: left;
       @include respondAt(767px) {
         font-size: 4rem;
       }
     }
-    &--cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      &__image {
-        margin-right: 2rem;
-        margin-left: 2rem;
-        margin-bottom: 1.5rem;
-        @include respondAt(767px) {
-          margin-right: 1.5rem;
-          margin-left: 1.5rem;
-          margin-bottom: 1rem;
+
+    .slick-slider {
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+
+      .slick-slide {
+        padding: 0 10px;
+      }
+
+      .slick-prev,
+      .slick-next {
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        &:before {
+          color: #c7751e;
+          font-size: 40px;
         }
-        img {
-          width: 15rem;
-          height: 8rem;
-          @include respondAt(767px) {
-            width: 12rem;
-            height: 6rem;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-200%);
+      }
+
+      .slick-prev {
+        left: -45px;
+      }
+
+      .slick-next {
+        right: -45px;
+      }
+
+      .slick-dots {
+        bottom: 80px;
+        li {
+          button:before {
+            font-size: 12px;
+            color: #c7751e;
+          }
+          &.slick-active button:before {
+            color: #fff;
           }
         }
       }
     }
-  }
-  &__past {
-    &--heading {
-      color: white;
-      font-family: "Bebas Neue", serif;
-      font-size: 4rem;
-      font-style: normal;
-      font-weight: 400;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      text-align: center;
-      @include respondAt(767px) {
-        font-size: 4rem;
+
+    &--cards__image {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      padding-top: 1rem;
+      
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
       }
     }
+
     &--button {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 1rem;
+      margin: 2rem 0;
+
       &__content {
         border-radius: 1.1875rem;
         border: 2px solid #c7751e;
         background: #212223;
-        width: 9rem;
-        padding: 0.5625rem 1.1875rem;
+        width: 12rem;
+        padding: 0.75rem 1.5rem;
         color: #fff;
         text-align: center;
         font-family: "Outfit", sans-serif;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-style: normal;
         font-weight: 400;
-        margin-right: 2rem;
         cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #c7751e;
+        }
+
         @include respondAt(915px) {
           width: 10rem;
-          margin-right: 0;
           margin-bottom: 1rem;
         }
       }
     }
-    &--cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      &__image {
-        margin-right: 2rem;
-        margin-left: 2rem;
-        margin-bottom: 1.5rem;
-        @include respondAt(767px) {
-          margin-right: 1.5rem;
-          margin-left: 1.5rem;
-          margin-bottom: 1rem;
-        }
-        img {
-          width: 15rem;
-          height: 8rem;
-          @include respondAt(767px) {
-            width: 12rem;
-            height: 6rem;
-          }
-        }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 1024px) {
+  .Sponsors__past .slick-slider {
+    .slick-prev {
+      left: -15px;
+    }
+    .slick-next {
+      right: -15px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .Sponsors__past {
+    &--heading {
+      font-size: 3rem;
+    }
+    .slick-slider {
+      .slick-prev,
+      .slick-next {
+        display: none !important;
       }
     }
   }
