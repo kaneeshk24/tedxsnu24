@@ -53,9 +53,13 @@ export default function Sponsors() {
     };
 
     return (
-        <div className='Sponsors'>
+        <div className='Sponsors'>            
+
             <div className='Sponsors__past'>
-                <p className='Sponsors__past--heading'>PAST SPONSORS</p>
+
+                <p className='Sponsors__past--heading'>
+                PAST SPONSORS</p>
+ 
                 <Slider {...settings}>
                     {pastSponsors.map((item, index) => (
                         <motion.div
