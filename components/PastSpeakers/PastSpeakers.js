@@ -42,7 +42,7 @@ const speakersData = [
   }
 ];
 
-export default function PastSpeakers() {
+function PastSpeakers() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const settings = {
@@ -83,3 +83,4 @@ export default function PastSpeakers() {
     </div>
   );
 }
+export default PastSpeakers;
