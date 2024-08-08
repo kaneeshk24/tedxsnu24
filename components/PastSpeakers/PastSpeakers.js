@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -44,6 +44,11 @@ const speakersData = [
 
 function PastSpeakers() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const settings = {
     dots: true,
@@ -54,33 +59,37 @@ function PastSpeakers() {
     afterChange: (current) => setCurrentSlide(current)
   };
 
+  if (!isMounted) {
+    return null; // Or you can return a loading spinner if you want
+  }
+
   return (
-    
     <div className='container'>
-    <h2 className='heading'>PREVIOUS SPEAKERS</h2>
-    <div className='card-holder'>
-      <div className='card-list'>
-        <Slider {...settings}>
-          {speakersData.map((speaker, index) => (
-            <div key={index} className='cards'>
-              <div className='imageHolder'>
-                <img src={speaker.image} alt={speaker.name} className='speakerImage' />
+      <h2 className='heading'>PREVIOUS SPEAKERS</h2>
+      <div className='card-holder'>
+        <div className='card-list'>
+          <Slider {...settings}>
+            {speakersData.map((speaker, index) => (
+              <div key={index} className='cards'>
+                <div className='imageHolder'>
+                  <img src={speaker.image} alt={speaker.name} className='speakerImage' />
+                </div>
+                <div className='textHolder'>
+                  <p>{speaker.name}</p>
+                </div>
               </div>
-              <div className='textHolder'>
-                <p>{speaker.name}</p>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
-      
-      <div className='description'>
-        <div className='description-holder'>
-          <p>{speakersData[currentSlide].description}</p>
+            ))}
+          </Slider>
         </div>
-      </div>
-     </div> 
+
+        <div className='description'>
+          <div className='description-holder'>
+            <p>{speakersData[currentSlide].description}</p>
+          </div>
+        </div>
+      </div> 
     </div>
   );
 }
+
 export default PastSpeakers;
