@@ -1,5 +1,6 @@
 import AboutUs from "../components/AboutUs/AboutUs";
 import LandingSection from "../components/LandingSection/LandingSection";
+import OurStory from "../components/OurStory/OurStory";
 import PastSpeakers from "../components/PastSpeakers/PastSpeakers";
 import Sponsors from "../components/Sponsors/Sponsors";
 import Stats from "../components/Stats/stats";
@@ -13,6 +14,11 @@ function Home() {
                 <LandingSection />
             </section>
             <section
+                className="OurStory"
+                id="ourstory">
+                <OurStory />
+            </section>
+            {/* <section
                 id="stats"
                 className="StatsSection">
                 <Stats />
@@ -21,7 +27,7 @@ function Home() {
                 id="about"
                 className="AboutSection">
                 <AboutUs />
-            </section>
+            </section> */}
             <section
                 id="past-speakers"
                 className="PastSpeakersSection">
