@@ -8,7 +8,9 @@ body {
   margin: 0;
   line-height: normal;
   box-sizing: border-box;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 :root {
   /* fonts */
@@ -110,7 +112,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .shiv-nadar-university-wrapper {
   align-self: stretch;
@@ -121,8 +123,7 @@ body {
   font-size: 5.625rem;
   flex-direction: row;
   display: flex;
-  justify-content: flex-start;
-
+  align-items: center;
 }
 .hero-banner {
   width: 100%;
@@ -130,7 +131,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .hero-line-child {
   align-self: stretch;
@@ -146,12 +147,13 @@ body {
 .hero-sect {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 
 }
 .hero-line {
   align-self: stretch;
-  align-items: flex-start;
+  align-items: center;
   padding: var(--padding-3xs);
 
 }
@@ -159,6 +161,7 @@ body {
   width: 100%;
   max-width: 79.625rem;
   align-items: center;
+  justify-content: center;
   text-align: left;
   font-size: 11.875rem;
   font-family: var(--font-poppins);
@@ -219,6 +222,32 @@ body {
   .shiv-nadar-university-wrapper {
     font-size: 2rem;
     padding: var(--padding-base);
+    width: 100%;
+    max-width: 19vw;
+    background-size: cover;
+    background-color: black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .ted1{
+    left: 0rem;
+  }
+  .txt-ted {
+    height: auto;
+    max-height: 2vh;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  .vector-icon4{
+    width: 100%;
+    max-width: 4.5rem;
   }
 
   .hero-sect {
@@ -226,11 +255,13 @@ body {
   }
 
   .sect-2 {
-    height: auto;
+    height: 6rem;
+    width: 103.5vw;
+    margin-left: -0.4rem;
     font-size: var(--font-size-13xl);
   }
 
   .vector-wrapper {
-    margin-left: 0;
+    margin-left: -2rem;
   }
 }

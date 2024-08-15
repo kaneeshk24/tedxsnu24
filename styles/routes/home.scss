@@ -1,12 +1,16 @@
 .LandingPageSection {
-  // background-image: url('/Images/LandingPage/landing_page.png');
-  // background-image: url('/Images/Assets/overallbg.png');
-  width: 100vw;
-  // height: 100vh;
+  width: 100%;
+  max-width: 100vw;
   background-size: cover;
   background-color: black;
   padding-top: 5rem;
   padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
 }
 .StatsSection {
   // background-image: url('/Images/Assets/overallbg.png');
@@ -35,4 +39,18 @@
   height: 100%;
   background-size: cover;
   background-color: black;
+}
+
+@media (max-width: 768px) {
+  .LandingPageSection {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .LandingPageSection {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
 }
