@@ -2,12 +2,8 @@
   display: grid;
   place-items: center;
   align-content: center;
-<<<<<<< HEAD
-  background-color: black;
-=======
   background-color: black; // Assuming a dark background based on your button styles
   height: 42rem;
->>>>>>> 7c91597044ac6dcae200845f43d7d73ee3460e17
 
   .line-1-child {
     align-self: stretch;
@@ -16,6 +12,7 @@
     box-sizing: border-box;
     // height: 0.3rem;
   }
+
   .line-1 {
     width: 2.25rem;
     display: flex;
@@ -25,6 +22,7 @@
     // box-sizing: border-box;
     margin-top: 2rem;
   }
+
   .line-2 {
     width: 5.25rem;
     display: flex;
@@ -101,11 +99,13 @@
 
       .slick-dots {
         bottom: 80px;
+
         li {
           button:before {
             font-size: 12px;
             color: #c7751e;
           }
+          
           &.slick-active button:before {
             color: #fff;
           }
@@ -130,13 +130,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-<<<<<<< HEAD
       margin: 2rem 0;
       width: 100%;
-=======
-      margin: -2rem 0;
-      
->>>>>>> 7c91597044ac6dcae200845f43d7d73ee3460e17
 
       &__content {
         border-radius: 1.1875rem;
@@ -151,10 +146,9 @@
         font-style: normal;
         font-weight: 400;
         transition: 0.3s ease-in-out;
-  
 
         &:hover {
-          background:  #8babfe;
+          background: #8babfe;
         }
 
         @include respondAt(915px) {
@@ -183,7 +177,7 @@
     &--cards__image {
       max-width: 60%;
       margin: 0 auto;
-    }  
+    }
   }
 }
 
@@ -194,18 +188,22 @@
       margin-top: 1.5rem;
       margin-bottom: 3rem;
     }
+
     .slick-slider {
       .slick-prev,
       .slick-next {
         width: 30px;
         height: 30px;
+
         &:before {
           font-size: 30px;
         }
       }
+      
       .slick-dots {
         bottom: 60px;
       }
+
       &--cards__image {
         max-width: 70%;
         margin: 0 auto;
@@ -219,6 +217,7 @@
     &--heading {
       font-size: 3rem;
     }
+
     .slick-slider {
       .slick-prev,
       .slick-next {
@@ -228,10 +227,10 @@
         bottom: 40px;
       }
 
-    &--cards__image {
-      max-width: 75%;
-      margin: 0 auto;
-    }  
+      &--cards__image {
+        max-width: 75%;
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -243,14 +242,18 @@
       margin-top: 1rem;
       margin-bottom: 2rem;
     }
+
     .slick-slider {
       margin-bottom: 1.5rem;
       margin-top: 1.5rem;
+
       .slick-slide {
         padding: 0 5px;
       }
+      
       .slick-dots {
         bottom: 20px;
+
         li {
           button:before {
             font-size: 10px;
@@ -258,15 +261,18 @@
         }
       }
     }
+
     &--cards__image {
       max-width: 25%;
       padding-top: 0.5rem;
     }
+
     &--button {
       margin: 1.5rem 0;
     }
   }
 }
+
 @media (max-width: 360px) {
   .Sponsors__past {
     &--cards__image {
@@ -274,6 +280,7 @@
     }
   }
 }
+
 @media (max-width: 320px) {
   .Sponsors__past {
     &--cards__image {

@@ -1,0 +1,71 @@
+.footer {
+  background-color: #1a0f0f;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.nav a {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.dot {
+  color: #ff2b06;
+  margin: 0 0.5rem;
+}
+
+.socialIcons {
+  margin-bottom: 1rem;
+}
+
+.socialIcons a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+}
+
+.tedxLogo {
+  font-size: 1.5rem;
+}
+
+.ted {
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #ff2b06;
+}
+
+.ted sup {
+  color: #ff2b06;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;}
+
+.university {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;}

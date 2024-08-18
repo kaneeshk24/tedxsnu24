@@ -1,5 +1,6 @@
 import AboutUs from "../components/AboutUs/AboutUs";
 import LandingSection from "../components/LandingSection/LandingSection";
+import OurStory from "../components/OurStory/OurStory";
 import PastSpeakers from "../components/PastSpeakers/PastSpeakers";
 import Sponsors from "../components/Sponsors/Sponsors";
 import Stats from "../components/Stats/stats";
@@ -11,6 +12,9 @@ function Home() {
                 className="LandingPageSection"
                 id="home">
                 <LandingSection />
+            </section>
+            <section className="StorySection" id="story">
+                <OurStory />
             </section>
             <section
                 id="stats"
