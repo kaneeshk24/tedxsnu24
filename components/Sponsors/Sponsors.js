@@ -22,11 +22,12 @@ export default function Sponsors() {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 300,
         slidesToShow: 6,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 1300,
+        arrows: false,
         responsive: [
             {
                 breakpoint: 1024,
