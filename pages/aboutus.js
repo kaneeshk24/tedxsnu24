@@ -1,9 +1,11 @@
-import AboutUs from "../components/AboutUs/AboutUs";
+import AboutUs from "../components/AboutUs/AboutUs.js";
 
 export default function Home(){
     return(
-        <div>
-            <AboutUs />
-        </div>
+        <section
+        id="about"
+        className="AboutSection">
+        <AboutUs />
+    </section>
     )
 }

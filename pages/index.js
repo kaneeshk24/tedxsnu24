@@ -16,16 +16,16 @@ function Home() {
             <section className="StorySection" id="story">
                 <OurStory />
             </section>
-            <section
+            {/* <section
                 id="stats"
                 className="StatsSection">
                 <Stats />
-            </section>
-            <section
+            </section> */}
+            {/* <section
                 id="about"
                 className="AboutSection">
                 <AboutUs />
-            </section>
+            </section> */}
             <section
                 id="past-speakers"
                 className="PastSpeakersSection">

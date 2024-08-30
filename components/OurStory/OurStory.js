@@ -20,7 +20,7 @@ const OurStory = () => {
       </div>
       
       <div className={styles.buttonContainer}>
-        <button className={styles.button}>
+        <button className={styles.button} onClick={() =>'../components/AboutUs/AboutUs'}>
           Know More →
         </button>
       </div>
