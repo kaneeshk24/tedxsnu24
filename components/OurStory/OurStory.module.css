@@ -40,7 +40,13 @@
     font-size: 1.1rem; /* Adjusted font size */
     height: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added a slight shadow for better visibility */
-    
+    color: #FFF;
+font-family: "Open Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 136.284%; /* 32.708px */
+letter-spacing: 0.24px;
 }
 
 .card p {
