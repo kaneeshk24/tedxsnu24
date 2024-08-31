@@ -2,12 +2,8 @@
   display: grid;
   place-items: center;
   align-content: center;
-<<<<<<< HEAD
-  background-color: black;
-=======
   background-color: black; // Assuming a dark background based on your button styles
   height: 42rem;
->>>>>>> 7c91597044ac6dcae200845f43d7d73ee3460e17
 
   .line-1-child {
     align-self: stretch;
@@ -37,13 +33,13 @@
   &__past {
     width: 100%;
     max-width: 1200px;
-    padding: 0 1rem;
+    padding-top: 2rem;
     align-items: flex-start;
     align-self: stretch;
     position: relative;
     border-radius: 30px;
     background-color: rgba(139, 171, 254, 0.75);
-    height: 19.75rem;
+    height: 22rem;
 
     &--heading {
       color: white;
@@ -69,7 +65,7 @@
 
     .slick-slider {
       margin-bottom: 2rem;
-      margin-top: 2rem;
+      margin-top: 4rem;
 
       .slick-slide {
         padding: 0 10px;
@@ -100,7 +96,7 @@
       }
 
       .slick-dots {
-        bottom: 80px;
+        bottom: 10px;
         li {
           button:before {
             font-size: 12px;
@@ -114,9 +110,18 @@
     }
 
     &--cards__image {
+      width: 140px;
+      height: 140px;
       background-color: white;
-      border-radius: 8px;
+      border-radius: 50%;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto 0;
+      position: relative;
+      z-index: 1;
+      padding: 0; 
       padding-top: 1rem;
       
       img {
@@ -130,13 +135,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-<<<<<<< HEAD
       margin: 2rem 0;
       width: 100%;
-=======
-      margin: -2rem 0;
-      
->>>>>>> 7c91597044ac6dcae200845f43d7d73ee3460e17
 
       &__content {
         border-radius: 1.1875rem;
@@ -150,7 +150,7 @@
         font-size: 1.2rem;
         font-style: normal;
         font-weight: 400;
-        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;}
   
 
         &:hover {
@@ -170,7 +170,7 @@
       }
     }
   }
-}
+
 
 @media (max-width: 1024px) {
   .Sponsors__past .slick-slider {
