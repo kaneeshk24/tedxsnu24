@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+
+
+.container {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 3.875rem;
+    font-weight: bold;
+    margin-bottom: 2.3rem;
+    margin-top: -2rem;
+    text-align: center;
+    font-family: var(--font-oswald);
+    letter-spacing: 0.1em;
+  }
+  
+  .titleUnderline {
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 0.25rem;
+  }
+  
+  .cardContainer {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem; /* Added padding for spacing around the cards */
+    background-color: #000; /* Set the background color to black */
+    font-family: var(--font-open-sans);
+  }
+
+@media (min-width: 768px) {
+    .cardContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    background-color: #8BABFE;
+    color: white;
+    border-radius: 1rem; /* Increased border-radius for a more rounded look */
+    display: flex;
+    padding: 1.5rem; /* Adjusted padding for consistent spacing */
+    flex-direction: column;
+    font-size: 1.1rem; /* Adjusted font size */
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added a slight shadow for better visibility */
+    
+}
+
+.card p {
+    margin-bottom: 0.75rem; /* Increased margin between paragraphs */
+    line-height: 1.5; /* Added line height for better readability */
+}
+
+  .buttonContainer {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .button {
+    background-color: white;
+    color: black;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 624.9375rem;
+    border: 2px solid #fff;
+    cursor: pointer;
+    border-radius: 88px;
+background: linear-gradient(97deg, #8BABFE 19.33%, #211814 100%);
+
+
+  }
+  
+  .statsContainer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1rem 0; /* Padding for spacing */
+    background-color: black; /* Background color */
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem; /* Padding between items */
+    color: #FFF;
+
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+
+}
+
+.statNumber {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: white; /* White text color */
+    margin-bottom: 0.5rem; /* Space between number and label */
+    color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 64px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+}
+
+.statLabel {
+    color: white; /* White label text */
+    font-size: 1.25rem;
+    font-weight: 600; /* Slightly bolder label text */
+}

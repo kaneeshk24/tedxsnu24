@@ -66,6 +66,7 @@ function PastSpeakers() {
   return (
     <div className='container'>
       <h2 className='heading'>PREVIOUS SPEAKERS</h2>
+      <div className='underline'></div>
       <div className='card-holder'>
         <div className='card-list'>
           <Slider {...settings}>

@@ -1,3 +1,5 @@
+import SponsorImages from '../components/SponsorPage/SponsorsPage';
+import ImageCard from '../components/SponsorPage/SponsorsPage';
 import '../styles/routes/sponsors.scss'
 import { motion } from 'framer-motion';
 
@@ -65,24 +67,28 @@ export default function Sponsors() {
     ]
     return (
 
-        <div className="AllSponsors">
-            <p className='AllSponsors__heading'>PAST SPONSORS</p>
-            <div className='AllSponsors__cards'>
-                {pastSponsors.map((item, index) => {
-                    return (
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: .7 }}
-                            key={index}
-                        >
-                            <div style={{ backgroundColor: "white" }} className='AllSponsors__cards--image'>
-                                <img src={item.url} />
-                            </div>
-                        </motion.div>
-                    )
-                })}
-            </div>
+        // <div className="AllSponsors">
+        //     <p className='AllSponsors__heading'>PAST SPONSORS</p>
+        //     <div className='AllSponsors__cards'>
+        //         {pastSponsors.map((item, index) => {
+        //             return (
+        //                 <motion.div
+        //                     initial={{ opacity: 0 }}
+        //                     whileInView={{ opacity: 1 }}
+        //                     transition={{ duration: .7 }}
+        //                     key={index}
+        //                 >
+        //                     <div style={{ backgroundColor: "white" }} className='AllSponsors__cards--image'>
+        //                         <img src={item.url} />
+        //                     </div>
+        //                 </motion.div>
+        //             )
+        //         })}
+        //     </div>
+        //     <ImageCard src={pastSponsors[0].url}/>
+        // </div>
+        <div>
+            <SponsorImages />
         </div>
     )
 }

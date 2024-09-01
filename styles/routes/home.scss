@@ -1,12 +1,16 @@
+
 .LandingPageSection {
-  // background-image: url('/Images/LandingPage/landing_page.png');
-  // background-image: url('/Images/Assets/overallbg.png');
-  width: 100vw;
-  // height: 100vh;
-  background-size: cover;
-  background-color: black;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  width: 100vw; /* Full width of the viewport */
+  min-height: 63vh; /* Ensures section takes at least the full height of the viewport */
+  background-size: cover; /* Background image (if any) covers the entire container */
+  background-color: black; /* Black background color */
+  padding-top: 5rem; /* Top padding */
+  padding-bottom: 5rem; /* Bottom padding */
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Aligns items vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  box-sizing: border-box; /* Includes padding in width/height calculations */
 }
 .StatsSection {
   // background-image: url('/Images/Assets/overallbg.png');
