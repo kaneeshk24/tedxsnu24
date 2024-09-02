@@ -50,7 +50,7 @@
       // margin-right: 3rem;
     }
     &--content {
-      color: black;
+      color: white;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -61,7 +61,7 @@
         align-items: center;
       }
       &__title {
-        color: black;
+        color: white;
         font-size: 2.5rem;
         font-family: "Outfit", sans-serif;
         font-weight: 600;
@@ -73,7 +73,7 @@
         }
       }
       &__desc {
-        color: black;
+        color: white;
         text-align: right;
         font-size: 1.5rem;
         width: 34.8125rem;
