@@ -1,0 +1,195 @@
+.AboutUsPage {
+  background-color: black;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.AboutUsHeading {
+  color: #FFF;
+  text-align: center;
+  font-family: Oswald, sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 2rem;
+}
+
+.AboutUsTopSection {
+    display: flex;
+    width: 90%;
+    max-width: 1126px;
+    padding: 25px 34px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 30px;
+    border: 4px solid #8BABFE;
+    margin: 0 auto 2rem;
+  }
+  
+  .aboutUsSectionText {
+    width: 100%;
+    max-width: 1038px;
+    color: #FFF;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0 auto;
+  }
+  
+  .imageGallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 1126px;
+  }
+  
+  .imageContainer {
+    aspect-ratio: 16 / 9;
+    background-color: #333;
+    border-radius: 10px;
+    border: 2px solid #8BABFE;
+  }
+  
+  .quotesSection {
+    position: relative;
+    padding: 2rem 0;
+    max-width: 1126px;
+    margin: 0 auto;
+  }
+  
+  .quotesLine {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 4px;
+    background-color: #8BABFE;
+  }
+  
+  .quotesLine.top {
+    top: 0;
+    border-radius: 0 0 2px 2px;
+  }
+  
+  .quotesLine.bottom {
+    bottom: 0;
+    border-radius: 2px 2px 0 0;
+  }
+  
+  .quotes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .quote {
+    text-align: center;
+  }
+  
+  .quote blockquote {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  
+  .quote footer {
+    font-size: 0.875rem;
+    color: #8BABFE;
+  }
+
+.meetOurTeam {
+  margin-top: 4rem;
+}
+
+.teamHeading {
+  font-family: Oswald, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.teamHeading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #FF0000;
+}
+
+.teamSection {
+  margin-top: 3rem;
+}
+
+.teamSectionHeading {
+  font-family: Oswald, sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #8BABFE;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.teamMember {
+  width: 100%;
+  max-width: 200px;
+}
+
+.memberImage {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.memberName {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.memberRole {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #8BABFE;
+}
+
+@media (max-width: 1200px) {
+  .teamGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .teamGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -14,18 +14,20 @@ const Footer = () => {
         <span className={styles.dot}>•</span>
         <Link href="/sponsors">Sponsors</Link>
         <span className={styles.dot}>•</span>
-        <Link href="/past-conferences">Past Conferences</Link>
+        <Link href="/pastConferences">Past Conferences</Link>
       </nav>
       
       <div className={styles.socialIcons}>
-        <Link href='tedx@gmail.com'><img src='/Logos/gmail.svg'></img></Link>
-        <Link href='tedx@gmail.com'><img src='/Logos/Linkedin.svg'></img></Link>
-        <Link href='tedx@gmail.com'><img src='/Logos/insta.svg'></img></Link>
+        <Link href='mailto:tedx.club@snu.edu.in' target="_blank" rel="noopener noreferrer"><img src='/Logos/gmail.svg'></img></Link>
+        <Link href='https://www.instagram.com/tedxshivnadaruniversity/' target="_blank" rel="noopener noreferrer"><img src='/Logos/Linkedin.svg'></img></Link>
+        <Link href='https://www.linkedin.com/company/tedx-snioe/mycompany/' target="_blank" rel="noopener noreferrer"><img src='/Logos/insta.svg'></img></Link>
       </div>
       
       <div className={styles.tedxLogo}>
-        <span className={styles.ted}>TED<sup>x</sup></span>
-        <span className={styles.university}>ShivNadarUniversity</span>
+        <span className={styles.ted}>
+          <img src='/Images/tedlogo.png' alt="TED Logo" className={styles.tedLogo} />
+        </span>
+        {/* <span className={styles.university}>ShivNadarUniversity</span> */}
       </div>
     </footer>
   );

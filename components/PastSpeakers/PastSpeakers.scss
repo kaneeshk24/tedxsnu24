@@ -41,11 +41,12 @@ body{
 }
 .card-list{
   // margin-top: 20;
-  width: 50%;
+  width: 49%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   background: linear-gradient(180deg, #85A4F3 3.5%, #5D72AA 100%);
+  background: black;
   top: 2797px;
   left: 120px;
   gap: 0px;
@@ -54,42 +55,44 @@ body{
   .cards{
     
     display: flex;
-    flex-direction: column;
+    position: relative;
+    // flex-direction: column;
     justify-content: center;
     align-items: center;
     // margin-top:9px;
-    margin-bottom: 0;
+    margin-bottom: -2rem;
 
     .imageHolder{
       display: flex;
+      position: relative;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      width: 350px;
-      height: 350px;  
-     margin-left: 85px;
-     border-radius: 30px;
+      width: 100%;
+      height: 100%;  
+      margin: 0;
+      border-radius: 30px;
 
     }
     .textHolder {
-      text-align: center;
-     top: 3250px;
-     left: 166px;
-     gap: 0px;
-     opacity: 0px;
-     color: black;
-     font-family: "Open Sans", sans-serif;
-     font-weight: 500;
-     font-size: 2rem;
-    
+      text-align: left;
+      z-index: 2; 
+      position: relative;
+      top: -3.9rem;
+      left: 43%;
+      opacity: 0px;
+      color: white;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 500;
+      font-size: 1.2rem;
 
     }
     .speakerImage{
-    width: 450px;
-    height: 380px;
-    border-radius: 30px;
-    
-
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      object-fit: cover;
     }
   }
   .description-holder{

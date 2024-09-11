@@ -2,7 +2,7 @@
   display: grid;
   place-items: center;
   align-content: center;
-  background-color: black; // Assuming a dark background based on your button styles
+  background-color: black;
   height: 42rem;
   margin-bottom: 6rem;
 
@@ -11,7 +11,6 @@
     position: relative;
     border-top: 7px solid #ff2b06;
     box-sizing: border-box;
-    // height: 0.3rem;
   }
 
   .line-1 {
@@ -20,7 +19,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: left;
-    // box-sizing: border-box;
     margin-top: 2rem;
   }
 
@@ -36,13 +34,13 @@
   &__past {
     width: 100%;
     max-width: 1200px;
-    padding: 0 1rem;
+    padding-top: 2rem;
     align-items: flex-start;
     align-self: stretch;
     position: relative;
     border-radius: 30px;
     background-color: rgba(139, 171, 254, 0.75);
-    height: 19.75rem;
+    height: 22rem;
 
     &--heading {
       color: white;
@@ -68,7 +66,7 @@
 
     .slick-slider {
       margin-bottom: 2rem;
-      margin-top: 2rem;
+      margin-top: 4rem;
 
       .slick-slide {
         padding: 0 10px;
@@ -83,11 +81,11 @@
         &:before {
           color: #fff;
           opacity: 1;
-          font-size: 2rem; //fix on 1440 breakpoint
+          font-size: 2rem;
         }
         position: absolute;
         top: 45%;
-        transform: translateY(-200%);
+        transform: translateY(-50%);
       }
 
       .slick-prev {
@@ -115,10 +113,18 @@
     }
 
     &--cards__image {
+      width: 140px;
+      height: 140px;
       background-color: white;
-      border-radius: 8px;
+      border-radius: 50%;
       overflow: hidden;
-      padding-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto 0;
+      position: relative;
+      z-index: 1;
+      padding: 1rem 0;
       
       img {
         width: 100%;
@@ -131,7 +137,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 2rem 0;
       margin-top: -3rem;
+
       width: 100%;
 
       &__content {
@@ -146,6 +154,7 @@
         font-size: 1.2rem;
         font-style: normal;
         font-weight: 400;
+
         transition: 0.3s ease-in-out;
 
         &:hover {
@@ -165,126 +174,122 @@
       }
     }
   }
-}
 
-@media (max-width: 1024px) {
-  .Sponsors__past .slick-slider {
-    .slick-prev {
-      left: -15px;
-    }
-    .slick-next {
-      right: -15px;
-    }
-    &--cards__image {
-      max-width: 60%;
-      margin: 0 auto;
+  @media (max-width: 1024px) {
+    &__past .slick-slider {
+      .slick-prev {
+        left: -15px;
+      }
+      .slick-next {
+        right: -15px;
+      }
+      &--cards__image {
+        max-width: 60%;
+        margin: 0 auto;
+      }
     }
   }
-}
 
-@media (max-width: 768px) {
-  .Sponsors__past {
-    &--heading {
-      font-size: 3.5rem;
-      margin-top: 1.5rem;
-      margin-bottom: 3rem;
+  @media (max-width: 768px) {
+    &__past {
+      &--heading {
+        font-size: 3.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .slick-slider {
+        .slick-prev,
+        .slick-next {
+          width: 30px;
+          height: 30px;
+
+          &:before {
+            font-size: 30px;
+          }
+        }
+        
+        .slick-dots {
+          bottom: 60px;
+        }
+
+        &--cards__image {
+          max-width: 70%;
+          margin: 0 auto;
+        }    
+      }
     }
+  }
 
-    .slick-slider {
-      .slick-prev,
-      .slick-next {
-        width: 30px;
-        height: 30px;
+  @media (max-width: 600px) {
+    &__past {
+      &--heading {
+        font-size: 3rem;
+      }
 
-        &:before {
-          font-size: 30px;
+      .slick-slider {
+        .slick-prev,
+        .slick-next {
+          display: none !important;
+        }
+        .slick-dots {
+          bottom: 40px;
+        }
+
+        &--cards__image {
+          max-width: 75%;
+          margin: 0 auto;
         }
       }
-      
-      .slick-dots {
-        bottom: 60px;
-      }
-
-      &--cards__image {
-        max-width: 70%;
-        margin: 0 auto;
-      }    
     }
   }
-}
 
-@media (max-width: 600px) {
-  .Sponsors__past {
-    &--heading {
-      font-size: 3rem;
-    }
-
-    .slick-slider {
-      .slick-prev,
-      .slick-next {
-        display: none !important;
-      }
-      .slick-dots {
-        bottom: 40px;
+  @media (max-width: 480px) {
+    &__past {
+      &--heading {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
       }
 
-      &--cards__image {
-        max-width: 75%;
-        margin: 0 auto;
-      }
-    }
-  }
-}
+      .slick-slider {
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
 
-@media (max-width: 480px) {
-  .Sponsors__past {
-    &--heading {
-      font-size: 2.5rem;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-    }
+        .slick-slide {
+          padding: 0 5px;
+        }
+        
+        .slick-dots {
+          bottom: 20px;
 
-    .slick-slider {
-      margin-bottom: 1.5rem;
-      margin-top: 1.5rem;
-
-      .slick-slide {
-        padding: 0 5px;
-      }
-      
-      .slick-dots {
-        bottom: 20px;
-
-        li {
-          button:before {
-            font-size: 10px;
+          li {
+            button:before {
+              font-size: 10px;
+            }
           }
         }
       }
-    }
 
-    &--cards__image {
-      max-width: 25%;
-      padding-top: 0.5rem;
-    }
+      &--cards__image {
+        max-width: 25%;
+        padding-top: 0.5rem;
+      }
 
-    &--button {
-      margin: 1.5rem 0;
+      &--button {
+        margin: 1.5rem 0;
+      }
     }
   }
-}
 
-@media (max-width: 360px) {
-  .Sponsors__past {
-    &--cards__image {
+  @media (max-width: 360px) {
+    &__past &--cards__image {
       max-width: 25%;
     }
   }
-}
 
-@media (max-width: 320px) {
-  .Sponsors__past {
-    &--cards__image {
+  @media (max-width: 320px) {
+    &__past &--cards__image {
       max-width: 18%;
     }
   }

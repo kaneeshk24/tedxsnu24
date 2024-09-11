@@ -36,7 +36,7 @@ function Navbar({ isSmall = false }) {
             const element = document.getElementById(id);
             element.scrollIntoView({
                 behavior: "smooth",
-                block: "start",
+            block: "start",
                 inline: "nearest",
             });
         } else {
@@ -59,10 +59,10 @@ function Navbar({ isSmall = false }) {
                     <div className="NavbarContainer__Logo">
                         <Link href="/" aria-label="Go to Home Page">
                             <Image
-                                src='/Images/TedX_logo.png'
+                                src='/Images/tedlogo.png'
                                 alt="TedX Logo"
                                 width={isSmall ? 50 : 250}
-                                height={isSmall ? 40 : 40}
+                                height={isSmall ? 24 : 24}
                                 priority
                             />
                         </Link>
@@ -113,9 +113,9 @@ function Navbar({ isSmall = false }) {
                                 : "NavbarContainer__Menu--list-item"
                                 }`}
                         >
-                            <p style={{ color: "white" }}
-                                onClick={() => scrollTo("about")}
-                            >About Us</p>
+                            <Link style={{ color: "white" }} href="/aboutus">
+                                About Us
+                            </Link>
                         </li>
                         <li
                             className={`${pathName === "/gallery"
@@ -123,9 +123,7 @@ function Navbar({ isSmall = false }) {
                                 : "NavbarContainer__Menu--list-item"
                                 }`}
                         >
-                            <p style={{ color: "white" }}
-                                onClick={() => scrollTo("sponsors")}
-                            >Sponsors</p>
+                                <Link style={{ color: "white" }} href="/sponsors">Sponsors</Link>
                         </li>
                         <li
                             className={`${pathName === "/events"
@@ -142,7 +140,7 @@ function Navbar({ isSmall = false }) {
                                 : "NavbarContainer__Menu--list-item"
                                 }`}
                         >
-                            <Link style={{ color: "red" }}  href="/contact">Contact Us</Link>
+                            <Link style={{ color: "white" }}  href="/contact">Contact Us</Link>
                         </li>
                     </ul>
                 </div>
