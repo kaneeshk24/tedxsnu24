@@ -10,7 +10,8 @@ $font-family: "Outfit", sans-serif;
 }
 
 .PastConfTitlesContainer {
-  color: $primary-color;
+
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +59,8 @@ $font-family: "Outfit", sans-serif;
     }
 
     &--year {
-      color: $primary-color;
+
+      color: white;
       text-align: center;
       font-size: clamp(2rem, 5vw, 3.25rem);
       font-family: $font-family;
@@ -68,7 +70,8 @@ $font-family: "Outfit", sans-serif;
     }
 
     &--title {
-      color: $primary-color;
+
+      color: white;
       text-align: center;
       font-size: clamp(0.875rem, 2vw, 1rem);
       font-family: $font-family;
