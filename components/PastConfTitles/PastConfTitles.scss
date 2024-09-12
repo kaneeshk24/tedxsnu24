@@ -1,68 +1,98 @@
+$breakpoint-tablet: 915px;
+$primary-color: black;
+$accent-color: #c7751e;
+$font-family: "Outfit", sans-serif;
+
+@mixin respondAt($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
 .PastConfTitlesContainer {
-  color: black;
+  color: $primary-color;
   display: flex;
-    justify-content: center;
-    // width: 100vw;
-  // justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 1rem;
+  
   &::-webkit-scrollbar {
     display: none;
   }
-   overflow-x: scroll;
-  @include respondAt(915px) {
-    border-radius: 20px;
-    border: 2px solid #c7751e;
-    // background: #212223;
+
+  @include respondAt($breakpoint-tablet) {
+    border-radius: 1.25rem;
+    border: 0.125rem solid $accent-color;
     padding: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    overflow-x: scroll;
+    margin: 0 1rem;
     justify-content: flex-start;
   }
+
   &__card {
+    margin: 0 1.5rem;
+    position: relative;
+    cursor: pointer;
+    
+    @include respondAt($breakpoint-tablet) {
+      margin: 0 1rem;
+    }
+
     &::after {
       content: "";
       display: block;
       width: 0;
-      height: 2px;
-      background-color: #c7751e;
-      transition: width 0.3s;
+      height: 0.125rem;
+      background-color: $accent-color;
+      transition: width 0.3s ease;
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     &:hover::after {
       width: 100%;
     }
-    margin: 0 3rem 0 3rem;
-    @include respondAt(915px) {
-      margin: 0 2rem 0 2rem;
-    }
+
     &--year {
-      color: black;
+      color: $primary-color;
       text-align: center;
-      font-size: 3.25rem;
-      font-family: "Outfit", sans-serif;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-family: $font-family;
       font-weight: 500;
-      margin-bottom: 0;
-      margin-top: 0;
-      @include respondAt(915px) {
-        font-size: 2rem;
-      }
+      margin: 0;
+      line-height: 1.2;
     }
+
     &--title {
-      color: black;
+      color: $primary-color;
       text-align: center;
-      font-size: 1rem;
-      font-family: "Outfit", sans-serif;
+      font-size: clamp(0.875rem, 2vw, 1rem);
+      font-family: $font-family;
       font-weight: 200;
-      margin-top: 0;
-      @include respondAt(915px) {
-        font-size: 1rem;
-        margin-bottom: 0;
-      }
+      margin: 0.5rem 0 0;
+      line-height: 1.4;
     }
   }
+
   &__divider {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: clamp(0.75rem, 2vw, 1.25rem);
+    height: clamp(0.75rem, 2vw, 1.25rem);
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .PastConfTitlesContainer {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    
+    &__card {
+      flex: 0 0 auto;
+      margin: 0 0.75rem;
+    }
   }
 }
