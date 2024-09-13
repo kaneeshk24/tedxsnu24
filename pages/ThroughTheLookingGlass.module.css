@@ -1,0 +1,263 @@
+.container {
+  border-color: rgba(255, 215, 0, 1);
+  background: linear-gradient(180deg, #000 0%, #2929A1 65.44%, #000 87.68%);
+  border-bottom-width: 2px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 102px 0 231px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 100px 0;
+  }
+}
+
+.title {
+  display: block;
+  text-align: left;
+  align-self: start;
+  margin-left: 0px;
+  margin-top: -79px;
+  color: rgba(255, 250, 205, 1);
+  white-space: nowrap;
+  text-transform: uppercase;
+  font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .title {
+    max-width: 100%;
+    font-size: 40px;
+    white-space: initial;
+  }
+}
+
+.titleEnd {
+  text-align: right;
+  align-self: end;
+  display: block;
+  margin-top: 6px;
+  color: rgba(255, 250, 205, 1);
+  white-space: nowrap;
+  text-transform: uppercase;
+  font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .titleEnd {
+    font-size: 40px;
+    margin-right: 10px;
+    white-space: initial;
+  }
+}
+
+.contentWrapper {
+  align-self: center;
+  display: flex;
+  margin-top: 21px;
+  width: 100%;
+  max-width: 1274px;
+  align-items: center;
+  gap: 40px 112px;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+  .contentWrapper {
+    max-width: 100%;
+  }
+}
+
+.description {
+  align-self: stretch;
+  width: 779px;
+  min-width: 240px;
+  color: rgba(230, 230, 250, 1);
+  flex-grow: 1;
+  margin: auto 0;
+  padding: 10px;
+  font: 400 40px/51px IM FELL English, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .description {
+    max-width: 100%;
+  }
+}
+
+.imageWrapper {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  align-items: center;
+  justify-content: start;
+  flex-grow: 1;
+  width: 255px;
+  margin: auto 0;
+  padding: 10px;
+}
+
+.image {
+  border-radius: 30px;
+  background-color: rgba(230, 230, 250, 1);
+  align-self: stretch;
+  display: flex;
+  min-height: 299px;
+  min-width: 240px;
+  width: 299px;
+  aspect-ratio: 1;
+  margin: auto 0;
+}
+
+.divider {
+  min-height: 2px;
+  margin-top: 25px;
+  width: 100%;
+  border: 2px solid rgba(255, 215, 0, 1);
+}
+
+@media (max-width: 991px) {
+  .divider {
+    max-width: 100%;
+  }
+}
+
+.speakerGrid {
+  align-self: center;
+  display: flex;
+  width: 100%;
+  max-width: 1294px;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  padding: 80px 83px;
+}
+
+@media (max-width: 991px) {
+  .speakerGrid {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.ticketsSection {
+  align-self: center;
+  z-index: 10;
+  display: flex;
+  width: 964px;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: start;
+}
+
+.ticketsContent {
+  display: flex;
+  width: 100%;
+  max-width: 1308px;
+  flex-direction: column;
+  color: rgba(230, 230, 250, 1);
+  justify-content: start;
+}
+
+@media (max-width: 991px) {
+  .ticketsContent {
+    max-width: 100%;
+  }
+}
+
+.ticketsTitle {
+  align-self: center;
+  display: flex;
+  min-height: 195px;
+  width: 848px;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 11.04px;
+  justify-content: start;
+  font: 450 138px Neue Haas Grotesk Display Pro, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .ticketsTitle {
+    font-size: 40px;
+  }
+}
+
+.grabYour {
+  align-self: stretch;
+  padding: 10px;
+}
+
+@media (max-width: 991px) {
+  .grabYour {
+    max-width: 100%;
+    font-size: 40px;
+  }
+}
+
+.ticketsSubtitle {
+  align-self: stretch;
+  margin-top: 37px;
+  width: 100%;
+  letter-spacing: 25.68px;
+  padding: 10px;
+  font: 400 321px Robuka, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .ticketsSubtitle {
+    max-width: 100%;
+    font-size: 40px;
+  }
+}
+
+.ticketButton {
+  border-radius: 30px;
+  background-color: rgba(255, 215, 0, 0.9);
+  overflow: hidden;
+  color: rgba(0, 0, 0, 1);
+  letter-spacing: 7.68px;
+  padding: 10px;
+  font: 400 96px IM FELL English, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .ticketButton {
+    font-size: 40px;
+  }
+}
+
+.speakerCard {
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 1);
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  width: 301px;
+  height: 323px;
+  flex-grow: 1;
+  margin: auto 0;
+  border: 3px solid rgba(0, 0, 0, 1);
+}
+
+.speakerCardTopLeft {
+  border-radius: 30px 0 0 0;
+}
+
+.speakerCardTopRight {
+  border-radius: 0 30px 0 0;
+}
+
+.speakerCardBottomLeft {
+  border-radius: 0 0 0 30px;
+}
+
+.speakerCardBottomRight {
+  border-radius: 0 0 30px 0;
+}
