@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&family=Open+Sans:wght@400&display=swap');
 
 
-:global(:root) {
+/* :root {
   --font-oswald: 'Oswald', sans-serif;
   --font-open-sans: 'Open Sans', sans-serif;
   --color-background: black;
@@ -11,7 +11,7 @@
   --color-accent: #ff4500;
   --color-button: #4a90e2;
   --color-button-hover: #3a7bc8;
-}
+} */
 
 .sponsorsContainer {
   background-color: var(--color-background);
