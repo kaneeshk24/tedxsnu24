@@ -56,39 +56,47 @@ function PastSpeakers() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    afterChange: (current) => setCurrentSlide(current)
+    afterChange: (current) => setCurrentSlide(current),
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
   };
 
   if (!isMounted) {
-    return null; // Or you can return a loading spinner if you want
+    return null;
   }
 
   return (
     <div className='container'>
-      <h2 className='heading'>PREVIOUS SPEAKERS</h2>
-      <div className='underline'></div>
+      <h2 className='heading'>PAST SPEAKERS</h2>
       <div className='card-holder'>
-        <div className='card-list'>
-          <Slider {...settings}>
-            {speakersData.map((speaker, index) => (
-              <div key={index} className='cards'>
-                <div className='imageHolder'>
-                  <img src={speaker.image} alt={speaker.name} className='speakerImage' />
-                </div>
-                <div className='textHolder'>
-                  <p>{speaker.name}</p>
-                </div>
+        <Slider {...settings}>
+          {speakersData.map((speaker, index) => (
+            <div key={index} className='cards'>
+              <div className='imageHolder'>
+                <img src={speaker.image} alt={speaker.name} className='speakerImage' />
               </div>
-            ))}
-          </Slider>
-        </div>
-
+              <div className='textHolder'>
+                <p className='speakerName'>{speaker.name}</p>
+                <p className='speakerTitle'>{speaker.title || 'Speaker'}</p>
+              </div>
+            </div>
+          ))}
+        </Slider>
         <div className='description'>
-          <div className='description-holder'>
-            <p>{speakersData[currentSlide].description}</p>
-          </div>
+          <p>{speakersData[currentSlide].description}</p>
         </div>
-      </div> 
+      </div>
+      <button className='viewAllButton'>View All →</button>
     </div>
   );
 }

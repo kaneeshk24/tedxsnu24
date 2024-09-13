@@ -1,126 +1,133 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
 
-
 .container {
-    background-color: black;
-    color: white;
-    padding: 2rem;
-  }
-  
-  .title {
-    font-size: 3.875rem;
-    font-weight: bold;
-    margin-bottom: 2.3rem;
-    margin-top: -2rem;
-    text-align: center;
-    font-family: var(--font-oswald);
-    letter-spacing: 0.1em;
-  }
-  
-  .titleUnderline {
-    border-bottom: 2px solid #ff0000;
-    padding-bottom: 0.25rem;
-  }
-  
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  max-width: 1200px; /* Limit the max width */
+  margin: 0 auto; /* Center the container */
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: var(--font-oswald);
+  letter-spacing: 0.1em;
+}
+
+.titleUnderline {
+  border-bottom: 2px solid #ff0000;
+  padding-bottom: 0.25rem;
+}
+
+.cardContainer {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #000;
+  font-family: var(--font-open-sans);
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
   .cardContainer {
-    display: grid;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    padding: 1rem; /* Added padding for spacing around the cards */
-    background-color: #000; /* Set the background color to black */
-    font-family: var(--font-open-sans);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 2.5rem;
   }
 
-@media (min-width: 768px) {
-    .cardContainer {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .card {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .statNumber {
+    font-size: 1.75rem; /* Smaller stat number */
+  }
+
+  .statLabel {
+    font-size: 1rem; /* Smaller label for stats */
+  }
 }
 
 .card {
-    background-color: #8BABFE;
-    color: white;
-    border-radius: 1rem; /* Increased border-radius for a more rounded look */
-    display: flex;
-    padding: 1.5rem; /* Adjusted padding for consistent spacing */
-    flex-direction: column;
-    font-size: 1.1rem; /* Adjusted font size */
-    height: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added a slight shadow for better visibility */
-    color: #FFF;
-font-family: "Open Sans";
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: 136.284%; /* 32.708px */
-letter-spacing: 0.24px;
+  background-color: #8babfe;
+  color: white;
+  border-radius: 1rem;
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  font-size: 1.1rem;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans";
 }
 
 .card p {
-    margin-bottom: 0.75rem; /* Increased margin between paragraphs */
-    line-height: 1.5; /* Added line height for better readability */
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
 }
 
-  .buttonContainer {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .button {
-    background-color: white;
-    color: black;
-    margin-top: 2rem;
-    padding: 0.5rem 1rem;
-    border-radius: 624.9375rem;
-    border: 2px solid #fff;
-    cursor: pointer;
-    border-radius: 88px;
-background: linear-gradient(97deg, #8BABFE 19.33%, #211814 100%);
+.buttonContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
+.button {
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: 2px solid #fff;
+  border-radius: 88px;
+  background: linear-gradient(97deg, #8babfe 19.33%, #211814 100%);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
 
-  }
-  
+.button:hover {
+  background: linear-gradient(97deg, #211814 19.33%, #8babfe 100%);
+  color: white;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: black;
+}
+
+@media (max-width: 767px) {
   .statsContainer {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    padding: 1rem 0; /* Padding for spacing */
-    background-color: black; /* Background color */
+    flex-direction: column; /* Stacks stats vertically on mobile */
+    gap: 1.5rem;
+  }
 }
 
 .statItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem; /* Padding between items */
-    color: #FFF;
-
-    text-align: center;
-    font-family: "Open Sans";
-    font-size: 45px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
 }
 
 .statNumber {
-    font-size: 2.25rem;
-    font-weight: bold;
-    color: white; /* White text color */
-    margin-bottom: 0.5rem; /* Space between number and label */
-    color: #FFF;
-text-align: center;
-font-family: Poppins;
-font-size: 64px;
-font-style: normal;
-font-weight: 900;
-line-height: normal;
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins";
 }
 
 .statLabel {
-    color: white; /* White label text */
-    font-size: 1.25rem;
-    font-weight: 600; /* Slightly bolder label text */
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
 }
