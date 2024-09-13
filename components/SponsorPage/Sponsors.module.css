@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&family=Open+Sans:wght@400&display=swap');
 
 
-:root {
+:global(:root) {
   --font-oswald: 'Oswald', sans-serif;
   --font-open-sans: 'Open Sans', sans-serif;
   --color-background: black;
