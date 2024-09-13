@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
+import Link from "next/link";
 import './LandingSection.scss';
 
 export default function LandingSection() {
@@ -25,7 +26,9 @@ export default function LandingSection() {
         </div>
       </div>
       <div className="sect-2">
+      <Link href="/ThroughTheLookingGlass">
           <b className="conference">CONFERENCE</b>
+      </Link>
       </div></>
     ); 
 
