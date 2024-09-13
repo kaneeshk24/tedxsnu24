@@ -3,105 +3,81 @@
   place-items: center;
   align-content: center;
   background-color: black;
-  height: 42rem;
-  margin-bottom: 6rem;
+  min-height: 100vh;
+  padding: 2rem 1rem;
 
-  .line-1-child {
-    align-self: stretch;
-    position: relative;
-    border-top: 7px solid #ff2b06;
-    box-sizing: border-box;
+  .line-1,
+  .line-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
   }
 
   .line-1 {
     width: 2.25rem;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    justify-content: left;
-    margin-top: 2rem;
+
+    &-child {
+      align-self: stretch;
+      border-top: 0.4375rem solid #ff2b06;
+    }
   }
 
   .line-2 {
     width: 5.25rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     align-items: flex-end;
-    box-sizing: border-box;
   }
-  
+
   &__past {
     width: 100%;
-    max-width: 1200px;
-    padding-top: 2rem;
-    align-items: flex-start;
-    align-self: stretch;
-    position: relative;
-    border-radius: 30px;
+    max-width: 75rem;
+    padding: 2rem 1rem;
+    border-radius: 1.875rem;
     background-color: rgba(139, 171, 254, 0.75);
-    height: 22rem;
 
     &--heading {
       color: white;
       font-family: "Bebas Neue", serif;
-      font-size: 4rem;
-      font-style: normal;
+      font-size: clamp(2rem, 5vw, 4rem);
       font-weight: 400;
-      margin-top: 2rem;
-      margin-bottom: 4rem;
-      margin-left: 36%;
-      text-align: left;
-      
-      @include respondAt(767px) {
-        font-size: 3.5rem;
-      }
-      
-      @include respondAt(480px) {
-        font-size: 3rem;
-        margin-top: 1.5rem;
-        margin-bottom: 3rem;
-      }
+      margin: 1rem 0 2rem;
+      text-align: center;
     }
 
     .slick-slider {
-      margin-bottom: 2rem;
-      margin-top: 4rem;
+      margin: 2rem 0;
 
       .slick-slide {
-        padding: 0 10px;
+        padding: 0 0.625rem;
       }
 
       .slick-prev,
       .slick-next {
         z-index: 1;
-        width: 40px;
-        height: 40px;
+        width: 2.5rem;
+        height: 2.5rem;
 
         &:before {
           color: #fff;
           opacity: 1;
           font-size: 2rem;
         }
-        position: absolute;
-        top: 45%;
-        transform: translateY(-50%);
       }
 
       .slick-prev {
-        left: -45px;
+        left: -2.8125rem;
       }
 
       .slick-next {
-        right: -45px;
+        right: -2.8125rem;
       }
 
       .slick-dots {
-        bottom: 80px;
+        bottom: 5rem;
 
         li {
           button:before {
-            font-size: 12px;
+            font-size: 0.75rem;
             color: #c7751e;
           }
           
@@ -113,19 +89,17 @@
     }
 
     &--cards__image {
-      width: 140px;
-      height: 140px;
+      width: 8.75rem;
+      height: 8.75rem;
       background-color: white;
       border-radius: 50%;
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: auto 0;
-      position: relative;
-      z-index: 1;
-      padding: 1rem 0;
-      
+      margin: 0 auto;
+      padding: 1rem;
+
       img {
         width: 100%;
         height: auto;
@@ -135,162 +109,99 @@
 
     &--button {
       display: flex;
-      align-items: center;
       justify-content: center;
-      margin: 2rem 0;
-      margin-top: -3rem;
-
-      width: 100%;
+      margin: 2rem 0 -1rem;
 
       &__content {
-        border-radius: 624.9375rem;
-        border: 2px solid #fff;
+        border-radius: 39.0625rem;
+        border: 0.125rem solid #fff;
         background: linear-gradient(96.81deg, #8babfe 19.33%, #211814);
-        width: 12rem;
         padding: 0.75rem 1.5rem;
         color: #fff;
-        text-align: center;
         font-family: "Outfit", sans-serif;
-        font-size: 1.2rem;
-        font-style: normal;
+        font-size: clamp(1rem, 2vw, 1.2rem);
         font-weight: 400;
-
         transition: 0.3s ease-in-out;
 
         &:hover {
           background: #8babfe;
         }
-
-        @include respondAt(915px) {
-          width: 10rem;
-          margin-bottom: 1rem;
-        }
-        
-        @include respondAt(480px) {
-          width: 9rem;
-          font-size: 1rem;
-          padding: 0.5rem 1rem;
-        }
       }
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 64rem) { // 1024px
     &__past .slick-slider {
       .slick-prev {
-        left: -15px;
+        left: -0.9375rem;
       }
       .slick-next {
-        right: -15px;
-      }
-      &--cards__image {
-        max-width: 60%;
-        margin: 0 auto;
+        right: -0.9375rem;
       }
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) { // 768px
     &__past {
-      &--heading {
-        font-size: 3.5rem;
-        margin-top: 1.5rem;
-        margin-bottom: 3rem;
-      }
-
       .slick-slider {
         .slick-prev,
         .slick-next {
-          width: 30px;
-          height: 30px;
+          width: 1.875rem;
+          height: 1.875rem;
 
           &:before {
-            font-size: 30px;
+            font-size: 1.875rem;
           }
         }
         
         .slick-dots {
-          bottom: 60px;
+          bottom: 3.75rem;
         }
-
-        &--cards__image {
-          max-width: 70%;
-          margin: 0 auto;
-        }    
       }
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 37.5rem) { // 600px
     &__past {
-      &--heading {
-        font-size: 3rem;
-      }
-
       .slick-slider {
         .slick-prev,
         .slick-next {
           display: none !important;
         }
         .slick-dots {
-          bottom: 40px;
-        }
-
-        &--cards__image {
-          max-width: 75%;
-          margin: 0 auto;
+          bottom: 2.5rem;
         }
       }
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 30rem) { // 480px
     &__past {
-      &--heading {
-        font-size: 2.5rem;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-      }
-
       .slick-slider {
-        margin-bottom: 1.5rem;
-        margin-top: 1.5rem;
+        margin: 1.5rem 0;
 
         .slick-slide {
-          padding: 0 5px;
+          padding: 0 0.3125rem;
         }
         
         .slick-dots {
-          bottom: 20px;
+          bottom: 1.25rem;
 
-          li {
-            button:before {
-              font-size: 10px;
-            }
+          li button:before {
+            font-size: 0.625rem;
           }
         }
       }
 
       &--cards__image {
-        max-width: 25%;
-        padding-top: 0.5rem;
+        width: 6.25rem;
+        height: 6.25rem;
+        padding: 0.5rem;
       }
 
       &--button {
-        margin: 1.5rem 0;
+        margin: 1.5rem 0 -0.5rem;
       }
-    }
-  }
-
-  @media (max-width: 360px) {
-    &__past &--cards__image {
-      max-width: 25%;
-    }
-  }
-
-  @media (max-width: 320px) {
-    &__past &--cards__image {
-      max-width: 18%;
     }
   }
 }

@@ -1,72 +1,114 @@
-.speakers_section_bg{
+:root {
+    --primary-color: #000;
+    --secondary-color: blue;
+    --accent-color: red;
+    --font-primary: 'Bebas Neue', serif;
+    --font-secondary: 'Outfit', sans-serif;
+  }
+  
+  .speakers_section_bg {
     position: relative;
     width: 100%;
     z-index: -1;
     height: 15rem;
-}
-
-.speakers_section_title{
-    position: relative;
-    left: 37rem;
-    z-index: 10;
-
-}
-
-.speakers_section_title>p{
-    color: #000;
-    font-family: Bebas Neue, serif;
-    font-size: 68px;
-    font-style: normal;
+  }
+  
+  .speakers_section_title {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .speakers_section_title > p {
+    color: var(--primary-color);
+    font-family: var(--font-primary);
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
     font-weight: 400;
-    line-height: 40px; /* 58.824% */
-    letter-spacing: 2.04px;
-    margin-bottom: 10rem;
-}
-
-.speakers_section_cards{
-    position: relative;
+    line-height: 1.2;
+    letter-spacing: 0.125rem;
+  }
+  
+  .speakers_section_cards {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
-    align-content: center;
-    left: 14rem;
     width: 100%;
-}
-
-.speakers_section_cards-det{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .speakers_section_cards-det {
     display: flex;
     flex-direction: column;
-    border: solid 2px blue;
-    width: 15rem;
-    height: 20rem;
-}
-
-.speakers_section-card2{
-    align-self: center;
-    position: relative;
-    background-color: red;
-    top: 15rem;
+    border: solid 2px var(--secondary-color);
     width: 100%;
-}
-
-.speakers_section_cards__firstname{
-    color: #000;
-    font-family: Outfit;
-    font-size: 29px;
-    font-style: normal;
+    max-width: 15rem;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .speakers_section-card2 {
+    align-self: center;
+    background-color: var(--accent-color);
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .speakers_section_cards__firstname {
+    color: var(--primary-color);
+    font-family: var(--font-secondary);
+    font-size: clamp(1.25rem, 3vw, 1.8125rem);
     font-weight: 600;
-    line-height: 40px; /* 137.931% */
-    letter-spacing: 0.87px;
-}
-
-.speakers_section_cards__lastname{
-    color: #000;
-    font-family: Outfit;
-    font-size: 28px;
-    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 0.054375rem;
+  }
+  
+  .speakers_section_cards__lastname {
+    color: var(--primary-color);
+    font-family: var(--font-secondary);
+    font-size: clamp(1.125rem, 2.8vw, 1.75rem);
     font-weight: 400;
-    line-height: 40px; /* 142.857% */
-    letter-spacing: 0.84px;
-}
-
+    line-height: 1.4;
+    letter-spacing: 0.0525rem;
+  }
+  
+  @media (max-width: 768px) {
+    .speakers_section_bg {
+      height: 10rem;
+    }
+  
+    .speakers_section_title {
+      margin-bottom: 2rem;
+    }
+  
+    .speakers_section_cards {
+      gap: 1rem;
+    }
+  
+    .speakers_section_cards-det {
+      max-width: calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .speakers_section_bg {
+      height: 8rem;
+    }
+  
+    .speakers_section_title {
+      margin-bottom: 1.5rem;
+    }
+  
+    .speakers_section_cards-det {
+      max-width: 100%;
+    }
+  
+    .speakers_section-card2 {
+      margin-top: 1.5rem;
+    }
+  }
