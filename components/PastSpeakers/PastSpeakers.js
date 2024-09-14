@@ -8,37 +8,45 @@ const speakersData = [
   {
     name: 'Kapil Dev',
     image: '/Images/PastSpeakers/kapil dev.jpg',
-    description: 'Kapil Dev description here.'
+    description: 'In organizing this event im sure a lot of you are learning so much, because life is about management.',
+    sayer:" - Seema Rao (Special Forces Trainer)"
+
   },
   {
-    name: 'Rishab',
+    name: 'Rishabh Jain',
     image: '/Images/CurrentSpeakers/rishab.png',
-    description: 'Rishab description here.'
+    description: 'The organization is great, the children are enthusiastic, the setup was beautiful. It was a good experience.',
+    sayer:"- Aastha Khanna (Intimacy Coordinator)"
   },
   {
     name: 'Ankur Warikoo',
     image: '/Images/PastSpeakers/ankur warikoo.jpg',
-    description: 'Ankur Warikoo description here.'
+    description: "I grew up watching TEDx, and I was inspired by it and wanted to Stand there at one point in my life. This was surreal and i'm just happy."
+    ,sayer:"- Aashima Mahajan (Coke Studio Singer)"
   },
   {
     name: 'Vanika Sangtani',
     image: '/Images/PastSpeakers/Vanika Sangtani.jpg',
-    description: 'Vanika Sangtani description here.'
+    description: 'The campus is beautiful, the hospitality the accommodation was perfect but most importantly the students behind the TedX conference was the highlight. '
+    ,"sayer":"-Kavita Emanuel (Social Activist) 2022"
   },
   {
     name: 'Ritika Khatnani',
     image: '/Images/PastSpeakers/ritika.JPG',
-    description: 'Ritika Khatnani description here.'
+    description: 'Coming to the campus was very nice, the auditorium was excellent. Full marks and credit to the university. '
+    ,"sayer":"-Prof Dr Sanjeev Bagai (Pediatrician and Nephrologist)"
   },
   {
     name: 'Sudhir R',
     image: '/Images/PastSpeakers/sudhir.jpg',
-    description: 'Sudhir R description here.'
+    description: "I grew up watching TEDx, and I was inspired by it and wanted to Stand there at one point in my life. This was surreal and i'm just happy."
+    ,sayer:"- Aashima Mahajan (Coke Studio Singer)"
   },
   {
     name: 'Anubha Bajaj',
     image: '/Images/CurrentSpeakers/anubha_bajaj.jpeg',
-    description: 'Anubha Bajaj description here.'
+   description: 'In organizing this event im sure a lot of you are learning so much, because life is about management.',
+    sayer:" - Seema Rao (Special Forces Trainer)"
   }
 ];
 
@@ -94,6 +102,10 @@ function PastSpeakers() {
         </Slider>
         <div className='description'>
           <p>{speakersData[currentSlide].description}</p>
+          <div className='sayer'>
+          <p>{speakersData[currentSlide].sayer}</p>
+        </div>
+        
         </div>
       </div>
       <button className='viewAllButton'>View All →</button>
