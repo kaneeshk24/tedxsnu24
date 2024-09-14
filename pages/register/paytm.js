@@ -2,24 +2,27 @@ import '../../styles/routes/google_pay.scss';
 import useTicket from '../../hooks/useTicket'
 import Link from 'next/link';
 import { useState } from 'react';
-import { payment } from '../../operations/payment.fetch';
+import { payment, updateRefCode } from '../../operations/payment.fetch';
 import { useRouter } from 'next/router';
 import BlurredSpinner from '../../components/BlurredSpinner/BlurredSpinner';
+import { v4 as uuidv4 } from 'uuid';
+import uniqid from 'uniqid';
 
 export default function PayTM() {
     const router = useRouter();
-    const { noOfPeople, setNoOfPeople, ticketPrice, setTicketPrice, snu, setSnu, nameOne, nameTwo, emailOne, emailTwo, phoneOne, phoneTwo, modeOfPayment } = useTicket();
+    const { noOfPeople, setNoOfPeople, ticketPrice, setTicketPrice, snu, setSnu, nameOne, nameTwo, emailOne, emailTwo, phoneOne, phoneTwo, modeOfPayment, setMyRefCode, refferealCode } = useTicket();
     const calculatePrice = () => {
         if (snu && noOfPeople) {
-            return '750';
+            return '700';
         } else if (snu && !noOfPeople) {
-            return '1200';
+            return '1250';
         } else if (!snu && noOfPeople) {
-            return '750';
+            return '700';
         } else {
-            return '1200';
+            return '1250';
         }
     }
+    const rC = uniqid.process('tedx-', '-2024')
     const [loading, setLoading] = useState(false);
     const [tid, setTid] = useState('');
     const handleClick = async () => {
@@ -40,7 +43,10 @@ export default function PayTM() {
             }
             setLoading(true);
             try {
+                const id = uuidv4();
+                setMyRefCode(rC);
                 const data = {
+                    'id': id,
                     'name1': nameOne,
                     'name2': nameTwo,
                     'email1': emailOne,
@@ -49,17 +55,31 @@ export default function PayTM() {
                     'phone2': phoneTwo,
                     'modeOfPayment': modeOfPayment,
                     'noOfPeople': noOfPeople ? 1 : 2,
-                    'amountPaid': noOfPeople ? 750 : 1200,
+                    'amountPaid': noOfPeople ? 700 : 1250,
                     'snu': snu,
                     'tid': tid,
                     'paymentVerified': false,
                     'emailSent': false,
+                    'referralCode': rC,
+                    'noOfTimesUsed': 0,
                 }
                 const response = await payment(data);
                 if (response.status === 200) {
-                    router.push('/register/confirm');
+                    if (refferealCode === '') {
+                        router.push('/register/confirm');
+                    } else {
+                        const res = await updateRefCode({ code: refferealCode });
+                        if (res.status === 200) {
+                            router.push('/register/confirm');
+                        } else {
+                            alert("INVALID REFERRAL CODE");
+                            setLoading(false);
+                            return;
+                        }
+                    }
                 } else {
                     alert('INTERNAL SERVER ERROR');
+                    setLoading(false);
                     return;
                 }
                 setLoading(false);
@@ -76,7 +96,7 @@ export default function PayTM() {
             <div className='GooglePay'>
                 <div className='GooglePay__qr'>
                     <p className='GooglePay__qr--text'>Scan the QR to Pay</p>
-                    <p style={{fontSize : "1rem", marginTop:"0", marginBottom:".5rem"}} className='GooglePay__qr--text'>Dwiti Deepak Modi</p>
+                    <p style={{ fontSize: "1rem", marginTop: "0", marginBottom: ".5rem" }} className='GooglePay__qr--text'>Dwiti Deepak Modi</p>
                     <img className='GooglePay__qr--image' src='/Images/Assets/paytm.jpg' />
                     <div className='GooglePay__qr--TID'>
                         <input onChange={(e) => setTid(e.target.value)} type='text' placeholder='Transaction ID' required />
@@ -97,7 +117,7 @@ export default function PayTM() {
                         </div>
                         <div className='GooglePay__details--priceDetails__ticket'>
                             <p>Ticket Price (per person)</p>
-                            <p>{snu ? '800' : '800'}</p>
+                            <p>{snu ? '750' : '750'}</p>
                         </div>
                         <div className='GooglePay__details--priceDetails__ticket'>
                             <p>Early Bird Discount</p>
