@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './ThroughTheLookingGlass.module.css';
 import SpeakerCard from './SpeakerCard';
+import { useRouter } from 'next/router';
 
 const ThroughTheLookingGlass = () => {
   const speakerPositions = [
@@ -9,6 +10,8 @@ const ThroughTheLookingGlass = () => {
     '', '', '',
     'bottomLeft', '', 'bottomRight'
   ];
+
+  const router = useRouter();
 
   return (
     <main className={styles.container}>
@@ -45,7 +48,9 @@ const ThroughTheLookingGlass = () => {
             <span style={{ letterSpacing: '9.63px' }}>t</span>s
           </p>
         </div>
-        <button className={styles.ticketButton}>tap here</button>
+        <button onClick={() => {
+          router.push('/register');
+        }} className={styles.ticketButton}>tap here</button>
       </section>
     </main>
   );

@@ -9,7 +9,7 @@ generator client {
 }
 
 model Payment {
-    id              String  @id @default(uuid())
+    id              String  @id
     name1           String  @db.VarChar(100)
     email1          String  @db.VarChar(100)
     phone1          String  @db.VarChar(100)
@@ -23,4 +23,6 @@ model Payment {
     tid             String  @default("") @db.VarChar(100)
     paymentVerified Boolean
     emailSent       Boolean
+    referralCode    String? @unique
+    noOfTimesUsed   Int?
 }
