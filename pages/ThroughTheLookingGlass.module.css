@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap');
+
 .container {
   border-color: rgba(255, 215, 0, 1);
   background: linear-gradient(180deg, #000 0%, #2929A1 65.44%, #000 87.68%);
@@ -10,7 +12,7 @@
 
 @media (max-width: 991px) {
   .container {
-    padding: 100px 0;
+    padding: 124px 0;
   }
 }
 
@@ -20,7 +22,7 @@
   align-self: start;
   margin-left: 0px;
   margin-top: -79px;
-  color: rgba(255, 250, 205, 1);
+  color: rgba(255, 250, 205, 3);
   white-space: nowrap;
   text-transform: uppercase;
   font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto, Helvetica, sans-serif;
@@ -29,7 +31,7 @@
 @media (max-width: 991px) {
   .title {
     max-width: 100%;
-    font-size: 40px;
+    font-size: 50px;
     white-space: initial;
   }
 }
@@ -39,7 +41,7 @@
   align-self: end;
   display: block;
   margin-top: 6px;
-  color: rgba(255, 250, 205, 1);
+  color: rgba(255, 250, 205, 3);
   white-space: nowrap;
   text-transform: uppercase;
   font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto, Helvetica, sans-serif;
@@ -47,7 +49,7 @@
 
 @media (max-width: 991px) {
   .titleEnd {
-    font-size: 40px;
+    font-size: 50px;
     margin-right: 10px;
     white-space: initial;
   }
@@ -56,12 +58,13 @@
 .contentWrapper {
   align-self: center;
   display: flex;
-  margin-top: 21px;
+  margin-top: 11px;
+  padding-bottom: 50px;
   width: 100%;
   max-width: 1274px;
   align-items: center;
   gap: 40px 112px;
-  justify-content: start;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -85,8 +88,12 @@
 @media (max-width: 991px) {
   .description {
     max-width: 100%;
+    font-size: 2rem;
+    text-align: center;
   }
+
 }
+
 
 .imageWrapper {
   align-self: stretch;
@@ -101,27 +108,66 @@
 }
 
 .image {
-  border-radius: 30px;
-  background-color: rgba(230, 230, 250, 1);
-  align-self: stretch;
+  border-radius: 50%; 
+  justify-content: center;       
+  align-items: center;
   display: flex;
-  min-height: 299px;
-  min-width: 240px;
+  flex-shrink: 1;
+  min-height: 199px;
+  min-width: 140px;
   width: 299px;
   aspect-ratio: 1;
   margin: auto 0;
+  background-image: url('/Images/conf24/yetToBe.png');
+  background-size: contain;     
+  background-position: center;   
+  background-repeat: no-repeat; 
+  box-shadow: 75px 30px 15px rgba(134, 211, 210, 0.7);
 }
 
 .divider {
-  min-height: 2px;
+  min-height: 0px;
   margin-top: 25px;
   width: 100%;
-  border: 2px solid rgba(255, 215, 0, 1);
+  border: 2px solid rgb(240, 215, 74);
+}
+.divider:nth-of-type(1) {
+  margin-top: -10px;
+  margin-bottom: -10px;  
+
+}
+.divider:nth-of-type(2) {
+  margin-bottom: 70px;  
+  margin-top: -15px;
+}
+.divider:nth-of-type(3) {
+  margin-top: -10px;
+}
+.divider:nth-of-type(4) {
+  margin-top: -10px;
 }
 
 @media (max-width: 991px) {
   .divider {
     max-width: 100%;
+    border: 1px solid rgb(240, 215, 74);
+
+  }
+  .divider:nth-of-type(1) {
+    margin-top: 0px;
+    margin-bottom: 0px;  
+  
+  }
+  .divider:nth-of-type(2) {
+    margin-bottom: 85px;  
+    margin-top: 0px;
+  }
+  .divider:nth-of-type(3) {
+    margin-top: 5px;
+    margin-bottom: -2px;
+  }
+  .divider:nth-of-type(4) {
+    margin-top: 0px;
   }
 }
 
@@ -130,16 +176,87 @@
   display: flex;
   width: 100%;
   max-width: 1294px;
+  min-height: 100vh;
+  font-size: 4vw; 
   align-items: center;
   justify-content: start;
   flex-wrap: wrap;
   padding: 80px 83px;
 }
+.speakerCard {
+  border-radius: 10px;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.speakerCardTopLeft {
+  background-image: url('/Images/conf24/speakers/ashvina.png');
+  content: "Ashvina";
+
+}
+.speakerCardTopRight{
+  background-image: url('/Images/conf24/speakers/pranay.png');
+  content: "Pranay";
+
+}
+.speakerCardBottomLeft{
+  background-image: url('/Images/conf24/speakers/samarth1.png');
+  content: "Samarth";
+
+}
+.speakerCardBottomRight{
+  background-image: url('/Images/conf24/notRevealed.png');
+  content: "Samarth";
+
+}
+.speakerCard {
+  position: relative; /* Necessary for absolute positioning */
+}
+
+.speakerCard .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px; /* Adjust padding as needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  color: white;
+  font-size: 12px; /* Adjust font size as needed */
+  text-align: center;
+}
+
+.speakerCardTopLeft .caption {
+  content: "Ashvina";
+}
+
+.speakerCardTopRight .caption {
+  content: "Pranay";
+}
+
+.speakerCardBottomLeft .caption {
+  content: "Samarth";
+}
+
+.speakerCardBottomRight .caption {
+  content: "Speaker not revealed yet";
+}
 
 @media (max-width: 991px) {
   .speakerGrid {
-    max-width: 100%;
-    padding: 0 20px;
+    max-width: 300px;
+    margin-top: 10px;
+    display: grid;
+    /* grid-template-columns: repeat(5, 1fr); */
+    gap: 10px 111px;
+
+  }
+  .speakerCardBottomRight{
+    background-size:auto;
+    background-position: center;
+    background-repeat: repeat;
   }
 }
 
@@ -203,17 +320,20 @@
 
 .ticketsSubtitle {
   align-self: stretch;
-  margin-top: 37px;
+  margin-top: 0px;
   width: 100%;
-  letter-spacing: 25.68px;
+  letter-spacing: 0.68px;
   padding: 10px;
-  font: 400 321px Robuka, sans-serif;
+  font: 400 321px "Almendra Display", serif;
 }
 
 @media (max-width: 991px) {
   .ticketsSubtitle {
     max-width: 100%;
-    font-size: 40px;
+    font-size: 30vw;
+    margin-top: -124px;
+    margin-left: -10px;
+    margin-bottom: -30px;
   }
 }
 
@@ -222,14 +342,18 @@
   background-color: rgba(255, 215, 0, 0.9);
   overflow: hidden;
   color: rgba(0, 0, 0, 1);
-  letter-spacing: 7.68px;
+  letter-spacing: 1;
+  text-transform: uppercase;
   padding: 10px;
   font: 400 96px IM FELL English, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 @media (max-width: 991px) {
   .ticketButton {
-    font-size: 40px;
+    font-size: 5vw;
+    padding: 5px 15px;
+    font-weight: 800;
+    text-transform: uppercase;
   }
 }
 
