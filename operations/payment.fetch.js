@@ -27,3 +27,23 @@ export async function emailSentRoute(formData) {
         body: JSON.stringify(formData),
     });
 }
+
+export async function createRefCode(formData) {
+    return fetch("/api/referralCode", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+    });
+}
+
+export async function updateRefCode(formData) {
+    return fetch("/api/updateReferalCode", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+    });
+}

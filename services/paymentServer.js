@@ -6,6 +6,19 @@ export async function createPayment(data) {
     })
 }
 
+export async function updateNoOfTimesUsed(referralCode) {
+    return db.payment.update({
+        where : {
+            referralCode : referralCode,
+        },
+        data : {
+            'noOfTimesUsed' : {
+                increment : 1,
+            }
+        }
+    })
+}
+
 export async function findPayments() {
     return db.payment.findMany();
 }
@@ -40,6 +53,14 @@ export async function fetchEmails(data) {
         select : {
             'email1' : true,
             'email2' : true,
+        }
+    })
+}
+
+export async function fetchPaymentReferralCode(code) {
+    return db.payment.findFirst({
+        where : {
+            referralCode : code,
         }
     })
 }

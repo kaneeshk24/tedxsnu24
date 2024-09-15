@@ -11,7 +11,8 @@ export default function Register() {
         setEmailOne,
         setEmailTwo,
         setPhoneOne,
-        setPhoneTwo } = useTicket();
+        setPhoneTwo,
+        setRefferalCode, } = useTicket();
     const handleClick = (isSnu) => {
         if (isSnu == 'snu') {
             setSnu(true);
@@ -27,15 +28,16 @@ export default function Register() {
     const [email2, setEmail2] = React.useState('');
     const [phone1, setPhone1] = React.useState('');
     const [phone2, setPhone2] = React.useState('');
+    const [reffereal, setRefferal] = React.useState('');
     const calculatePrice = () => {
         if (snu && noOfPeople) {
-            return '750';
+            return '700';
         } else if (snu && !noOfPeople) {
-            return '1200';
+            return '1250';
         } else if (!snu && noOfPeople) {
-            return '750';
+            return '700';
         } else {
-            return '1200';
+            return '1250';
         }
     }
     const handleSubmit = (e) => {
@@ -59,6 +61,7 @@ export default function Register() {
                     setEmailOne(email1);
                     setNameOne(name1);
                     setPhoneOne(phone1);
+                    setRefferalCode(reffereal);
                     router.push('/register/payment')
                 } else {
                     alert('Please enter a valid SNU email ID');
@@ -72,6 +75,8 @@ export default function Register() {
                     setEmailTwo(email2);
                     setNameTwo(name2);
                     setPhoneTwo(phone2);
+                    setPhoneOne(phone1);
+                    setRefferalCode(reffereal);
                     router.push('/register/payment')
                 } else {
                     alert('Please enter a valid SNU email ID');
@@ -84,6 +89,7 @@ export default function Register() {
                     setEmailOne(email1);
                     setNameOne(name1);
                     setPhoneOne(phone1);
+                    setRefferalCode(reffereal);
                     router.push('/register/payment')
                 } else {
                     alert('Please enter a valid email ID');
@@ -97,6 +103,7 @@ export default function Register() {
                     setEmailTwo(email2);
                     setNameTwo(name2);
                     setPhoneTwo(phone2);
+                    setRefferalCode(reffereal);
                     router.push('/register/payment')
                 } else {
                     alert('Please enter a valid email ID');
@@ -134,11 +141,14 @@ export default function Register() {
                                 <p>Email</p>
                                 <input onChange={(e) => setEmail1(e.target.value)} type="email" placeholder="Email Id" required />
                                 {snu ? <p className='RegisterSection__details--value__email--warn'>Please enter only snu email id</p> : <p></p>}
-
                             </div>
                             <div className='RegisterSection__details--value__phone'>
                                 <p>Mobile Number</p>
                                 <input onChange={(e) => setPhone1(e.target.value)} type="number" placeholder="Mobile Number" required />
+                            </div>
+                            <div className='RegisterSection__details--value__phone'>
+                                <p>Referral Code</p>
+                                <input onChange={(e) => setRefferal(e.target.value)} type="text" placeholder="Referral Code" required />
                             </div>
                         </div> :
                         <div className='RegisterSection__details--value'>
@@ -170,6 +180,10 @@ export default function Register() {
                                 <p>Mobile Number</p>
                                 <input onChange={(e) => setPhone2(e.target.value)} type="number" placeholder="Mobile Number" required />
                             </div>
+                            <div className='RegisterSection__details--value__phone'>
+                                <p>Referral Code</p>
+                                <input onChange={(e) => setRefferal(e.target.value)} type="text" placeholder="Referral Code" required />
+                            </div>
                         </div>
                     }
                     <div onClick={(e) => handleSubmit(e)} style={{ color: 'black' }} className='RegisterSection__details--submit'>Submit</div>
@@ -188,7 +202,7 @@ export default function Register() {
                         </div>
                         <div className='RegisterSection__amount--priceDetails__ticket'>
                             <p>Ticket Price (per person)</p>
-                            <p>{noOfPeople ? '800' : '800'}</p>
+                            <p>{noOfPeople ? '750' : '725'}</p>
                         </div>
                         <div className='RegisterSection__amount--priceDetails__ticket'>
                             <p>Early Bird Discount</p>

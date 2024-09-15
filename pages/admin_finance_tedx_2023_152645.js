@@ -66,6 +66,8 @@ export default function Admin({ payments }) {
                         <th>Mode Of Payment</th>
                         <th>TID</th>
                         <th>SNU/Non-SNU</th>
+                        <th>Referral Code</th>
+                        <th>No Of Times Used</th>
                         <th>Payment Verified</th>
                         <th>Email Sent</th>
                     </tr>
@@ -85,6 +87,8 @@ export default function Admin({ payments }) {
                                             <td>{payment["modeOfPayment"]}</td>
                                             <td>{payment["tid"]}</td>
                                             <td>{payment["snu"] ? <p>SNU Student</p> : <p>Non SNU Student</p>}</td>
+                                            <td>{payment["referralCode"]}</td>
+                                            <td>{payment["noOfTimesUsed"]}</td>
                                             <td>
                                                 {payment["paymentVerified"] ? (
                                                     <button disabled>Payment Verified</button>
@@ -123,6 +127,8 @@ export default function Admin({ payments }) {
                         <th>Mode Of Payment</th>
                         <th>TID</th>
                         <th>SNU/Non-SNU</th>
+                        <th>Referral Code</th>
+                        <th>No Of Times Used</th>
                         <th>Payment Verified</th>
                         <th>Email Sent</th>
                     </tr>
@@ -147,6 +153,8 @@ export default function Admin({ payments }) {
                                             <td>{payment["modeOfPayment"]}</td>
                                             <td>{payment["tid"]}</td>
                                             <td>{payment["snu"] ? <p>SNU Student</p> : <p>Non Snu Student</p>}</td>
+                                            <td>{payment["referralCode"]}</td>
+                                            <td>{payment["noOfTimesUsed"]}</td>
                                             <td>{payment["paymentVerified"] ? <button disabled>Payment Verified</button> : <button onClick={() => handlePayment(payment["id"])}>Mark As Verified</button>}</td>
                                             <td>{payment["emailSent"] ? <button disabled>Email Sent</button> : <button onClick={() => handleEmail(payment["id"])}>Mark as email sent</button>}</td>
                                         </tr>

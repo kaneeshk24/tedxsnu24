@@ -1,21 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
 
-
 .footer {
-  /* background-color: black; */
-  background: linear-gradient(black,black,black, maroon);
-
+  background: linear-gradient(black, black, black, maroon);
   color: white;
   padding: 2rem;
   text-align: center;
-  font-weight: 10;
   padding-top: 3rem;
 }
 
 .title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-family:   var( --font-open-sans);
+  font-family: var(--font-open-sans);
 }
 
 .nav {
@@ -27,10 +23,9 @@
 }
 
 .nav a {
-  color: #FFF;
+  color: #fff;
   font-family: "Open Sans";
   font-size: 32px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
@@ -57,9 +52,7 @@
 .ted {
   font-family: Inter;
   font-size: 48px;
-  font-style: normal;
   font-weight: 1000;
-  line-height: normal;
   color: #ff2b06;
 }
 
@@ -67,14 +60,98 @@
   color: #ff2b06;
   font-family: Inter;
   font-size: 48px;
-  font-style: normal;
   font-weight: 1000;
-  line-height: normal;}
+}
 
 .university {
-  color: #FFF;
+  color: #fff;
   font-family: Inter;
   font-size: 48px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;}
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .nav a {
+    font-size: 28px;
+  }
+
+  .ted, .university, .ted sup {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav a {
+    font-size: 24px;
+  }
+
+  .socialIcons a {
+    font-size: 1.3rem;
+  }
+
+  .ted, .university, .ted sup {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .nav a {
+    font-size: 20px;
+  }
+
+  .socialIcons a {
+    font-size: 1.2rem;
+  }
+
+  .ted, .university, .ted sup {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .nav a {
+    font-size: 18px;
+  }
+
+  .ted, .university, .ted sup {
+    font-size: 28px;
+  }
+
+  .socialIcons a {
+    font-size: 1rem;
+  }
+}

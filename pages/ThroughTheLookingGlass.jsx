@@ -2,12 +2,15 @@ import React from 'react';
 import Link from 'next/link'
 import styles from './ThroughTheLookingGlass.module.css';
 import SpeakerCard from './SpeakerCard';
+import { useRouter } from 'next/router';
 
 const ThroughTheLookingGlass = () => {
   const speakerPositions = [
     'topLeft',  'topRight',
     'bottomLeft',  'bottomRight'
   ];
+
+  const router = useRouter();
 
   return (
     <main className={styles.container}>
