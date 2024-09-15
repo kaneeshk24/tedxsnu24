@@ -25,39 +25,40 @@ const quotes = [
 ];
 
 const conferenceCore = [
-    { name: "Khushii Anand", role: "Lead Organizer", image: "/Images/Team/image.png" },
-    { name: "Dhruvin Arjun", role: "Co-organizer", image: "/Images/Team/Anahita.svg" },
-    { name: "Aditi Mohapatra", role: "Curator & Secretary", image: "/Images/Team/Anahita.svg" },
-    { name: "Ishan Das", role: "Head Of Finance & Associate Secretary", image: "/Images/Team/Anahita.svg" },
-    { name: "Aarushi Bansal", role: "Creative Director", image: "/Images/Team/Anahita.svg" },
-    { name: "Joelle x Jose", role: "Curator & Licensee", image: "/Images/Team/Anahita.svg" },
-    { name: "Ayushi Raghvendram", role: "Communication Director", image: "/path_to_image" },
-    { name: "Sai Sangeeth Murukutla", role: "Production Head", image: "/Images/Team/Anahita.svg" },
-    { name: "Aaryam Sharma", role: "Treasurer", image: "/Images/Team/Anahita.svg" },
-    { name: "Ananya Jaisani", role: "Associate Secretary", image: "/Images/Team/Anahita.svg" },
+    { name: "Anahita Anand", role: "Lead Organizer", image: "/TeamImages/Anahita.png" },
+    { name: "D Arjun", role: "Co-organizer", image: "/TeamImages/Arjun.png" },//
+    { name: "Aditi Mohapatra", role: "Curator & Secretary", image: "/TeamImages/Aditi.png" },
+    { name: "Ishan Das", role: "Head Of Finance & Associate Secretary", image: "/TeamImages/Ishan.png" },
+    { name: "Aarushi Bansal", role: "Creative Director", image: "/TeamImages/AarushiB.png" },
+    { name: "Joelle x Jose", role: "Curator & Licensee", image: "/TeamImages/Joella.png" },
+    { name: "Ayushi Raghvendram", role: "Communication Director", image: "/TeamImages/Ayushi.png" },
+    { name: "Sai Sangeeth Murukutla", role: "Production Head", image: "/TeamImages/Sai.png" },
+    { name: "Aaryam Sharma", role: "Treasurer", image: "/TeamImages/Aaryam.png" },//
+    { name: "Ananya Jaisani", role: "Associate Secretary", image: "/TeamImages/Ananya.png" },
 ];
 
 const teamLeads = [
-    { name: "Anshika Gupta", role: "Marketing Lead", image: "/Images/Team/image.png" },
-    // { name: "Aanya Anand", role: "Marketing Lead", image: "/path_to_image" },
-    // { name: "Disha Mukharjee", role: "Sponsorship Lead & Freshman Coordinator", image: "/path_to_image" },
-    // { name: "Darshil Mencha", role: "Sponsorship Lead", image: "/path_to_image" },
-    // { name: "Pratyush Bhatti", role: "Design Lead", image: "/path_to_image" },
-    // { name: "Aryan Chotaria", role: "Design Lead", image: "/path_to_image" },
+    { name: "Anshika Gupta", role: "Marketing Lead", image: "/TeamImages/Anshika.png" },
+    { name: "Aanya Anand", role: "Marketing Lead", image: "/TeamImages/Aanya.png" },
+    { name: "Dipro Mukherjee", role: "Sponsorship Lead & Freshman Coordinator", image: "/TeamImages/Dipro.png" },
+    { name: "Darpin Mevcha", role: "Sponsorship Lead", image: "/TeamImages/Darpin.png" },
+    { name: "Pratyush Bhatti", role: "Design Lead", image: "/TeamImages/Pratyush.png" },
+    { name: "Pratiroop", role: "Videography Lead", image: "/TeamImages/Pratiroop.png" },
     // { name: "Saksham Shaw", role: "Decor Lead", image: "/path_to_image" },
-    // { name: "Kamakshya Bhardwaj", role: "Decor Lead", image: "/path_to_image" },
-    // { name: "Sri Vidhrya", role: "Decor Lead", image: "/path_to_image" },
-    // { name: "A Nikhita", role: "PR Lead", image: "/path_to_image" },
-    // { name: "Shivansh Kalra", role: "Web Development Lead", image: "/path_to_image" },
-    // { name: "Karthik Gupta", role: "Web Development Lead", image: "/path_to_image" },
-    // { name: "Arushi Madaan", role: "Content Lead", image: "/path_to_image" },
+    { name: "Kamakshya Bhardwaj", role: "Decor Lead", image: "/TeamImages/Kamakhya.png"},
+    { name: "Nandhini", role: "Decor Lead", image: "/TeamImages/Nandhini.png" },
+    { name: "Rishika Anand", role: "PR Lead", image: "/TeamImages/Rishika.png" },//
+    { name: "Shivansh Kalra", role: "Web Development Lead", image: "/TeamImages/Shivansh.png" },
+    { name: "Karthik Gupta", role: "Web Development Lead", image: "/TeamImages/Kaneeshk.png" },
+    { name: "Arushi Madaan", role: "Content Lead", image: "/TeamImages/arushi.png" },//
     // { name: "Nishita Srivastava", role: "Content Lead", image: "/path_to_image" },
-    // { name: "Namitha Mehta", role: "Logistics Lead", image: "/path_to_image" },
+    { name: "Nandita Mehta", role: "Logistics Lead", image: "/TeamImages/Nandita.png" },
     // { name: "Rishav Singh", role: "Videography Lead", image: "/path_to_image" },
     // { name: "Prathamesh Gandhi", role: "Videography Lead", image: "/path_to_image" },
 ];
 
 const TeamMember = ({ name, role, image }) => (
+   
     <div className="teamMember">
         <img src={image} alt={name} className="memberImage" />
         <h3 className="memberName">{name}</h3>
