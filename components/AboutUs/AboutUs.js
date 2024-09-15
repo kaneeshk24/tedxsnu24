@@ -43,9 +43,12 @@ const teamLeads = [
     { name: "Dipro Mukherjee", role: "Sponsorship Lead & Freshman Coordinator", image: "/TeamImages/Dipro.png" },
     { name: "Darpin Mevcha", role: "Sponsorship Lead", image: "/TeamImages/Darpin.png" },
     { name: "Pratyush Bhatti", role: "Design Lead", image: "/TeamImages/Pratyush.png" },
+    { name: "Neeloy", role: "Design Lead", image: "/TeamImages/Neeloy.png" },
+
     { name: "Pratiroop", role: "Videography Lead", image: "/TeamImages/Pratiroop.png" },
+    { name: "Abhay", role: "Videography Lead", image: "/TeamImages/Abhay.png" },
     // { name: "Saksham Shaw", role: "Decor Lead", image: "/path_to_image" },
-    { name: "Kamakshya Bhardwaj", role: "Decor Lead", image: "/TeamImages/Kamakhya.png"},
+    { name: "Kamakhya Bhardwaj", role: "Decor Lead", image: "/TeamImages/Kamakhya.png"},
     { name: "Nandhini", role: "Decor Lead", image: "/TeamImages/Nandhini.png" },
     { name: "Rishika Anand", role: "PR Lead", image: "/TeamImages/Rishika.png" },//
     { name: "Shivansh Kalra", role: "Web Development Lead", image: "/TeamImages/Shivansh.png" },
