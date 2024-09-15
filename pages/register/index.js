@@ -31,11 +31,11 @@ export default function Register() {
     const [reffereal, setRefferal] = React.useState('');
     const calculatePrice = () => {
         if (snu && noOfPeople) {
-            return '700';
+            return '699';
         } else if (snu && !noOfPeople) {
             return '1250';
         } else if (!snu && noOfPeople) {
-            return '700';
+            return '699';
         } else {
             return '1250';
         }
@@ -202,7 +202,7 @@ export default function Register() {
                         </div>
                         <div className='RegisterSection__amount--priceDetails__ticket'>
                             <p>Ticket Price (Early Bird Sale)</p>
-                            <p>{noOfPeople ? '750' : '725'}</p>
+                            <p>{noOfPeople ? '699' : '725'}</p>
                         </div>
                         <hr />
                         <div className='RegisterSection__amount--priceDetails__total'>
