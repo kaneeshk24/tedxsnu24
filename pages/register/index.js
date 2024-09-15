@@ -201,12 +201,8 @@ export default function Register() {
                             <p>{noOfPeople ? '1' : '2'}</p>
                         </div>
                         <div className='RegisterSection__amount--priceDetails__ticket'>
-                            <p>Ticket Price (per person)</p>
+                            <p>Ticket Price (Early Bird Sale)</p>
                             <p>{noOfPeople ? '750' : '725'}</p>
-                        </div>
-                        <div className='RegisterSection__amount--priceDetails__ticket'>
-                            <p>Early Bird Discount</p>
-                            <p>{noOfPeople ? '-50' : '-200'}</p>
                         </div>
                         <hr />
                         <div className='RegisterSection__amount--priceDetails__total'>
