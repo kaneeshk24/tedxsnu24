@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+.container {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.heading::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: #EF4444;
+}
+
+.yearContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.year {
+  color: #FFF;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.activeYear {
+  color: #EF4444;
+}
+
+.conferenceInfo {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.conferenceHeading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: #FFF;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.speakerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.chevron {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.chevron.left {
+  transform: rotate(-135deg);
+}
+
+.chevron.right {
+  transform: rotate(45deg);
+}
+
+.speakerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.speakerCard {
+  text-align: center;
+}
+
+.speakerImage {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.speakerName {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .year {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .speakerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .year {
+    font-size: 24px;
+  }
+
+  .speakerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+/* Specific speaker grid styling */
+.speakerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.speakerCard {
+  text-align: center;
+}
+
+.imageHolder {
+  margin-bottom: 1rem;
+}
+
+.speakerImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.textHolder {
+  text-align: center;
+}
+
+.speakerName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.speakerTitle {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .year {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .speakerName {
+    font-size: 1.1rem;
+  }
+
+  .speakerTitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .speakerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .year {
+    font-size: 24px;
+  }
+
+  .speakerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .speakerName {
+    font-size: 1rem;
+  }
+
+  .speakerTitle {
+    font-size: 0.8rem;
+  }
+}
+
+/* Additional CSS for past conferences years styling */
+.past-conferences {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.years-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.years-container span {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.years-container span::after {
+  content: "•";
+  color: red;
+  margin-left: 0.5rem;
+}
+
+.years-container span:last-child::after {
+  content: "";
+}
+
+/* For mobile views */
+@media (max-width: 768px) {
+  .years-container {
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+.dot{
+    width: 12px;height: 12px;
+    fill: var(--orange-fill, #FF2B06);
+}

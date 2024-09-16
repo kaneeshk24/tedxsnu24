@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps, user }) {
             <ConfProvider>
                 <TicketProvider>
                     <Head>
-                        <title>TEDx ShivNadarIOE</title>
+                        <title>TEDx Shiv Nadar University</title>
                         <meta
                             name="description"
                             content="TEDx Shiv Nadar Insitute of Eminence Annual Conference"
