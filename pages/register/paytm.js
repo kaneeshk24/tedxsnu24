@@ -13,11 +13,11 @@ export default function PayTM() {
     const { noOfPeople, setNoOfPeople, ticketPrice, setTicketPrice, snu, setSnu, nameOne, nameTwo, emailOne, emailTwo, phoneOne, phoneTwo, modeOfPayment, setMyRefCode, refferealCode } = useTicket();
     const calculatePrice = () => {
         if (snu && noOfPeople) {
-            return '700';
+            return '699';
         } else if (snu && !noOfPeople) {
             return '1250';
         } else if (!snu && noOfPeople) {
-            return '700';
+            return '699';
         } else {
             return '1250';
         }
@@ -55,7 +55,7 @@ export default function PayTM() {
                     'phone2': phoneTwo,
                     'modeOfPayment': modeOfPayment,
                     'noOfPeople': noOfPeople ? 1 : 2,
-                    'amountPaid': noOfPeople ? 700 : 1250,
+                    'amountPaid': noOfPeople ? 699 : 1250,
                     'snu': snu,
                     'tid': tid,
                     'paymentVerified': false,
@@ -97,7 +97,7 @@ export default function PayTM() {
                 <div className='GooglePay__qr'>
                     <p className='GooglePay__qr--text'>Scan the QR to Pay</p>
                     <p style={{ fontSize: "1rem", marginTop: "0", marginBottom: ".5rem" }} className='GooglePay__qr--text'>Aditi Mohapatra</p>
-                    <img className='GooglePay__qr--image' src='/Images/Assets/aditiqr1.jpg' />
+                    <img className='GooglePay__qr--image' src='/Images/Assets/aditiqr1.png' />
                     <div className='GooglePay__qr--TID'>
                         <input onChange={(e) => setTid(e.target.value)} type='text' placeholder='Transaction ID' required />
                     </div>
@@ -117,11 +117,7 @@ export default function PayTM() {
                         </div>
                         <div className='GooglePay__details--priceDetails__ticket'>
                             <p>Ticket Price (per person)</p>
-                            <p>{snu ? '750' : '750'}</p>
-                        </div>
-                        <div className='GooglePay__details--priceDetails__ticket'>
-                            <p>Early Bird Discount</p>
-                            <p>{noOfPeople ? '-50' : '-200'}</p>
+                            <p>{snu ? '699' : '625'}</p>
                         </div>
                         <hr />
                         <div className='GooglePay__details--priceDetails__total'>
