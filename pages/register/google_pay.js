@@ -26,8 +26,10 @@ export default function GooglePay() {
     }
     const [tid, setTid] = useState('');
     const handleClick = async () => {
-        if (tid === '') {
-            alert('Please enter a vaid transaction id');
+        const isValidTid = /^\d{12}$/.test(tid);
+
+        if (!isValidTid) {
+            alert('Please enter a valid 12-digit transaction ID');
             return;
         } else {
             if (noOfPeople) {
