@@ -88,7 +88,7 @@
 @media (max-width: 991px) {
   .description {
     max-width: 100%;
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-align: center;
   }
 
@@ -193,55 +193,30 @@
 }
 
 .speakerCardTopLeft {
-  background-image: url('/Images/conf24/ashvina.jpg');
-  content: "Ashvina";
-
+  background-image: url('/Images/conf24/humaira1.jpg');
 }
 .speakerCardTopRight{
-  background-image: url('/Images/conf24/pranay.jpg');
-  content: "Pranay";
-
+  background-image: url('/Images/conf24/sudhana1.jpg');
 }
 .speakerCardBottomLeft{
-  background-image: url('/Images/conf24/samarth1.jpg');
-  content: "Samarth";
-
+  background-image: url('/Images/conf24/sampath.png');
 }
 .speakerCardBottomRight{
   background-image: url('/Images/conf24/notRevealed.png');
-  content: "Samarth";
-
 }
 .speakerCard {
   position: relative; /* Necessary for absolute positioning */
 }
 
-.speakerCard .caption {
+.caption {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 0; /* Aligns caption to the bottom */
   width: 100%;
-  padding: 5px; /* Adjust padding as needed */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  color: white;
-  font-size: 12px; /* Adjust font size as needed */
-  text-align: center;
-}
-
-.speakerCardTopLeft .caption {
-  content: "Ashvina";
-}
-
-.speakerCardTopRight .caption {
-  content: "Pranay";
-}
-
-.speakerCardBottomLeft .caption {
-  content: "Samarth";
-}
-
-.speakerCardBottomRight .caption {
-  content: "Speaker not revealed yet";
+  text-align: center; /* Centers the text */
+  color: white; /* Makes the text white */
+  font: 4 14px IM FELL English, -apple-system, Roboto, Helvetica, sans-serif;
+  padding: 10px 0; /* Padding for spacing */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
 }
 
 @media (max-width: 991px) {

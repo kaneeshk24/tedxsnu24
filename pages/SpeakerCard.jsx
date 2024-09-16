@@ -3,23 +3,24 @@ import styles from './ThroughTheLookingGlass.module.css';
 
 const SpeakerCard = ({ position }) => {
   let cardStyle = styles.speakerCard;
+  let captionText = '';
   
   switch(position) {
     case 'topLeft':
       cardStyle += ` ${styles.speakerCardTopLeft}`;
-      <div className={styles.caption}>Ashvina</div>
+      captionText = 'Humaira Mushtaq: Professional racing driver ';
       break;
     case 'topRight':
       cardStyle += ` ${styles.speakerCardTopRight}`;
-      <div className={styles.caption}>Ashvina</div>
+      captionText = 'Sudhana Shanker: A versatile Bharatnatyam performer';
       break;
     case 'bottomLeft':
       cardStyle += ` ${styles.speakerCardBottomLeft}`;
-      <div className={styles.caption}>Ashvina</div>
+      captionText = "Sampath G. : Author & editor at The Hindu";
       break;
     case 'bottomRight':
       cardStyle += ` ${styles.speakerCardBottomRight}`;
-      <div className={styles.caption}>Ashvina</div>
+      captionText = 'More To Be Revealed';
       break;
     default:
       break;
@@ -27,7 +28,9 @@ const SpeakerCard = ({ position }) => {
 
 
 
-  return <div className={cardStyle}></div> ;
+  return <div className={cardStyle}>
+    <div className={styles.caption}>{captionText}</div>
+</div> ;
 };
 
 export default SpeakerCard;
