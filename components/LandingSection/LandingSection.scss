@@ -192,13 +192,15 @@ body {
 .conference {
   position: relative;
   letter-spacing: 0.09em;
+  color: #fff;
 }
 
 .sect-2 {
   width: 100%;
-  max-width: 73rem;
-  border-radius: var(--br-11xl);
-  background-color: #fffacd;
+  background-image: url('/Images/conf24/logo24.png');
+  background-size: auto; 
+  background-position: center;
+  background-repeat: no-repeat; 
   height: 19rem;
   display: flex;
   flex-direction: row;
@@ -206,9 +208,8 @@ body {
   justify-content: center;
   margin-top: 3rem;
   margin-left: 0rem;
-  box-sizing: border-box;
   font-size: var(--font-size-45xl);
-  color: #000;
+  color: black;
   font-family: var(--font-outfit);
 }
 

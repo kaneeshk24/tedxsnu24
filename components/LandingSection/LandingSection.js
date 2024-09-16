@@ -27,7 +27,7 @@ export default function LandingSection() {
       </div>
       <div className="sect-2">
       <Link href="/ThroughTheLookingGlass">
-          <b className="conference">CONFERENCE</b>
+          <b className="conference">CONFERENCE 24'</b>
       </Link>
       </div></>
     ); 
