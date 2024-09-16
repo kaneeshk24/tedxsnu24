@@ -14,11 +14,11 @@ export default function Cash() {
     const { noOfPeople, setNoOfPeople, ticketPrice, setTicketPrice, snu, setSnu, nameOne, nameTwo, emailOne, emailTwo, phoneOne, phoneTwo, modeOfPayment, setMyRefCode, refferealCode } = useTicket();
     const calculatePrice = () => {
         if (snu && noOfPeople) {
-            return '700';
+            return '699';
         } else if (snu && !noOfPeople) {
             return '1250';
         } else if (!snu && noOfPeople) {
-            return '700';
+            return '699';
         } else {
             return '1250';
         }
@@ -51,7 +51,7 @@ export default function Cash() {
                 'phone2': phoneTwo,
                 'modeOfPayment': modeOfPayment,
                 'noOfPeople': noOfPeople ? 1 : 2,
-                'amountPaid': noOfPeople ? 700 : 1250,
+                'amountPaid': noOfPeople ? 699 : 1250,
                 'snu': snu,
                 'tid': tid,
                 'paymentVerified': false,
@@ -92,7 +92,7 @@ export default function Cash() {
             <div className='GooglePay'>
                 <div className='GooglePay__qr'>
                     <p className='GooglePay__qr--text'>Contact this number for further details</p>
-                    <p className='GooglePay__qr--text'>Dwiti - +91 93162 44424</p>
+                    <p className='GooglePay__qr--text'>Ishan - +91 96358 72209</p>
                     <p className='GooglePay__qr--text'>Aditi - +91 70084 42718</p>
                     <p onClick={() => handleClick()} className='GooglePay__qr--bottom'>Proceed</p>
                 </div>
@@ -110,11 +110,7 @@ export default function Cash() {
                         </div>
                         <div className='GooglePay__details--priceDetails__ticket'>
                             <p>Ticket Price (per person)</p>
-                            <p>{snu ? '750' : '750'}</p>
-                        </div>
-                        <div className='GooglePay__details--priceDetails__ticket'>
-                            <p>Early Bird Discount</p>
-                            <p>{noOfPeople ? '-50' : '-200'}</p>
+                            <p>{snu ? '699' : '699'}</p>
                         </div>
                         <hr />
                         <div className='GooglePay__details--priceDetails__total'>
