@@ -104,7 +104,7 @@ export default function PayTM() {
                     <p onClick={() => handleClick()} className='GooglePay__qr--bottom'>Proceed</p>
                 </div>
                 <div className='GooglePay__details'>
-                    <img className='GooglePay__details--image' src='/Images/Assets/payment.png' />
+                    <img className='GooglePay__details--image' src='../../public/Images/Assets/payment.png' />
                     <div className='GooglePay__details--priceDetails'>
                         <p>Price Details</p>
                         <div className='GooglePay__details--priceDetails__snu'>
