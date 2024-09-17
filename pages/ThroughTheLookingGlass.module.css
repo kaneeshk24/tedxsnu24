@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap");
 
 .container {
   border-color: rgba(255, 215, 0, 1);
-  background: linear-gradient(180deg, #000 0%, #2929A1 65.44%, #000 87.68%);
+  background: linear-gradient(180deg, #000 0%, #2929a1 65.44%, #000 87.68%);
   border-bottom-width: 2px;
   display: flex;
   flex-direction: column;
@@ -16,6 +16,7 @@
   }
 }
 
+/* Add ghost text animation */
 .title {
   display: block;
   text-align: left;
@@ -25,11 +26,41 @@
   color: rgba(255, 250, 205, 3);
   white-space: nowrap;
   text-transform: uppercase;
-  font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto,
+    Helvetica, sans-serif;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromLeft 2s forwards;
+  /* animation-delay: 0.7s; */
 }
 
 @media (max-width: 991px) {
   .title {
+    max-width: 100%;
+    font-size: 50px;
+    white-space: initial;
+  }
+}
+
+.titleThrough {
+  display: block;
+  text-align: left;
+  align-self: start;
+  margin-left: 0px;
+  margin-top: -79px;
+  color: rgba(255, 250, 205, 3);
+  white-space: nowrap;
+  text-transform: uppercase;
+  font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto,
+    Helvetica, sans-serif;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromLeft 2s forwards;
+  animation-delay: 0.7s;
+}
+
+@media (max-width: 991px) {
+  .titleThrough {
     max-width: 100%;
     font-size: 50px;
     white-space: initial;
@@ -44,7 +75,11 @@
   color: rgba(255, 250, 205, 3);
   white-space: nowrap;
   text-transform: uppercase;
-  font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto,
+    Helvetica, sans-serif;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromRight 2s forwards;
 }
 
 @media (max-width: 991px) {
@@ -54,6 +89,66 @@
     white-space: initial;
   }
 }
+
+.titleEndGlass {
+  text-align: right;
+  align-self: end;
+  display: block;
+  margin-top: 6px;
+  color: rgba(255, 250, 205, 3);
+  white-space: nowrap;
+  text-transform: uppercase;
+  font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto,
+    Helvetica, sans-serif;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromRight 2s forwards;
+  animation-delay: 1.3s;
+}
+@media (max-width: 991px) {
+  .titleEndGlass {
+    font-size: 50px;
+    margin-right: 10px;
+    white-space: initial;
+  }
+}
+
+/* Animation keyframes */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); /* Starts off-screen on the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Moves into place */
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); /* Starts off-screen on the right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Moves into place */
+  }
+}
+
+/* 
+.title:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+.titleEnd:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+.title:nth-of-type(2) {
+  animation-delay: 1.2s;
+}
+.titleEnd:nth-of-type(2) {
+  animation-delay: 0.3s;
+} */
 
 .contentWrapper {
   align-self: center;
@@ -82,7 +177,8 @@
   flex-grow: 1;
   margin: auto 0;
   padding: 10px;
-  font: 400 40px/51px IM FELL English, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 400 40px/51px IM FELL English, -apple-system, Roboto, Helvetica,
+    sans-serif;
 }
 
 @media (max-width: 991px) {
@@ -91,9 +187,7 @@
     font-size: 1.3rem;
     text-align: center;
   }
-
 }
-
 
 .imageWrapper {
   align-self: stretch;
@@ -108,8 +202,8 @@
 }
 
 .image {
-  border-radius: 50%; 
-  justify-content: center;       
+  border-radius: 50%;
+  justify-content: center;
   align-items: center;
   display: flex;
   flex-shrink: 1;
@@ -118,10 +212,10 @@
   width: 299px;
   aspect-ratio: 1;
   margin: auto 0;
-  background-image: url('/Images/conf24/yetToBe.png');
-  background-size: contain;     
-  background-position: center;   
-  background-repeat: no-repeat; 
+  background-image: url("/Images/conf24/yetToBe.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   box-shadow: 75px 30px 15px rgba(134, 211, 210, 0.7);
 }
 
@@ -131,18 +225,21 @@
   width: 100%;
   border: 2px solid rgb(240, 215, 74);
 }
+
 .divider:nth-of-type(1) {
   margin-top: -10px;
-  margin-bottom: -10px;  
-
+  margin-bottom: -10px;
 }
+
 .divider:nth-of-type(2) {
-  margin-bottom: 70px;  
+  margin-bottom: 70px;
   margin-top: -15px;
 }
+
 .divider:nth-of-type(3) {
   margin-top: -10px;
 }
+
 .divider:nth-of-type(4) {
   margin-top: -10px;
 }
@@ -151,15 +248,13 @@
   .divider {
     max-width: 100%;
     border: 1px solid rgb(240, 215, 74);
-
   }
   .divider:nth-of-type(1) {
     margin-top: 0px;
-    margin-bottom: 0px;  
-  
+    margin-bottom: 0px;
   }
   .divider:nth-of-type(2) {
-    margin-bottom: 85px;  
+    margin-bottom: 85px;
     margin-top: 0px;
   }
   .divider:nth-of-type(3) {
@@ -177,12 +272,13 @@
   width: 100%;
   max-width: 1294px;
   min-height: 100vh;
-  font-size: 4vw; 
+  font-size: 4vw;
   align-items: center;
   justify-content: start;
   flex-wrap: wrap;
   padding: 80px 83px;
 }
+
 .speakerCard {
   border-radius: 10px;
   aspect-ratio: 1 / 1;
@@ -193,30 +289,34 @@
 }
 
 .speakerCardTopLeft {
-  background-image: url('/Images/conf24/humaira1.jpg');
+  background-image: url("/Images/conf24/humaira1.jpg");
 }
-.speakerCardTopRight{
-  background-image: url('/Images/conf24/sudhana1.jpg');
+
+.speakerCardTopRight {
+  background-image: url("/Images/conf24/sudhana1.jpg");
 }
-.speakerCardBottomLeft{
-  background-image: url('/Images/conf24/sampath.png');
+
+.speakerCardBottomLeft {
+  background-image: url("/Images/conf24/sampath.png");
 }
-.speakerCardBottomRight{
-  background-image: url('/Images/conf24/notRevealed.png');
+
+.speakerCardBottomRight {
+  background-image: url("/Images/conf24/notRevealed.png");
 }
+
 .speakerCard {
-  position: relative; /* Necessary for absolute positioning */
+  position: relative;
 }
 
 .caption {
   position: absolute;
-  bottom: 0; /* Aligns caption to the bottom */
+  bottom: 0;
   width: 100%;
-  text-align: center; /* Centers the text */
-  color: white; /* Makes the text white */
+  text-align: center;
+  color: white;
   font: 4 14px IM FELL English, -apple-system, Roboto, Helvetica, sans-serif;
-  padding: 10px 0; /* Padding for spacing */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 991px) {
@@ -224,12 +324,10 @@
     max-width: 300px;
     margin-top: 10px;
     display: grid;
-    /* grid-template-columns: repeat(5, 1fr); */
     gap: 10px 111px;
-
   }
-  .speakerCardBottomRight{
-    background-size:auto;
+  .speakerCardBottomRight {
+    background-size: auto;
     background-position: center;
     background-repeat: repeat;
   }
@@ -272,7 +370,8 @@
   align-items: center;
   letter-spacing: 11.04px;
   justify-content: start;
-  font: 450 138px Neue Haas Grotesk Display Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 450 138px Neue Haas Grotesk Display Pro, -apple-system, Roboto,
+    Helvetica, sans-serif;
 }
 
 @media (max-width: 991px) {
