@@ -18,7 +18,9 @@ const ThroughTheLookingGlass = () => {
         <hr className={styles.divider} />
         <span className={styles.titleThrough}>Looking</span>
         <hr className={styles.divider} />
-        <span className={styles.titleEndGlass}>Glass</span>
+        <span className={styles.titleEndGlass}>
+          <span className={styles.titleEndGlassBlur}>Glass</span>
+        </span>
         <hr className={styles.divider} />
       </h1>
       <section className={styles.contentWrapper}>
