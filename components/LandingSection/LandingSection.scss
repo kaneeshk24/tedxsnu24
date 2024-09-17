@@ -237,6 +237,7 @@ body {
   }
 
   .hero-sect {
+    font-family: var(--font-poppins);
     font-size: 5rem;
   }
 
@@ -246,6 +247,7 @@ body {
     width: 40rem;
     flex-shrink: 1;
     font-size: var(--font-size-21xl);
+    font-family: var(--font-outfit);
   }
 
   .frame-parent {
@@ -308,6 +310,8 @@ body {
   }
 
   .hero-sect {
+    font-family: var(--font-poppins);
+
     font-size: 3rem;
   }
 
@@ -316,6 +320,7 @@ body {
     width: 103.5vw;
     margin-left: -0.4rem;
     font-size: var(--font-size-13xl);
+    font-family: var(--font-outfit);
   }
 
   .vector-wrapper {

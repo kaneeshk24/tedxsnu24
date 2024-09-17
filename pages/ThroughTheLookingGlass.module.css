@@ -16,6 +16,7 @@
   }
 }
 
+/* Add ghost text animation */
 .title {
   display: block;
   text-align: left;
@@ -26,6 +27,9 @@
   white-space: nowrap;
   text-transform: uppercase;
   font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: ghostText 2s forwards;
 }
 
 @media (max-width: 991px) {
@@ -45,6 +49,10 @@
   white-space: nowrap;
   text-transform: uppercase;
   font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: ghostText 2s forwards;
+  animation-delay: 0.5s;
 }
 
 @media (max-width: 991px) {
@@ -53,6 +61,32 @@
     margin-right: 10px;
     white-space: initial;
   }
+}
+
+/* Animation keyframes */
+@keyframes ghostText {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Delayed animation for each word */
+.title:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.titleEnd:nth-of-type(1) {
+  animation-delay: 1.5s;
+}
+.title:nth-of-type(2) {
+  animation-delay: 2.5s;
+}
+.titleEnd:nth-of-type(2) {
+  animation-delay: 3.5s;
 }
 
 .contentWrapper {
