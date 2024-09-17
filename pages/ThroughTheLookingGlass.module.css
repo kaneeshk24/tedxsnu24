@@ -104,7 +104,9 @@
   transform: translateX(-100%);
   animation: slideInFromRight 2s forwards;
   animation-delay: 1.3s;
+  transition: filter 0.5s ease, transform 0.5s ease; /* Smooth transition for blur and scale */
 }
+
 @media (max-width: 991px) {
   .titleEndGlass {
     font-size: 50px;
@@ -113,6 +115,11 @@
   }
 }
 
+/* Add hover state for blur effect */
+.titleEndGlass:hover {
+  filter: blur(5px); /* Apply blur effect */
+  transform: scale(1.1); /* Slightly enlarge text on hover */
+}
 /* Animation keyframes */
 @keyframes slideInFromLeft {
   0% {
