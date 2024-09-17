@@ -150,7 +150,7 @@
     filter: blur(0); /* Start with no blur */
   }
   100% {
-    filter: blur(2px); /* Apply blur gradually */
+    filter: blur(3px); /* Apply blur gradually */
   }
 }
 
@@ -221,6 +221,7 @@
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 75px 30px 15px rgba(134, 211, 210, 0.7);
+  transition: transform 0.3s ease-out; /* Add smooth transition */
 }
 
 .divider {

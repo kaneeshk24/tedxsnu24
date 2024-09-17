@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "./ThroughTheLookingGlass.module.css";
 import SpeakerCard from "./SpeakerCard";
@@ -6,8 +6,33 @@ import { useRouter } from "next/router";
 
 const ThroughTheLookingGlass = () => {
   const speakerPositions = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
-
   const router = useRouter();
+
+  // UseRef to track rotation and avoid unnecessary re-renders
+  const rotationRef = useRef(0);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const newRotation = scrollPosition * 0.4; // Adjust rotation factor for smoothness
+
+      // Use requestAnimationFrame for smooth transitions
+      requestAnimationFrame(() => {
+        rotationRef.current = newRotation;
+        if (imageRef.current) {
+          imageRef.current.style.transform = `rotate(${rotationRef.current}deg)`;
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <main className={styles.container}>
@@ -25,7 +50,8 @@ const ThroughTheLookingGlass = () => {
       </h1>
       <section className={styles.contentWrapper}>
         <div className={styles.imageWrapper}>
-          <div className={styles.image} />
+          {/* Apply the rotation to the image */}
+          <div className={styles.image} ref={imageRef} />
         </div>
         <p className={styles.description}>
           Beneath the violet twilight, an iridescent fog drifted through the
