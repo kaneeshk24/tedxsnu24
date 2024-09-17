@@ -27,14 +27,14 @@ const quotes = [
 const conferenceCore = [
     { name: "Anahita Anand", role: "Lead Organizer", image: "/TeamImages/Anahita.png" },
     { name: "D Arjun", role: "Co-organizer", image: "/TeamImages/Arjun.png" },//
-    { name: "Aditi Mohapatra", role: "Curator & Secretary", image: "/TeamImages/Aditi.png" },
-    { name: "Ishan Das", role: "Head Of Finance & Associate Secretary", image: "/TeamImages/Ishan.png" },
-    { name: "Aarushi Bansal", role: "Creative Director", image: "/TeamImages/AarushiB.png" },
+    { name: "Aditi Mohapatra", role: "Managing Director & Secretary", image: "/TeamImages/Aditi.png" },
+    { name: "Ishan Das", role: "Head Of Finance & Associate Secretary 1", image: "/TeamImages/Ishan.png" },
+    { name: "Aarushi Bansal", role: "Creative  Director", image: "/TeamImages/AarushiB.png" },
     { name: "Joelle x Jose", role: "Curator & Licensee", image: "/TeamImages/Joella.png" },
     { name: "Ayushi Raghvendram", role: "Communication Director", image: "/TeamImages/Ayushi.png" },
-    { name: "Sai Sangeeth Murukutla", role: "Production Head", image: "/TeamImages/Sai.png" },
+    { name: "Sai Sanjeeth Muralikrishna", role: "Production Head", image: "/TeamImages/Sai.png" },
     { name: "Aaryam Sharma", role: "Treasurer", image: "/TeamImages/Aaryam.png" },//
-    { name: "Ananya Jaisani", role: "Associate Secretary", image: "/TeamImages/Ananya.png" },
+    { name: "Ananya Jauhari", role: "Associate Secretary", image: "/TeamImages/Ananya.png" },
 ];
 
 const teamLeads = [
@@ -42,19 +42,20 @@ const teamLeads = [
     { name: "Aanya Anand", role: "Marketing Lead", image: "/TeamImages/Aanya.png" },
     { name: "Dipro Mukherjee", role: "Sponsorship Lead & Freshman Coordinator", image: "/TeamImages/Dipro.png" },
     { name: "Darpin Mevcha", role: "Sponsorship Lead", image: "/TeamImages/Darpin.png" },
-    { name: "Pratyush Bhatti", role: "Design Lead", image: "/TeamImages/Pratyush.png" },
+    { name: "Pratyush Bhatli", role: "Design Lead", image: "/TeamImages/Pratyush.png" },
     { name: "Neeloy", role: "Design Lead", image: "/TeamImages/Neeloy.png" },
 
-    { name: "Pratiroop", role: "Videography Lead", image: "/TeamImages/Pratiroop.png" },
-    { name: "Abhay", role: "Videography Lead", image: "/TeamImages/Abhay.png" },
+    { name: "Pratiroop Kundu", role: "Videography Lead", image: "/TeamImages/Pratiroop.png" },
+    { name: "Abhay Singh", role: "Videography Lead", image: "/TeamImages/Abhay.png" },
     // { name: "Saksham Shaw", role: "Decor Lead", image: "/path_to_image" },
     { name: "Kamakhya Bhardwaj", role: "Decor Lead", image: "/TeamImages/Kamakhya.png"},
-    { name: "Nandhini", role: "Decor Lead", image: "/TeamImages/Nandhini.png" },
+    { name: "SR Mithreyi", role: "Decor Lead", image: "/TeamImages/Mithreyi.png"},
+    { name: "Nandhini", role: "Decor Lead", image: "/TeamImages/Nandhini.png" }, //not in figma
     { name: "Rishika Anand", role: "PR Lead", image: "/TeamImages/Rishika.png" },//
     { name: "Shivansh Kalra", role: "Web Development Lead", image: "/TeamImages/Shivansh.png" },
-    { name: "Karthik Gupta", role: "Web Development Lead", image: "/TeamImages/Kaneeshk.png" },
+    { name: "Kanishk Gupta", role: "Web Development Lead", image: "/TeamImages/Kaneeshk.png" },
     { name: "Arushi Madaan", role: "Content Lead", image: "/TeamImages/arushi.png" },//
-    // { name: "Nishita Srivastava", role: "Content Lead", image: "/path_to_image" },
+    { name: "Naisha Srivastava", role: "Content Lead", image: "/TeamImages/Naisha.png" },
     { name: "Nandita Mehta", role: "Logistics Lead", image: "/TeamImages/Nandita.png" },
     // { name: "Rishav Singh", role: "Videography Lead", image: "/path_to_image" },
     // { name: "Prathamesh Gandhi", role: "Videography Lead", image: "/path_to_image" },
@@ -73,6 +74,7 @@ export default function AboutUs() {
     return (
         <div className="AboutUsPage">
             <h1 className="AboutUsHeading">ABOUT US</h1>
+            <hr style={{ width: '10rem', border: '1px solid red', marginBottom: '1.5rem', marginTop: '0' }} />
             
             <div className="AboutUsTopSection">
                 <p className="aboutUsSectionText">
@@ -89,14 +91,6 @@ export default function AboutUs() {
                 </p>
             </div>
 
-            <div className="imageGallery">
-                <div className="imageContainer"></div>
-                <div className="imageContainer"></div>
-                <div className="imageContainer"></div>
-                <div className="imageContainer"></div>
-                <div className="imageContainer"></div>
-                <div className="imageContainer"></div>
-            </div>
             
             <div className="quotesSection">
                 <div className="quotesLine top"></div>
