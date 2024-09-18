@@ -180,10 +180,7 @@ export default function Register() {
                                 <p>Mobile Number</p>
                                 <input onChange={(e) => setPhone2(e.target.value)} type="number" placeholder="Mobile Number" required />
                             </div>
-                            <div className='RegisterSection__details--value__phone'>
-                                <p>Referral Code</p>
-                                <input onChange={(e) => setRefferal(e.target.value)} type="text" placeholder="Referral Code" required />
-                            </div>
+
                         </div>
                     }
                     <div onClick={(e) => handleSubmit(e)} style={{ color: 'black' }} className='RegisterSection__details--submit'>Submit</div>

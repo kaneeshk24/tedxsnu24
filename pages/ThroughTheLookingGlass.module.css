@@ -31,6 +31,7 @@
   transform: translateX(-100%);
   animation: slideInFromLeft 2s forwards;
   /* animation-delay: 0.7s; */
+
 }
 
 @media (max-width: 991px) {
@@ -81,6 +82,7 @@
   opacity: 0;
   transform: translateX(-100%);
   animation: slideInFromRight 2s forwards;
+
 }
 
 @media (max-width: 991px) {
@@ -151,6 +153,7 @@
   100% {
     filter: blur(3px); /* Apply blur gradually */
   }
+
 }
 
 .contentWrapper {

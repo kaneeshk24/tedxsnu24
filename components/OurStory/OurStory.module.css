@@ -1,133 +1,127 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
-
-.container {
+.ourStory {
   background-color: black;
   color: white;
-  padding: 2rem;
-  max-width: 1200px; /* Limit the max width */
-  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
   text-align: center;
-  font-family: var(--font-oswald);
-  letter-spacing: 0.1em;
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: 30px;
+  font-size: 4.5rem;
+  font-weight: 600;
+  font-family: "oswald",sans-serif;
 }
 
-.titleUnderline {
-  border-bottom: 2px solid #ff0000;
-  padding-bottom: 0.25rem;
+
+.title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: #ff0000;
 }
 
-.cardContainer {
-  display: grid;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background-color: #000;
-  font-family: var(--font-open-sans);
-}
-
-/* Responsive Layout */
-@media (min-width: 768px) {
-  .cardContainer {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 767px) {
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .card {
-    font-size: 1rem; /* Adjust font size for smaller screens */
-  }
-
-  .statNumber {
-    font-size: 1.75rem; /* Smaller stat number */
-  }
-
-  .statLabel {
-    font-size: 1rem; /* Smaller label for stats */
-  }
-}
-
-.card {
-  background-color: #8babfe;
-  color: white;
-  border-radius: 1rem;
+.contentBox {
   display: flex;
-  padding: 1.5rem;
-  flex-direction: column;
-  font-size: 1.1rem;
-  height: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: "Open Sans";
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
-.card p {
-  margin-bottom: 0.75rem;
-  line-height: 1.5;
+.textBox {
+  flex: 1;
+  background-color: #85A4F3;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.buttonContainer {
-  text-align: center;
-  margin-bottom: 2rem;
+.textBox p{
+  font-size: 1.5rem;
 }
 
-.button {
-  background-color: white;
-  color: black;
-  padding: 0.5rem 1rem;
-  border: 2px solid #fff;
-  border-radius: 88px;
-  background: linear-gradient(97deg, #8babfe 19.33%, #211814 100%);
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+.mobileTextBox {
+  display: none;
+  background-color: #85A4F3;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-.button:hover {
-  background: linear-gradient(97deg, #211814 19.33%, #8babfe 100%);
+.knowMore {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #85A4F3;
   color: white;
+  border: none;
+  border-radius: 40px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 25px;
 }
 
-.statsContainer {
+.stats {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  padding: 1rem 0;
-  background-color: black;
+  margin-top: 40px;
+  margin-bottom: -40px;
 }
 
-@media (max-width: 767px) {
-  .statsContainer {
-    flex-direction: column; /* Stacks stats vertically on mobile */
-    gap: 1.5rem;
+.statItem h3 {
+  font-size: 2.5rem;
+  font-style: "poppins",sans-serif;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.statItem p {
+  margin-top: 0;
+  font-size: 2.1rem;
+  font-family: "sans-serif",sans-serif;
+  font-weight: 500;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .contentBox {
+    display: none;
   }
-}
 
-.statItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 1rem;
-}
+  .title{
+    font-size:3rem;
+  }
 
-.statNumber {
-  font-size: 2.25rem;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 0.5rem;
-  font-family: "Poppins";
-}
+  .mobileTextBox {
+    display: block;
+  }
 
-.statLabel {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: white;
+  .knowMore {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #85A4F3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  .stats {
+    flex-direction: column;
+    margin-bottom: -40px;
+  }
+
+  .statItem {
+    margin-bottom: 20px;
+  }
 }

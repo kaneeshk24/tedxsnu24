@@ -186,21 +186,15 @@ body {
   justify-content: center;
   text-align: left;
   font-size: 11.875rem;
-  font-family: var(--font-poppins);
-}
-
-.conference {
-  position: relative;
-  letter-spacing: 0.09em;
-  color: #fff;
+  font-family: "Poppins", sans-serif;
 }
 
 .sect-2 {
   width: 100%;
   background-image: url('/Images/conf24/logo24.png');
-  background-size: auto; 
+  background-size: auto;
   background-position: center;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   height: 19rem;
   display: flex;
   flex-direction: row;
@@ -211,6 +205,98 @@ body {
   font-size: var(--font-size-45xl);
   color: black;
   font-family: var(--font-outfit);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/Images/glassbroke.jpg');
+    mix-blend-mode: screen;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 19rem;
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;
+  }
+
+  &.fade-in::before {
+    opacity: 1;
+  }
+}
+.conference-button {
+  position: relative;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.09em;
+  color: #fff;
+  background-image: url('/Images/conf24/logo24.png');
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  overflow: hidden;
+  max-width: 90vw; // Responsive width
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/Images/glassbroke.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 3s ease;
+  }
+
+  &.fade-in::before {
+    opacity: 1;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.conference-text {
+  position: relative;
+  z-index: 2;
+}
+
+// Media query for mobile devices
+@media (max-width: 768px) {
+  .conference-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+// Media query for very small devices
+@media (max-width: 320px) {
+  .conference-button {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
 }
 
 /* Responsive styles */
@@ -237,6 +323,7 @@ body {
   }
 
   .hero-sect {
+    font-family: var(--font-poppins);
     font-size: 5rem;
   }
 
@@ -246,6 +333,7 @@ body {
     width: 40rem;
     flex-shrink: 1;
     font-size: var(--font-size-21xl);
+    font-family: var(--font-outfit);
   }
 
   .frame-parent {
@@ -308,6 +396,8 @@ body {
   }
 
   .hero-sect {
+    font-family: var(--font-poppins);
+
     font-size: 3rem;
   }
 
@@ -316,6 +406,7 @@ body {
     width: 103.5vw;
     margin-left: -0.4rem;
     font-size: var(--font-size-13xl);
+    font-family: var(--font-outfit);
   }
 
   .vector-wrapper {

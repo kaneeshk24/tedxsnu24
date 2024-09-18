@@ -5,6 +5,7 @@ import PastSpeakers from "../components/PastSpeakers/PastSpeakers";
 import Sponsors from "../components/Sponsors/Sponsors";
 import Stats from "../components/Stats/stats";
 import '../styles/routes/home.scss'
+import StickyFooter from "../components/sticky_footer/sticky_footer";
 function Home() {
     return (
         <>
@@ -36,6 +37,9 @@ function Home() {
                 className="SponsorsSection">
                 <Sponsors />
             </section>
+            <div className="StickyFooter">
+              <StickyFooter />
+            </div>
         </>
     )
 }
