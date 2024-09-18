@@ -1,5 +1,6 @@
 import './sticky_footer.scss'
 import Countdown from 'react-countdown';
+import Link from "next/link";
 
 
 export default function StickyFooter() {
