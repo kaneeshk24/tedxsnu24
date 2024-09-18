@@ -1,5 +1,6 @@
 .Confirm {
   .ConfirmSection {
+    background: linear-gradient(180deg, #FFF 0%, #FFF 85.5%,#FFF 95.5%, #000 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +30,7 @@
       width: 20rem;
     }
     &__thank {
-      color: red;
+      color: #7B68EE solid;
       font-family: "Inter", sans-serif;
       font-size: 2rem;
       font-weight: 500;
