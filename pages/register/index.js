@@ -148,7 +148,7 @@ export default function Register() {
                             </div>
 { snu && (
     <div className='RegisterSection__details--value__phone'>
-        <p>Referral Code</p>
+        <p>Referral Code (OPTIONAL)</p>
         <input onChange={(e) => setRefferal(e.target.value)} type="text" placeholder="Referral Code" required />
     </div>
 )}
