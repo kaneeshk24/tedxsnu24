@@ -76,7 +76,7 @@ export default function Register() {
                     setNameTwo(name2);
                     setPhoneTwo(phone2);
                     setPhoneOne(phone1);
-                    setRefferalCode(reffereal);
+                    setRefferalCode('');
                     router.push('/register/payment')
                 } else {
                     alert('Please enter a valid SNU email ID');
@@ -89,7 +89,7 @@ export default function Register() {
                     setEmailOne(email1);
                     setNameOne(name1);
                     setPhoneOne(phone1);
-                    setRefferalCode(reffereal);
+                    setRefferalCode('');
                     router.push('/register/payment')
                 } else {
                     alert('Please enter a valid email ID');
