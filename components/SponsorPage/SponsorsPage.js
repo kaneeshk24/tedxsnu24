@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Sponsors.module.css';
+import Link from 'next/link';
 
 const Sponsors = () => {
   const [startIndex, setStartIndex] = useState(0);
@@ -81,27 +82,35 @@ const Sponsors = () => {
       <h1 className={styles.title}>OUR SPONSORS</h1>
       <div className={styles.underline}></div>
       
-      <div className={styles.sponsorsGrid}>
-        <button onClick={prevSponsors} className={`${styles.navButton} ${styles.prevButton}`}>
+      <div className={styles.sponsorDiv}>
+      <button onClick={prevSponsors} className={`${styles.navButton} ${styles.prevButton}`}>
           &lt;
         </button>
+
+        <div className={styles.sponsorsGrid}>
         
         {sponsors.slice(startIndex, startIndex + sponsorsPerPage).map(sponsor => (
           <div key={sponsor.id} className={styles.sponsorItem}>
             {/* Replace with actual image component */}
             <img className={styles.placeholderImage} src={sponsor.url}>
             </img>
-          </div>
+            </div>
         ))}
         
+        
+      </div>
+
         <button onClick={nextSponsors} className={`${styles.navButton} ${styles.nextButton}`}>
           &gt;
         </button>
       </div>
       
+      
+      <Link href='/contact'> 
       <button className={styles.sponsorUsButton}>
         Sponsor Us →
       </button>
+      </Link>
     </div>
   );
 };
