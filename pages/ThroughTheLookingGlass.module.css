@@ -26,8 +26,7 @@
   color: rgba(255, 250, 205, 3);
   white-space: nowrap;
   text-transform: uppercase;
-  font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto,
-    Helvetica, sans-serif;
+  font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto, Helvetica, sans-serif;
   opacity: 0;
   transform: translateX(-100%);
   animation: slideInFromLeft 2s forwards;
