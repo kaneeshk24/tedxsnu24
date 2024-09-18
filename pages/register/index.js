@@ -103,7 +103,7 @@ export default function Register() {
                     setEmailTwo(email2);
                     setNameTwo(name2);
                     setPhoneTwo(phone2);
-                    setRefferalCode(reffereal);
+                    setRefferalCode('');
                     router.push('/register/payment')
                 } else {
                     alert('Please enter a valid email ID');
@@ -146,10 +146,12 @@ export default function Register() {
                                 <p>Mobile Number</p>
                                 <input onChange={(e) => setPhone1(e.target.value)} type="number" placeholder="Mobile Number" required />
                             </div>
-                            <div className='RegisterSection__details--value__phone'>
-                                <p>Referral Code</p>
-                                <input onChange={(e) => setRefferal(e.target.value)} type="text" placeholder="Referral Code" required />
-                            </div>
+{ snu && (
+    <div className='RegisterSection__details--value__phone'>
+        <p>Referral Code</p>
+        <input onChange={(e) => setRefferal(e.target.value)} type="text" placeholder="Referral Code" required />
+    </div>
+)}
                         </div> :
                         <div className='RegisterSection__details--value'>
                             <p>Details Student 1</p>
