@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import VanillaTilt from "vanilla-tilt";
+import VanillaTilt from 'vanilla-tilt';
 import styles from "./ThroughTheLookingGlass.module.css";
 
 const SpeakerCard = ({ position }) => {

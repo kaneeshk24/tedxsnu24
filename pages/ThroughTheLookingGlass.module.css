@@ -220,7 +220,7 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 75px 30px 15px rgba(134, 211, 210, 0.7);
+  box-shadow: 21px -19px 15px rgba(134, 211, 210, 0.7);
   transition: transform 0.3s ease-out; /* Add smooth transition */
 }
 
