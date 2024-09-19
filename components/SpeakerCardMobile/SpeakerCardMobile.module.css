@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=SUSE:wght@100..800&display=swap');
 /* General Card Styles */
 .card {
   border-radius: 10px;
@@ -52,6 +53,7 @@
 .description {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   color: white;
+  font-family: "SUSE", sans-serif;
   padding: 10px;
   text-align: center;
   opacity: 0;
