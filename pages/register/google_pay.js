@@ -57,7 +57,7 @@ export default function GooglePay() {
                     'phone2': phoneTwo,
                     'modeOfPayment': modeOfPayment,
                     'noOfPeople': noOfPeople ? 1 : 2,
-                    'amountPaid': noOfPeople ? 700 : 1250,
+                    'amountPaid': noOfPeople ? 699 : 1250,
                     'snu': snu,
                     'tid': tid,
                     'paymentVerified': false,
