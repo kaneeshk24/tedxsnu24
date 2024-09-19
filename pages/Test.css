@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px; /* Add some padding if needed */
+  align-items: center; /* Center-align the cards horizontally */
+  overflow-y: auto; /* Allow scrolling if necessary */
+  scroll-behavior: smooth; /* Smooth scrolling for a better experience */
+}

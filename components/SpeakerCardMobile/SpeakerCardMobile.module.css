@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=SUSE:wght@100..800&display=swap');
+/* General Card Styles */
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  opacity: 0; /* Initially hidden */
+  transform: scale(0.8); /* Initially smaller */
+  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+
+/* When card is in view */
+.card.inView {
+  transform: scale(1.2); /* Enlarge when in view */
+  opacity: 1;
+  transition: transform 0.8s cubic-bezier(0.5, 0.05, 0.1, 1),
+    opacity 0.8s ease-in-out;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth Fade-out */
+.card.fadeOut {
+  opacity: 0;
+  transform: scale(0.8); /* Shrink smoothly */
+  transition: transform 0.8s cubic-bezier(0.5, 0.05, 0.1, 1),
+    opacity 0.8s ease-in-out;
+}
+
+/* Image Styles */
+.imageWrapper {
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image {
+  max-width: 80vw;
+  object-fit: cover;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Description Styles */
+.description {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  font-family: "SUSE", sans-serif;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  border-radius: 10px;
+}
+
+.card.inView .description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.descriptionText {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Mobile Scroll Behavior */
+@media (max-width: 768px) {
+  .card {
+    display: flex;
+    margin-top: 15vh;
+  }
+  .image {
+    max-width: 60vw;
+  }
+  .description {
+    background: none;
+    margin-top: 0;
+  }
+}
