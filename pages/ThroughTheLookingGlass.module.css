@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 .container {
   border-color: rgba(255, 215, 0, 1);
@@ -181,8 +182,7 @@
   flex-grow: 1;
   margin: auto 0;
   padding: 10px;
-  font: 400 40px/51px IM FELL English, -apple-system, Roboto, Helvetica,
-    sans-serif;
+  font: 400 40px/51px "Oswald", sans-serif;
 }
 
 @media (max-width: 991px) {
@@ -307,7 +307,7 @@
   width: 100%;
   text-align: center;
   color: white;
-  font: 4 14px IM FELL English, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 4 14px "Oswald", sans-serif;
   padding: 10px 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
