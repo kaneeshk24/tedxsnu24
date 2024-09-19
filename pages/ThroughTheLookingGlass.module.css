@@ -150,7 +150,7 @@
     filter: blur(0); /* Start with no blur */
   }
   100% {
-    filter: blur(3px); /* Apply blur gradually */
+    filter: blur(5px); /* Apply blur gradually */
   }
 }
 
@@ -183,6 +183,14 @@
   padding: 10px;
   font: 400 40px/51px IM FELL English, -apple-system, Roboto, Helvetica,
     sans-serif;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.descriptionVisible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 991px) {
@@ -190,6 +198,8 @@
     max-width: 100%;
     font-size: 1.3rem;
     text-align: center;
+    opacity: 1; /* Ensure description is always visible on mobile */
+    transform: none; /* No animation on mobile */
   }
 }
 
