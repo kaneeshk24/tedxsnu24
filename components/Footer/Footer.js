@@ -25,7 +25,7 @@ const Footer = () => {
       
       <div className={styles.tedxLogo}>
         <span className={styles.ted}>
-          <img src='/Images/tedlogo.png' alt="TED Logo" className={styles.tedLogo} />
+          <img src='/Images/tedlogo.png' alt="TED Logo" style={{ width: '20rem', height: 'auto' }} />
         </span>
         {/* <span className={styles.university}>ShivNadarUniversity</span> */}
       </div>

@@ -45,17 +45,12 @@
   margin: 0 0.5rem;
 }
 
-
-
 .tedxLogo {
-  font-size: 1.5rem;
+/* width: 50%; */
 }
 
 .ted {
-  font-family: Inter;
-  font-size: 5vw;
-  font-weight: 1000;
-  color: #ff2b06;
+  margin: -1rem;
 }
 
 .ted sup {
@@ -85,6 +80,7 @@
   .ted, .university, .ted sup {
     font-size: 40px;
   }
+
 }
 
 @media (max-width: 992px) {
@@ -149,11 +145,12 @@
     font-size: 18px;
   }
 
-  .ted, .university, .ted sup {
+ .university, .ted sup {
     font-size: 28px;
   }
 
   .socialIcons a {
     font-size: 1rem;
   }
+
 }
