@@ -26,12 +26,12 @@
   color: rgba(255, 250, 205, 3);
   white-space: nowrap;
   text-transform: uppercase;
-  font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 500 179px Neue Haas Grotesk Display Pro, -apple-system, Roboto,
+    Helvetica, sans-serif;
   opacity: 0;
   transform: translateX(-100%);
   animation: slideInFromLeft 2s forwards;
   /* animation-delay: 0.7s; */
-
 }
 
 @media (max-width: 991px) {
@@ -82,7 +82,6 @@
   opacity: 0;
   transform: translateX(-100%);
   animation: slideInFromRight 2s forwards;
-
 }
 
 @media (max-width: 991px) {
@@ -153,7 +152,6 @@
   100% {
     filter: blur(3px); /* Apply blur gradually */
   }
-
 }
 
 .contentWrapper {
@@ -281,9 +279,10 @@
   min-height: 100vh;
   font-size: 4vw;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 80px 83px;
+  gap: 30px;
 }
 
 .speakerCard {
@@ -296,27 +295,6 @@
   transition: transform 0.2s ease-in-out, backdrop-filter 0.2s ease-in-out;
   will-change: transform; /* For performance optimization */
   border-radius: 10px;
-}
-
-.speakerCard:hover {
-  backdrop-filter: blur(100px) brightness(0.9); /* Frosted effect */
-  transform: scale(1.05); /* Slight scale effect on hover */
-}
-
-.speakerCardTopLeft {
-  background-image: url("/Images/conf24/humaira1.jpg");
-}
-
-.speakerCardTopRight {
-  background-image: url("/Images/conf24/sudhana1.jpg");
-}
-
-.speakerCardBottomLeft {
-  background-image: url("/Images/conf24/sampath.png");
-}
-
-.speakerCardBottomRight {
-  background-image: url("/Images/conf24/notRevealed.png");
 }
 
 .speakerCard {

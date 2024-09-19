@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "./ThroughTheLookingGlass.module.css";
-import SpeakerCard from "./SpeakerCard";
+import SpeakerCard from "../components/SpeakerCard/SpeakerCard";
+import SpeakerCardMobile from "../components/SpeakerCardMobile/SpeakerCardMobile";
 import { useRouter } from "next/router";
+import speakerData from "../public/Data/Speakers.json";
 
 const ThroughTheLookingGlass = () => {
   const speakerPositions = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
@@ -65,8 +67,21 @@ const ThroughTheLookingGlass = () => {
       </section>
       <hr className={styles.divider} />
       <section className={styles.speakerGrid}>
-        {speakerPositions.map((position, index) => (
-          <SpeakerCard key={index} position={position} />
+        {speakerData.map((speaker, index) => (
+          <SpeakerCard
+            key={index}
+            name={speaker.name}
+            description={speaker.description}
+            image={speaker.image}
+          />
+        ))}
+        {speakerData.map((speaker, index) => (
+          <SpeakerCardMobile
+            key={index}
+            name={speaker.name}
+            description={speaker.description}
+            image={speaker.image}
+          />
         ))}
       </section>
       <section className={styles.ticketsSection}>
