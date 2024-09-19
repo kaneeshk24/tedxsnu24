@@ -99,8 +99,8 @@ export default function PayTM() {
             <div className='GooglePay'>
                 <div className='GooglePay__qr'>
                     <p className='GooglePay__qr--text'>Scan the QR to Pay</p>
-                    <p style={{ fontSize: "1rem", marginTop: "0", marginBottom: ".5rem" }} className='GooglePay__qr--text'>Aditi Mohapatra</p>
-                    <img className='GooglePay__qr--image' src='/Images/conf24/aditiqr.jpg' />
+                    <p style={{ fontSize: "1rem", marginTop: "0", marginBottom: ".5rem" }} className='GooglePay__qr--text'>Dipro Mukherjee</p>
+                    <img className='GooglePay__qr--image' src='/Images/conf24/dipro.jpg' />
                     <div className='GooglePay__qr--TID'>
                         <input onChange={(e) => setTid(e.target.value)} type='text' placeholder='Transaction ID' required />
                     </div>
