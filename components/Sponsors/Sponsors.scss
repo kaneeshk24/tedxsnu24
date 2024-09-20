@@ -1,17 +1,17 @@
 .sponsor-carousel {
-  background-color: #4a90e2;
+  background: linear-gradient(180deg, #85A4F3 3.5%, #5D72AA 100%);
   width: 100%;
   padding: 40px 20px;
   border-radius: 10px;
   box-sizing: border-box; /* Include padding in width */
   overflow: hidden; /* Hide overflow if necessary */
 }
-
 .sponsor-carousel__title {
   color: white;
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 30px;
+  margin-top:10px;
 }
 
 .sponsor-carousel__wrapper {
@@ -20,8 +20,7 @@
 }
 
 .sponsor-carousel__container {
-  width: 100%;
-  max-width: 1200px;
+  width: 200%;
   margin: 0 auto; /* Center the container */
   box-sizing: border-box; /* Include padding in width */
 }
@@ -93,12 +92,45 @@
   }
 }
 
-@media (max-width: 768px) {
-  .sponsor-carousel {
-    &__title {
+
+  @media (max-width: 480px)  {
+    .sponsor-carousel {
+      background: linear-gradient(180deg, #85A4F3 3.5%, #5D72AA 100%);
+      border-radius: 35px;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      width:94%;
+      margin-left: 15px;
+      height: 220px;
+      border-radius: 10px;
+      box-sizing: border-box; /* Include padding in width */
+      overflow: hidden; /* Hide overflow if necessary */
+      font-family: "Oswald", sans-serif;
+    }
+  
+    .sponsor-carousel__title {
+      color: white;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      margin-top:-30px;
+      padding-top: 0px;
       font-size: 2rem;
     }
+    .sponsor-carousel__container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto; /* Center the container */
+      box-sizing: border-box; /* Include padding in width */
+    }
+  }
 
+
+@media (max-width: 768px) {
+    .sponsor-carousel {
+      &__title {
+        font-size: 2rem;
+      }
     &__item {
       img {
         width: 110px;
@@ -108,17 +140,3 @@
   }
 }
 
-@media (max-width: 480px) {
-  .sponsor-carousel {
-    &__title {
-      font-size: 1.8rem;
-    }
-
-    &__item {
-      img {
-        width: 100px;
-        height: 100px;
-      }
-    }
-  }
-}
