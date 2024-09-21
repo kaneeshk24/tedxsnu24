@@ -95,7 +95,9 @@ body {
 }
 
 .vector-icon4 {
-  width: 100%;
+  margin-left: 10px;
+  margin-bottom: 47px;
+  width: 50%;
   max-width: 11.375rem;
   height: auto;
 }
@@ -125,8 +127,7 @@ body {
   justify-content: center;
   padding: var(--padding-3xs);
   margin-top: -2.938rem;
-  margin-left: 17rem;
-  font-size: 5.625rem;
+  font-size: 5rem;
   flex-direction: row;
   display: flex;
   align-items: center;
@@ -366,7 +367,7 @@ body {
     font-size: 2rem;
     padding: var(--padding-base);
     width: 100%;
-    max-width: 19vw;
+    max-width: 100vw;
     background-size: cover;
     background-color: black;
     padding-top: 1rem;
@@ -376,11 +377,13 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    padding-left: 5px;
     margin: 0 auto;
   }
 
   .ted1 {
     left: 0rem;
+    font-size: x-large;
   }
 
   .txt-ted {
@@ -392,7 +395,9 @@ body {
 
   .vector-icon4 {
     width: 100%;
-    max-width: 4.5rem;
+    max-width: 1.5rem;
+    margin-top: 35px;
+    margin-left: 3px;
   }
 
   .hero-sect {
@@ -419,6 +424,8 @@ body {
   }
 
   .frame-parent {
+    margin: -25px ;
+    margin-bottom: -50px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
