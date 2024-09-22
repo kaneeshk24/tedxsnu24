@@ -25,7 +25,7 @@ const quotes = [
 ];
 
 const conferenceCore = [
-    { name: "Anahita Anand", role: "Lead Organizer", image: "/TeamImages/Anahita.png" },
+    { name: "Anahita Anand", role: "Lead Organizer", image: "/TeamImages/Anahita2.png" },
     { name: "D Arjun", role: "Co-organizer", image: "/TeamImages/Arjun.png" },//
     { name: "Aditi Mohapatra", role: "Managing Director & Secretary", image: "/TeamImages/Aditi.png" },
     { name: "Ishan Das", role: "Head Of Finance & Associate Secretary 1", image: "/TeamImages/Ishan.png" },
@@ -39,7 +39,7 @@ const conferenceCore = [
 
 const teamLeads = [
     { name: "Anshika Gupta", role: "Marketing Lead", image: "/TeamImages/Anshika.png" },
-    { name: "Aanya Anand", role: "Marketing Lead", image: "/TeamImages/Aanya.png" },
+    { name: "Aanya Anand", role: "Marketing Lead", image: "/TeamImages/Aanya1.png" },
     { name: "Dipro Mukherjee", role: "Sponsorship Lead & Freshman Coordinator", image: "/TeamImages/Dipro.png" },
     { name: "Darpin Mevcha", role: "Sponsorship Lead", image: "/TeamImages/Darpin.png" },
     { name: "Pratyush Bhatli", role: "Design Lead", image: "/TeamImages/Pratyush.png" },
@@ -55,7 +55,7 @@ const teamLeads = [
     { name: "Shivansh Kalra", role: "Web Development Lead", image: "/TeamImages/Shivansh.png" },
     { name: "Kanishk Gupta", role: "Web Development Lead", image: "/TeamImages/Kaneeshk.png" },
     { name: "Arushi Madaan", role: "Content Lead", image: "/TeamImages/arushi.png" },//
-    { name: "Naisha Srivastava", role: "Content Lead", image: "/TeamImages/Naisha.png" },
+    { name: "Naisha Srivastava", role: "Content Lead", image: "/TeamImages/Naisha1.png" },
     { name: "Nandita Mehta", role: "Logistics Lead", image: "/TeamImages/Nandita.png" },
     // { name: "Rishav Singh", role: "Videography Lead", image: "/path_to_image" },
     // { name: "Prathamesh Gandhi", role: "Videography Lead", image: "/path_to_image" },

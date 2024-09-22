@@ -376,6 +376,7 @@
 .grabYour {
   align-self: stretch;
   padding: 10px;
+  margin-bottom: 0;
 }
 
 @media (max-width: 991px) {
