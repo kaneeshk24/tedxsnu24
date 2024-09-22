@@ -386,13 +386,20 @@
   }
 }
 
+@font-face {
+  font-family: 'Mystery Quest';
+  src: url('/fonts/MysteryQuest-Regular.ttf') format('truetype'); /* Correct path to the font */
+  font-weight: normal;
+  font-style: normal;
+}
+
 .ticketsSubtitle {
   align-self: stretch;
   margin-top: 0px;
   width: 100%;
   letter-spacing: 0.68px;
   padding: 10px;
-  font: 400 321px "Almendra Display", serif;
+  font: 400 321px "Mystery Quest";
 }
 
 @media (max-width: 991px) {
