@@ -100,12 +100,12 @@ const ThroughTheLookingGlass = () => {
       <section className={styles.ticketsSection}>
         <div className={styles.ticketsContent}>
           <div className={styles.ticketsTitle}>
-            <h2 className={styles.grabYour}>GRAB YOUR</h2>
+            <h2 className={styles.grabYour}>Stay Tuned For</h2>
           </div>
           <p className={styles.ticketsSubtitle}>Tickets</p>
         </div>
         <Link href="/">
-          <button className={styles.ticketButton}>tap here</button>
+          <button className={styles.ticketButton}>Soon</button>
         </Link>
       </section>
     </main>
