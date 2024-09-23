@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 .container {
   border-color: rgba(255, 215, 0, 1);
@@ -182,7 +181,8 @@
   flex-grow: 1;
   margin: auto 0;
   padding: 10px;
-  font: 400 40px/51px "Oswald", sans-serif;
+  font: 400 40px/51px IM FELL English, -apple-system, Roboto, Helvetica,
+    sans-serif;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -317,7 +317,7 @@
   width: 100%;
   text-align: center;
   color: white;
-  font: 4 14px "Oswald", sans-serif;
+  font: 4 14px IM FELL English, -apple-system, Roboto, Helvetica, sans-serif;
   padding: 10px 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -386,7 +386,6 @@
 .grabYour {
   align-self: stretch;
   padding: 10px;
-  margin-bottom: 0;
 }
 
 @media (max-width: 991px) {
@@ -396,20 +395,13 @@
   }
 }
 
-@font-face {
-  font-family: 'Mystery Quest';
-  src: url('/fonts/MysteryQuest-Regular.ttf') format('truetype'); /* Correct path to the font */
-  font-weight: normal;
-  font-style: normal;
-}
-
 .ticketsSubtitle {
   align-self: stretch;
   margin-top: 0px;
   width: 100%;
   letter-spacing: 0.68px;
   padding: 10px;
-  font: 400 321px "Mystery Quest";
+  font: 400 321px "Almendra Display", serif;
 }
 
 @media (max-width: 991px) {

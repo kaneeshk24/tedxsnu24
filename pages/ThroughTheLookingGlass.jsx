@@ -1,23 +1,21 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import styles from "./ThroughTheLookingGlass.module.css";
 import SpeakerCard from "../components/SpeakerCard/SpeakerCard";
 import SpeakerCardMobile from "../components/SpeakerCardMobile/SpeakerCardMobile";
-import { useRouter } from "next/router";
+
 import speakerData from "../public/Data/Speakers.json";
 
 const ThroughTheLookingGlass = () => {
-  const speakerPositions = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
-  const router = useRouter();
-
-  // UseRef to track rotation and avoid unnecessary re-renders
   const rotationRef = useRef(0);
   const imageRef = useRef(null);
+  const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
+  const descriptionRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const newRotation = scrollPosition * 0.4; // Adjust rotation factor for smoothness
+      const newRotation = scrollPosition * 0.2; // Adjust rotation factor for smoothness
 
       // Use requestAnimationFrame for smooth transitions
       requestAnimationFrame(() => {
@@ -26,6 +24,16 @@ const ThroughTheLookingGlass = () => {
           imageRef.current.style.transform = `rotate(${rotationRef.current}deg)`;
         }
       });
+      if (descriptionRef.current) {
+        const rect = descriptionRef.current.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        if (rect.top < viewportHeight && rect.bottom > 0) {
+          setIsDescriptionVisible(true);
+        } else {
+          setIsDescriptionVisible(false);
+        }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -55,7 +63,12 @@ const ThroughTheLookingGlass = () => {
           {/* Apply the rotation to the image */}
           <div className={styles.image} ref={imageRef} />
         </div>
-        <p className={styles.description}>
+        <p
+          className={`${styles.description} ${
+            isDescriptionVisible ? styles.descriptionVisible : ""
+          }`}
+          ref={descriptionRef}
+        >
           Beneath the violet twilight, an iridescent fog drifted through the
           ancient forest, where whispers of forgotten legends intertwined with
           the rustling of leaves.
