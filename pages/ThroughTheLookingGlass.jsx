@@ -91,7 +91,7 @@ const ThroughTheLookingGlass = () => {
           </div>
           <p className={styles.ticketsSubtitle}>Tickets</p>
         </div>
-        <Link href="/register">
+        <Link href="/">
           <button className={styles.ticketButton}>tap here</button>
         </Link>
       </section>
