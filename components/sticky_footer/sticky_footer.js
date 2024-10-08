@@ -10,8 +10,8 @@ export default function StickyFooter() {
             <div className='StickyFooter__container fadeInUp-animation'>
                  <p className="StickyFooter__container--text">Conference 24'</p>
                  <Countdown className="StickyFooter__container--text" date={1729987250000} />
-                <Link href='/ThroughTheLookingGlass'>
-                 <button className="StickyFooter__container--button">Stay Tuned</button>
+                <Link href='/register'>
+                 <button className="StickyFooter__container--button">Buy Now</button>
                 </Link>
         </div>        
         </div>
