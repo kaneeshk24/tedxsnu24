@@ -15,13 +15,13 @@ export default function GooglePay() {
     const { noOfPeople, setNoOfPeople, ticketPrice, setTicketPrice, snu, setSnu, nameOne, nameTwo, emailOne, emailTwo, phoneOne, phoneTwo, modeOfPayment, refferealCode, setMyRefCode  } = useTicket();
     const calculatePrice = () => {
         if (snu && noOfPeople) {
-            return '699';
+            return '750';
         } else if (snu && !noOfPeople) {
-            return '1250';
+            return '1350';
         } else if (!snu && noOfPeople) {
-            return '699';
+            return '750';
         } else {
-            return '1250';
+            return '1350';
         }
     }
     const [tid, setTid] = useState('');
@@ -119,7 +119,7 @@ export default function GooglePay() {
                         </div>
                         <div className='GooglePay__details--priceDetails__ticket'>
                             <p>Ticket Price (per person)</p>
-                            <p>{snu ? '699' : '625'}</p>
+                            <p>{snu ? '750' : '675'}</p>
                         </div>
                         <hr />
                         <div className='GooglePay__details--priceDetails__total'>
