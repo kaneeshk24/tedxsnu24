@@ -110,7 +110,7 @@ export default function Cash() {
                         </div>
                         <div className='GooglePay__details--priceDetails__ticket'>
                             <p>Ticket Price (per person)</p>
-                            <p>{snu ? '750' : '750'}</p>
+                            <p>{snu ? '750' : '675'}</p>
                         </div>
                         <hr />
                         <div className='GooglePay__details--priceDetails__total'>
