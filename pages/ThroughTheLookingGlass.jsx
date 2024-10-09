@@ -97,6 +97,12 @@ const ThroughTheLookingGlass = () => {
           />
         ))}
       </section>
+      <section className={styles.noRefundsSection}>
+      {/* <hr className={styles.divider} /> */}
+      <p className={styles.noRefundsText}>We do not allow any refunds</p>
+      {/* <hr className={styles.divider} /> */}
+      </section>
+
       <section className={styles.ticketsSection}>
         <div className={styles.ticketsContent}>
           <div className={styles.ticketsTitle}>
@@ -108,6 +114,7 @@ const ThroughTheLookingGlass = () => {
           <button className={styles.ticketButton}>Buy Now</button>
         </Link>
       </section>
+      
     </main>
   );
 };

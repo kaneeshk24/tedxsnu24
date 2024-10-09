@@ -16,6 +16,48 @@
     padding: 124px 0;
   }
 }
+.noRefundsSection {
+  background-color: black;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noRefundsText {
+  font-size: 16px;
+  font-family: 'Arial', sans-serif; /* Use any custom font */
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background-color: yellow; /* Adjust to match the divider color */
+  width: 100%;
+  margin-left: 0; /* Ensure no extra space is added */
+}
+
+@media (min-width: 768px) {
+  .noRefundsText {
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .noRefundsText {
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
+}
+
+
 
 /* Add ghost text animation */
 .title {
