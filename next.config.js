@@ -23,7 +23,6 @@ const nextConfig = {
         ignoreDuringBuilds: true,
     },
      module.exports = {
-     ...
      optimizeFonts: false,
  },
 
