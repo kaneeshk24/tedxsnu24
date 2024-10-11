@@ -22,6 +22,10 @@ const nextConfig = {
     eslint: {
         ignoreDuringBuilds: true,
     },
+     module.exports = {
+     ...
+     optimizeFonts: false,
+ },
 
 };
 module.exports = nextConfig;
