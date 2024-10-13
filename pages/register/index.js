@@ -12,6 +12,7 @@ export default function Register() {
         setEmailTwo,
         setPhoneOne,
         setPhoneTwo,
+        setschool,
         setRefferalCode, } = useTicket();
     const handleClick = (isSnu) => {
         if (isSnu == 'snu') {
@@ -29,6 +30,9 @@ export default function Register() {
     const [phone1, setPhone1] = React.useState('');
     const [phone2, setPhone2] = React.useState('');
     const [reffereal, setRefferal] = React.useState('');
+    const [school, setSchool] = React.useState('');
+
+
     const calculatePrice = () => {
         if (snu && noOfPeople) {
             return '750';
@@ -134,6 +138,18 @@ export default function Register() {
                         <div className='RegisterSection__details--value'>
                             <p>Details Student 1</p>
                             <div className='RegisterSection__details--value__name'>
+                                {/* School/Organization field for non-SNU */}
+                                    {!snu && (
+                                        <div className='RegisterSection__details--value__school'>
+                                            <p>School/Organization</p>
+                                            <input 
+                                                onChange={(e) => setSchool(e.target.value)} 
+                                                type='text' 
+                                                placeholder='School/Organization' 
+                                                required 
+                                            />
+                                        </div>
+                                    )}
                                 <p>Full Name</p>
                                 <input onChange={(e) => setName1(e.target.value)} type='text' placeholder='Full Name' required />
                             </div>
@@ -146,12 +162,12 @@ export default function Register() {
                                 <p>Mobile Number</p>
                                 <input onChange={(e) => setPhone1(e.target.value)} type="number" placeholder="Mobile Number" required />
                             </div>
-{ snu && (
-    <div className='RegisterSection__details--value__phone'>
-        <p>Referral Code (OPTIONAL)</p>
-        <input onChange={(e) => setRefferal(e.target.value)} type="text" placeholder="Referral Code" required />
-    </div>
-)}
+                        { snu && (
+                            <div className='RegisterSection__details--value__phone'>
+                                <p>Referral Code (OPTIONAL)</p>
+                                <input onChange={(e) => setRefferal(e.target.value)} type="text" placeholder="Referral Code" required />
+                            </div>
+                        )}
                         </div> :
                         <div className='RegisterSection__details--value'>
                             <p>Details Student 1</p>

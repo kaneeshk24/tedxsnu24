@@ -24,5 +24,6 @@ model Payment {
     paymentVerified Boolean
     emailSent       Boolean
     referralCode    String? @unique
+    school          String @db.VarChar(100)
     noOfTimesUsed   Int?
 }
