@@ -15,6 +15,7 @@ export function TicketProvider({children, ...props}) {
     const [modeOfPayment, setModeOfPayment] = React.useState('');
     const [filter, setFilter] = React.useState('');
     const [refferealCode, setRefferalCode] = React.useState('');
+    const [school, setschool] = React.useState('');
     const [myRefCode, setMyRefCode] = React.useState('');
 
     const ticket = {
@@ -44,6 +45,8 @@ export function TicketProvider({children, ...props}) {
         setRefferalCode,
         myRefCode,
         setMyRefCode,
+        school,            
+        setschool,
         ...props
     }
 

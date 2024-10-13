@@ -13,7 +13,7 @@ export default function Register() {
         setPhoneOne,
         setPhoneTwo,
         setschool,
-        setRefferalCode, } = useTicket();
+        setRefferalCode } = useTicket();
     const handleClick = (isSnu) => {
         if (isSnu == 'snu') {
             setSnu(true);
@@ -93,6 +93,7 @@ export default function Register() {
                     setEmailOne(email1);
                     setNameOne(name1);
                     setPhoneOne(phone1);
+                    setschool(school);
                     setRefferalCode('');
                     router.push('/register/payment')
                 } else {
@@ -107,6 +108,7 @@ export default function Register() {
                     setEmailTwo(email2);
                     setNameTwo(name2);
                     setPhoneTwo(phone2);
+                    setschool(school);
                     setRefferalCode('');
                     router.push('/register/payment')
                 } else {
@@ -143,7 +145,7 @@ export default function Register() {
                                         <div className='RegisterSection__details--value__school'>
                                             <p>School/Organization</p>
                                             <input 
-                                                onChange={(e) => setSchool(e.target.value)} 
+                                                onChange={(e) => setschool(e.target.value)} 
                                                 type='text' 
                                                 placeholder='School/Organization' 
                                                 required 

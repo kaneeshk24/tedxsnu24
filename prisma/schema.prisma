@@ -12,6 +12,7 @@ model Payment {
     id              String  @id
     name1           String  @db.VarChar(100)
     email1          String  @db.VarChar(100)
+    school          String  @db.VarChar(100)
     phone1          String  @db.VarChar(100)
     name2           String  @default("") @db.VarChar(100)
     email2          String  @default("") @db.VarChar(100)
@@ -24,6 +25,5 @@ model Payment {
     paymentVerified Boolean
     emailSent       Boolean
     referralCode    String? @unique
-    school          String @db.VarChar(100)
     noOfTimesUsed   Int?
 }
