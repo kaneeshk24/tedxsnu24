@@ -70,7 +70,15 @@ body {
   color: #fff;
   flex-shrink: 1;
 }
-
+@media (min-width: 780px){
+  .ted {
+    font-size: smaller;
+  }
+  
+  .ted1 {
+    font-size: smaller;
+  }
+}
 .txt-ted,
 .txt-ted-wrapper {
   display: flex;
