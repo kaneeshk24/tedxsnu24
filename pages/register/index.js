@@ -12,7 +12,6 @@ export default function Register() {
         setEmailTwo,
         setPhoneOne,
         setPhoneTwo,
-        setschool,
         setRefferalCode } = useTicket();
     const handleClick = (isSnu) => {
         if (isSnu == 'snu') {
@@ -30,7 +29,6 @@ export default function Register() {
     const [phone1, setPhone1] = React.useState('');
     const [phone2, setPhone2] = React.useState('');
     const [reffereal, setRefferal] = React.useState('');
-    const [school, setSchool] = React.useState('');
 
 
     const calculatePrice = () => {
@@ -93,7 +91,6 @@ export default function Register() {
                     setEmailOne(email1);
                     setNameOne(name1);
                     setPhoneOne(phone1);
-                    setschool(school);
                     setRefferalCode('');
                     router.push('/register/payment')
                 } else {
@@ -108,7 +105,6 @@ export default function Register() {
                     setEmailTwo(email2);
                     setNameTwo(name2);
                     setPhoneTwo(phone2);
-                    setschool(school);
                     setRefferalCode('');
                     router.push('/register/payment')
                 } else {
@@ -140,18 +136,6 @@ export default function Register() {
                         <div className='RegisterSection__details--value'>
                             <p>Details Student 1</p>
                             <div className='RegisterSection__details--value__name'>
-                                {/* School/Organization field for non-SNU */}
-                                    {!snu && (
-                                        <div className='RegisterSection__details--value__school'>
-                                            <p>School/Organization</p>
-                                            <input 
-                                                onChange={(e) => setschool(e.target.value)} 
-                                                type='text' 
-                                                placeholder='School/Organization' 
-                                                required 
-                                            />
-                                        </div>
-                                    )}
                                 <p>Full Name</p>
                                 <input onChange={(e) => setName1(e.target.value)} type='text' placeholder='Full Name' required />
                             </div>
