@@ -210,6 +210,11 @@ export default function Register() {
                             <p>Total Amount</p>
                             <p>{calculatePrice()}</p>
                         </div>
+                        <div >
+                            <p style={{ fontSize: '12px', textAlign: 'left', marginTop: '10px' }}>
+                                *Tickets once purchased cannot be refunded.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
