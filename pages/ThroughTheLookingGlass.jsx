@@ -99,7 +99,6 @@ const ThroughTheLookingGlass = () => {
       </section>
       <section className={styles.noRefundsSection}>
       {/* <hr className={styles.divider} /> */}
-      <p className={styles.noRefundsText}>We do not allow any refunds</p>
       {/* <hr className={styles.divider} /> */}
       </section>
 
