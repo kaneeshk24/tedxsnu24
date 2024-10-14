@@ -28,7 +28,7 @@ export default function Payment() {
         }
     }
     const [mop, setMop] = React.useState('');
-    const { noOfPeople, setNoOfPeople, ticketPrice, setTicketPrice, snu, setSnu, setModeOfPayment , emailTwo, setschool} = useTicket();
+    const { noOfPeople, setNoOfPeople, ticketPrice, setTicketPrice, snu, setSnu, setModeOfPayment , emailTwo} = useTicket();
     return (
         <div className='PaymentContainer'>
             <div className='PaymentContainer__option'>
