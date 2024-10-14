@@ -7,7 +7,6 @@ const SpeakerCard = ({ name, image, description }) => {
   const cardRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
 
-
   useEffect(() => {
     // Initialize Vanilla Tilt for desktop view (above 768px)
     if (window.innerWidth > 768 && cardRef.current) {
@@ -28,10 +27,10 @@ const SpeakerCard = ({ name, image, description }) => {
       <div className={styles.imageWrapperd}>
         <img src={image} alt="Speaker" className={styles.imaged} />
       </div>
-      <div className={styles.descriptiond}>
+      {/* <div className={styles.descriptiond}>
         <p className={styles.named}>{name}</p>
         <p className={styles.descriptionTextd}>{description}</p>
-      </div>
+      </div> */}
     </div>
   );
 };

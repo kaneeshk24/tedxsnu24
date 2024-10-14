@@ -38,10 +38,10 @@ const SpeakerCardMobile = ({ name, image, description }) => {
       <div className={styles.imageWrapper}>
         <img src={image} alt="Speaker" className={styles.image} />
       </div>
-      <div className={styles.description}>
+      {/* <div className={styles.description}>
         <p className={styles.name}>{name}</p>
         <p className={styles.descriptionText}>{description}</p>
-      </div>
+      </div> */}
     </div>
   );
 };
