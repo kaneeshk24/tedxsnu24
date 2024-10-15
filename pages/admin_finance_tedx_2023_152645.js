@@ -308,14 +308,10 @@ export default function Admin({ payments }) {
 }
 
 export async function getServerSideProps(context) {
-    try {
-        const response = await findPayments();
-        return {
-            props: {
-                payments: response,
-            }
+    const response = await findPayments();
+    return {
+        props: {
+            payments: response,
         }
-    } catch (error) {
-        
     }
 }
