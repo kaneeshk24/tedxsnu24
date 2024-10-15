@@ -20,7 +20,7 @@
 
 /* Glass Effect for the Image */
 .imageWrapperd {
-  padding: 20px;
+  padding: 10px;
 
   overflow: hidden;
   border-radius: 10px;
@@ -47,7 +47,7 @@
   ); /* Slightly more opaque for better readability */
   color: white;
 
-  padding: 10px;
+  padding: 0px;
   text-align: center;
   opacity: 0;
   transform: translateY(100%);

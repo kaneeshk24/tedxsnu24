@@ -2,21 +2,31 @@
   {
     "name": "Humaira Mushtaq",
     "description": "Professional racing driver",
-    "image": "/Images/conf24/humaira1.jpg"
+    "image": "/Images/conf24/1.png"
   },
   {
     "name": "Sudhana Shanker",
     "description": "A versatile Bharatnatyam performer",
-    "image": "/Images/conf24/sudhana1.jpg"
+    "image": "/Images/conf24/2.png"
   },
   {
     "name": "Sampath G.",
     "description": "Author & editor at The Hindu",
-    "image": "/Images/conf24/sampath.jpg"
+    "image": "/Images/conf24/3.png"
   },
   {
     "name": "?",
     "description": "More to be revealed!",
-    "image": "/Images/conf24/notRevealed.png"
+    "image": "/Images/conf24/4.png"
+  },
+  {
+    "name": "?",
+    "description": "More to be revealed!",
+    "image": "/Images/conf24/5.png"
+  },
+  {
+    "name": "?",
+    "description": "More to be revealed!",
+    "image": "/Images/conf24/6.png"
   }
 ]

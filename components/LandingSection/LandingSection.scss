@@ -95,7 +95,7 @@ body {
 }
 
 .vector-icon4 {
-  margin-left: 10px;
+  margin-left: 2rem;
   margin-bottom: 47px;
   width: 50%;
   max-width: 11.375rem;
@@ -123,15 +123,16 @@ body {
 }
 
 .shiv-nadar-university-wrapper {
-  align-self: stretch;
-  justify-content: center;
+  display: flex; /* Ensure this is a flex container */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  text-align: center; /* Optional: centers text within the div */
   padding: var(--padding-3xs);
   margin-top: -2.938rem;
-  font-size: 5rem;
-  flex-direction: row;
-  display: flex;
-  align-items: center;
+  font-size: 5rem; /* Adjust based on your needs */
+  width: 100%; /* Ensure it takes full width */
 }
+
 
 .hero-banner {
   width: 100%;
@@ -350,7 +351,7 @@ body {
   }
 
   .vector-wrapper {
-    margin-left: -1rem;
+    margin-left: 1rem;
   }
 
   .hero-banner {
