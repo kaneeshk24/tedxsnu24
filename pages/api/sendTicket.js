@@ -30,9 +30,9 @@ async function sendConfirmationMails(emailList, nameList) {
     let transporter = nodemailer.createTransport({
         port: 465,
         host: "smtp.gmail.com",
-        from: 'kanishkg830@gmail.com',
+        from: 'tedx.club@snu.edu.in',
         auth: {
-            user: "kanishkg830@gmail.com",
+            user: "tedx.club@snu.edu.in",
             pass: process.env.GMAIL_PASS,
         },
         secure: true,
