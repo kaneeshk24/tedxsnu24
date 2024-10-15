@@ -32,6 +32,7 @@
     "vanilla-tilt": "^1.8.1"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.16",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
     "prisma": "^5.17.0",
