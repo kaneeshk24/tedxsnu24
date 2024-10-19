@@ -65,17 +65,10 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-2.0.3.tgz"
   integrity sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==
 
-"@img/sharp-darwin-arm64@0.33.5":
+"@img/sharp-win32-x64@0.33.5":
   version "0.33.5"
-  resolved "https://registry.npmjs.org/@img/sharp-darwin-arm64/-/sharp-darwin-arm64-0.33.5.tgz"
-  integrity sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==
-  optionalDependencies:
-    "@img/sharp-libvips-darwin-arm64" "1.0.4"
-
-"@img/sharp-libvips-darwin-arm64@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/@img/sharp-libvips-darwin-arm64/-/sharp-libvips-darwin-arm64-1.0.4.tgz"
-  integrity sha512-XblONe153h0O2zuFfTAbQYAX2JhYmDHeWikp1LM9Hul9gVPjFY427k6dFEcOL72O01QxQsWi761svJ/ev9xEDg==
+  resolved "https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.33.5.tgz"
+  integrity sha512-MpY/o8/8kj+EcnxwvrP4aTJSWw/aZ7JIGR4aBeZkZw5B7/Jn+tY9/VNwtcoGmdT7GfggGIU4kygOMSbYnOrAbg==
 
 "@jridgewell/gen-mapping@^0.3.5":
   version "0.3.5"
@@ -117,10 +110,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@next/env@14.2.13":
-  version "14.2.13"
-  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.13.tgz"
-  integrity sha512-s3lh6K8cbW1h5Nga7NNeXrbe0+2jIIYK9YaA9T7IufDWnZpozdFUp6Hf0d5rNWUKu4fEuSX2rCKlGjCrtylfDw==
+"@next/env@14.2.15":
+  version "14.2.15"
+  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.15.tgz"
+  integrity sha512-S1qaj25Wru2dUpcIZMjxeMVSwkt8BK4dmWHHiBuRstcIyOsMapqT4A4jSB6onvqeygkSSmOkyny9VVx8JIGamQ==
 
 "@next/eslint-plugin-next@13.4.4":
   version "13.4.4"
@@ -129,10 +122,22 @@
   dependencies:
     glob "7.1.7"
 
-"@next/swc-darwin-arm64@14.2.13":
-  version "14.2.13"
-  resolved "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.13.tgz"
-  integrity sha512-IkAmQEa2Htq+wHACBxOsslt+jMoV3msvxCn0WFSfJSkv/scy+i/EukBKNad36grRxywaXUYJc9mxEGkeIs8Bzg==
+"@next/font@^14.2.15":
+  version "14.2.15"
+  resolved "https://registry.npmjs.org/@next/font/-/font-14.2.15.tgz"
+  integrity sha512-QopYhBmCDDrNDynbi+ZD1hDZXmQXVFo7TmAFp4DQgO/kogz1OLbQ92hPigJbj572eZ3GaaVxNIyYVn3/eAsehg==
+
+"@next/mdx@^14.2.15":
+  version "14.2.15"
+  resolved "https://registry.npmjs.org/@next/mdx/-/mdx-14.2.15.tgz"
+  integrity sha512-OQWxKY5jWtHqPXdN3s5mj/LsD57pxt8CQsY4VQtTfQdQn6rNPd1bjN+kpbtezXdjgrKhvTJAb1yv1XGvzlh0uw==
+  dependencies:
+    source-map "^0.7.0"
+
+"@next/swc-win32-x64-msvc@14.2.15":
+  version "14.2.15"
+  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.2.15.tgz"
+  integrity sha512-SzqGbsLsP9OwKNUG9nekShTwhj6JSB9ZLMWQ8g1gG6hdE5gQLncbnbymrwy2yVmH9nikSLYRYxYMFu78Ggp7/g==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -1379,11 +1384,6 @@ fs.realpath@^1.0.0:
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
 
-fsevents@~2.3.2:
-  version "2.3.3"
-  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz"
-  integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
-
 function-bind@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.2.tgz"
@@ -2032,12 +2032,12 @@ next-transpile-modules@^10.0.1:
   dependencies:
     enhanced-resolve "^5.10.0"
 
-next@^14.2.13:
-  version "14.2.13"
-  resolved "https://registry.npmjs.org/next/-/next-14.2.13.tgz"
-  integrity sha512-BseY9YNw8QJSwLYD7hlZzl6QVDoSFHL/URN5K64kVEVpCsSOWeyjbIGK+dZUaRViHTaMQX8aqmnn0PHBbGZezg==
+next@*, next@^14.2.15:
+  version "14.2.15"
+  resolved "https://registry.npmjs.org/next/-/next-14.2.15.tgz"
+  integrity sha512-h9ctmOokpoDphRvMGnwOJAedT6zKhwqyZML9mDtspgf4Rh3Pn7UTYKqePNoDvhsWBAO5GoPNYshnAUGIazVGmw==
   dependencies:
-    "@next/env" "14.2.13"
+    "@next/env" "14.2.15"
     "@swc/helpers" "0.5.5"
     busboy "1.6.0"
     caniuse-lite "^1.0.30001579"
@@ -2045,15 +2045,15 @@ next@^14.2.13:
     postcss "8.4.31"
     styled-jsx "5.1.1"
   optionalDependencies:
-    "@next/swc-darwin-arm64" "14.2.13"
-    "@next/swc-darwin-x64" "14.2.13"
-    "@next/swc-linux-arm64-gnu" "14.2.13"
-    "@next/swc-linux-arm64-musl" "14.2.13"
-    "@next/swc-linux-x64-gnu" "14.2.13"
-    "@next/swc-linux-x64-musl" "14.2.13"
-    "@next/swc-win32-arm64-msvc" "14.2.13"
-    "@next/swc-win32-ia32-msvc" "14.2.13"
-    "@next/swc-win32-x64-msvc" "14.2.13"
+    "@next/swc-darwin-arm64" "14.2.15"
+    "@next/swc-darwin-x64" "14.2.15"
+    "@next/swc-linux-arm64-gnu" "14.2.15"
+    "@next/swc-linux-arm64-musl" "14.2.15"
+    "@next/swc-linux-x64-gnu" "14.2.15"
+    "@next/swc-linux-x64-musl" "14.2.15"
+    "@next/swc-win32-arm64-msvc" "14.2.15"
+    "@next/swc-win32-ia32-msvc" "14.2.15"
+    "@next/swc-win32-x64-msvc" "14.2.15"
 
 node-releases@^2.0.18:
   version "2.0.18"
@@ -2601,6 +2601,11 @@ source-map@^0.6.0:
   version "0.6.1"
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+
+source-map@^0.7.0:
+  version "0.7.4"
+  resolved "https://registry.npmjs.org/source-map/-/source-map-0.7.4.tgz"
+  integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
 
 stop-iteration-iterator@^1.0.0:
   version "1.0.0"
