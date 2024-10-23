@@ -45,6 +45,17 @@ export async function emailSent(data) {
     })
 }
 
+export async function ticketSent(data) {
+    return db.payment.update({
+        where: {
+            id: data.id,
+        },
+        data: {
+            'ticketEmail': true,
+        }
+    })
+}
+
 export async function fetchEmails(data) {
     return db.payment.findMany({
         where: {

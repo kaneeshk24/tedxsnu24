@@ -76,24 +76,25 @@ export default function Admin({ payments }) {
             const data = {
                 id: id,
             }
-            console.log(name1, name2);
             const response = await ticketSentRoute(data);
+            console.log(name1, name2);  
             const response2 = await sendTicket({
                 'email1': email1,
                 'email2': email2,
                 'name1' : name1,
                 'name2': name2,
             })
+            console.log(response2); 
             if (response.status === 200 && response2.status === 200) {
                 setLoading(false);
                 window.location.reload();
             } else {
-                alert('INTERNAL SERVER ERROR, CONTACT WEBDEV - 9336833660')
+                console.error('INTERNAL SERVER ERROR, CONTACT WEBDEV - 9336833660')
             }
         } catch (error) {
-            console.error("Error", e)
+            console.error("Error", error)
         }
-        setLoading(false)
+        setLoading(false);
     }
     const filteredPayments = payments.filter(
         (payment) => filter === '' || payment['modeOfPayment'] === filter
