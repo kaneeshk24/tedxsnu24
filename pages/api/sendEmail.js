@@ -1,27 +1,29 @@
 import nodemailer from "nodemailer";
 import { TicketTemplate } from "../../public/Templates/TicketTemplate";
+
 async function SendEmail(req, res) {
     const body = await req.body;
     let emailList = [];
     console.log(body);
+    
     if (body.email1 !== '') {
         emailList.push(body.email1);
     }
     if (body.email2 !== '') {
         emailList.push(body.email2);
     }
+
     try {
-        await sendConfirmationMail(emailList)
+        await sendConfirmationMail(emailList);
         res.send({ status: 200, message: "Emails sent successfully" });
-    } catch (e){
+    } catch (e) {
         console.log(e);
         res.send({ status: 500, message: "Emails not sent" });
     }
 }
 
 async function sendConfirmationMail(emailList) {
-       // Create a transporter instance outside the loop
-       let transporter = nodemailer.createTransport({
+    let transporter = nodemailer.createTransport({
         port: 465,
         host: "smtp.gmail.com",
         from: 'tedx.club@snu.edu.in',
@@ -32,16 +34,15 @@ async function sendConfirmationMail(emailList) {
         secure: true,
     });
 
-    // Iterate through the emailList and send personalized emails
-    for (let i = 0; i < emailList.length; i++) {
-        const email = emailList[i];
-        // const name = nameList[i];
-        console.log(email);
-        var mailOptions = {
+    // Create an array of promises for sending emails
+    const emailPromises = emailList.map(async (email) => {
+        console.log(`Sending email to: ${email}`);
+        
+        const mailOptions = {
             to: email,
             from: 'TEDxShivNadarIoE <tedx.club@snu.edu.in>',
-            subject: `TEDxSNU | Ticket Confirmation | Conference’24 `,
-            html: TicketTemplate () // Pass the name as a parameter to your template function
+            subject: `TEDxSNU | Ticket Confirmation | Conference'24`,
+            html: TicketTemplate(), // Note: This template doesn't seem to need any parameters
             // attachments: [
             //     {
             //         filename: 'tedx_ticket.png',
@@ -54,13 +55,24 @@ async function sendConfirmationMail(emailList) {
             //         cid: 'tedx@uniqueIt'
             //     },
             // ]
-    }};
+        };
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.log(error);
-        }
+        // Convert callback-based sendMail to Promise
+        return new Promise((resolve, reject) => {
+            transporter.sendMail(mailOptions, (error, info) => {
+                if (error) {
+                    console.error(`Error sending to ${email}:`, error);
+                    reject(error);
+                } else {
+                    console.log(`Email sent successfully to ${email}`);
+                    resolve(info);
+                }
+            });
+        });
     });
+
+    // Wait for all emails to be sent
+    await Promise.all(emailPromises);
 }
 
 export default SendEmail;
