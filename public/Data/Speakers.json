@@ -28,5 +28,27 @@
     "name": "?",
     "description": "More to be revealed!",
     "image": "/Images/conf24/6.png"
+  },
+  {
+    "name": "Imon",
+    "description": "xyz",
+    "image": "/Images/conf24/Imon.png"
+  },{
+    "name": "Khalid Wani",
+    "description": "xyz",
+    "image": "/Images/conf24/Khalid.png"
+  },{
+    "name": "Outkasts",
+    "description": "xyz",
+    "image": "/Images/conf24/Outkasts.png"
+  },{
+    "name": "Tanu Jain",
+    "description": "Professional racing driver",
+    "image": "/Images/conf24/Tanu.png"
+  },
+  {
+    "name": "Vijaita",
+    "description": "Professional racing driver",
+    "image": "/Images/conf24/Vijaita.png"
   }
 ]
