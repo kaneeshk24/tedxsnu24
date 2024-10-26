@@ -47,19 +47,18 @@ async function sendConfirmationMails(emailList, nameList) {
             to: email,
             from: 'TEDxShivNadarIoE <tedx.club@snu.edu.in>',
             subject: `TEDxSNU | Ticket | Conference'24 Attendee Itinerary`,
-            html: FinalTicketTemplate(name),
-            // Uncomment if you want to include attachments
-            // attachments: [
+            html: FinalTicketTemplate(name)
+            // ,attachments: [
             //     {
-            //         filename: 'tedx_ticket.png',
-            //         path: 'https://firebasestorage.googleapis.com/v0/b/swapsta-6813b.appspot.com/o/tedx_ticket.png?alt=media&token=33879210-60ca-48a6-91c6-96c37e33c18d',
+            //         filename: 'TEDx Ticket_20241025_021623_0000.png',
+            //         path: 'https://firebasestorage.googleapis.com/v0/b/tedx24-ticket.appspot.com/o/TEDx%20Ticket_20241025_021623_0000.png?alt=media&token=da955ce6-58ab-4408-a98f-449c60217c79',
             //         cid: 'tedx@unique'
-            //     },
-            //     {
-            //         filename: 'tedx.png',
-            //         path: 'https://firebasestorage.googleapis.com/v0/b/swapsta-6813b.appspot.com/o/tedx.png?alt=media&token=e4f3ec06-d682-4843-bd4f-2ebe2ddcc2a2',
-            //         cid: 'tedx@uniqueIt'
-            //     },
+            //     }
+            //     // ,{
+            //     //     filename: 'tedx.png',
+            //     //     path: 'https://firebasestorage.googleapis.com/v0/b/swapsta-6813b.appspot.com/o/tedx.png?alt=media&token=e4f3ec06-d682-4843-bd4f-2ebe2ddcc2a2',
+            //     //     cid: 'tedx@uniqueIt'
+            //     // },
             // ]
         };
 

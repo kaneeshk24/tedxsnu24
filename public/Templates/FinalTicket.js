@@ -1,3 +1,4 @@
+
 export const FinalTicketTemplate = (name) => {
     return `
     <!DOCTYPE html>
@@ -12,11 +13,11 @@ export const FinalTicketTemplate = (name) => {
     <body>
         <div>
             <p>Dear ${name},<br/><br /></p>
-            <p>You’re officially a part of the 7th edition of TEDxShivNadarUniversity annual conference. We cannot wait for you to experience the riveting talks, the mesmerising performances, the finger-licking delicacies, and so much more we have to offer!<br/></p>
-            <img src="cid:tedx@unique" alt="tedx_ticket" style="display: block; width: 400px;">
+            <p>Great news! You called, and here we are—your ticket to the TEDx Conference 2024 at Shiv Nadar University is ready! <br/> Get ready for an action-packed day filled with incredible ideas and an exchange of knowledge. This is your chance to connect with incredible thinkers and innovators, and we know you’re going to love every moment!<br/></p>
+            <img src="http://drive.google.com/uc?export=view&id=1XEjXtU6Y9imgMN1Pd4osyAiw_6RZFfu0" alt="tedx_ticket" >
             <p><b>Please note: It is mandatory for you to carry a soft copy of the E-ticket for your entry.</b><br /><br/></p>
             <p>Here are the details - <br/></p>
-            <p><b>Date - </b>Sunday 24th, September</p>
+            <p><b>Date - </b>27th October, 2024 (Sunday)</p>
             <p><b>Registration + Attendee Activities - </b>9:00 AM - 10:00 AM (G Block entrance)</p>
             <p><b>Venue - </b>G Block Auditorium</p>
             <p><b>Dress Code - </b>Business Formals</p>
@@ -25,8 +26,8 @@ export const FinalTicketTemplate = (name) => {
             <br/>
             <p>Attached below is the itinerary for the day.</p>
             <br />
-            <img src="cid:tedx@uniqueIt" alt="tedx_itinerary" style="display: block; width: 600px;" />
-            <p>We’re so excited for you to experience this with us :)<p>
+            <p>Thanks for being part of our community. We can’t wait to see you there!<p>
+            <img src="http://drive.google.com/uc?export=view&id=1PzZD24VoO8DZKB2ZEcNfNQJnE4b1q8B3" />
         </div>
     </body>
 
