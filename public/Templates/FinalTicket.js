@@ -18,16 +18,19 @@ export const FinalTicketTemplate = (name) => {
             <p><b>Please note: It is mandatory for you to carry a soft copy of the E-ticket for your entry.</b><br /><br/></p>
             <p>Here are the details - <br/></p>
             <p><b>Date - </b>27th October, 2024 (Sunday)</p>
-            <p><b>Registration + Attendee Activities - </b>9:00 AM - 10:00 AM (G Block entrance)</p>
+            <p><b>Registration + Attendee Activities - </b>9:30 AM onwards (G Block entrance)</p>
             <p><b>Venue - </b>G Block Auditorium</p>
             <p><b>Dress Code - </b>Business Formals</p>
             <br/>
-            <p>Please note registrations for attendees close at 10AM. The food coupons will be issued to all attendees at registration, without which the attendees will not be able to avail their meals for the day.<br/>Please make it a point to register when you arrive!</p>
+            <p>Please note registrations for attendees close at 10AM. The food coupons and delegate kits will be issued to all attendees at registration, without which the attendees will not be able to avail their meals for the day.<br/>Please make it a point to register when you arrive!</p>
             <br/>
             <p>Attached below is the itinerary for the day.</p>
             <br />
             <p>Thanks for being part of our community. We can’t wait to see you there!<p>
             <img src="http://drive.google.com/uc?export=view&id=1PzZD24VoO8DZKB2ZEcNfNQJnE4b1q8B3" />
+            
+            <p>With love,<br/>
+            TEDx ShivNadarUniversity Team</p>
         </div>
     </body>
 
