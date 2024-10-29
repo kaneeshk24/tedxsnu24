@@ -42,7 +42,7 @@ const teamLeads = [
     { name: "Aanya Anand", role: "Marketing Lead", image: "/TeamImages/Aanya1.png" },
     { name: "Dipro Mukherjee", role: "Sponsorship Lead & Freshman Coordinator", image: "/TeamImages/Dipro.png" },
     { name: "Darpin Mevcha", role: "Sponsorship Lead", image: "/TeamImages/Darpin.png" },
-    { name: "Pratyush Balti", role: "Design Lead", image: "/TeamImages/Pratyush.jpg" },
+    { name: "", role: "", image: "/TeamImages/Pratyush.jpg" },
     { name: "Neeloy", role: "Design Lead", image: "/TeamImages/Neeloy.png" },
 
     { name: "Pratiroop Kundu", role: "Videography Lead", image: "/TeamImages/Pratiroop.png" },
